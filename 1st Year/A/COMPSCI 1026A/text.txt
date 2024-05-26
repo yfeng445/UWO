@@ -1,0 +1,4 @@
+The first part of organizing is getting your e-books into calibre¡¯s library. 
+Click the ¡®Add books¡¯ button in the tool bar at the top of the window, then select the e-books you would like calibre to import. 
+When calibre imports your e-books it makes a copy of them in the storage location you specified during initial setup. On
+ce you¡¯ve added an e-book, calibre doesn¡¯t need further access to the original file.
