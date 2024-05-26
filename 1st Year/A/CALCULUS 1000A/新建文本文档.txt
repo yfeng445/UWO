@@ -1,0 +1,14 @@
+Help Entering Intervals
+Endpoints of intervals: If an endpoint is included, then use [ or ]. If not, then use ( or ). For example, the interval from -3 to 7 that includes 7 but not -3 is expressed (-3,7].
+
+Infinite intervals: For infinite intervals, use Inf for ¡Þ (infinity) or -Inf for -¡Þ (-Infinity). For example, the infinite interval containing all points greater than or equal to 6 is expressed [6,Inf).
+
+Unions of intervals: If the set includes more than one interval, they are joined using the union symbol U. For example, the set consisting of all points in (-3,7] together with all points in [-8,-5) is expressed [-8,-5)U(-3,7]. WeBWorK will not interpret [2,4]U[3,5] as equivalent to [2,5], unless a problem tells you otherwise. All sets should be expressed in their simplest interval notation form, with no overlapping intervals.
+
+Empty intervals: If the answer is the empty set, you can specify that by using braces with nothing inside: { }
+
+Special symbols: You can use R as a shorthand for all real numbers. So, it is equivalent to entering (-Inf, Inf).
+
+Set notation: You can use set difference notation. So, for all real numbers except 3, you can use R-{3} or (-Inf, 3)U(3,Inf) since they are the same. Similarly, [1,10)-{3,4} is the same as [1,3)U(3,4)U(4,10).
+
+One point intervals: When an interval contains only one point, enter it as a one point set such as {3} or as a closed interval such as [3,3].
