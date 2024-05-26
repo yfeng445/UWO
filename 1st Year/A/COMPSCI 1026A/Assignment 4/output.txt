@@ -1,0 +1,1 @@
+Country|Continent|Population|Area

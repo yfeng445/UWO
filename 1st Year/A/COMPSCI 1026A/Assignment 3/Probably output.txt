@@ -1,0 +1,5 @@
+(happiness_value,count_of_keyword_tweets,count_of_tweets)
+(28511, 1159, 1911)
+(12912, 502, 860)
+(2289, 99, 127)
+(7159, 286, 406)

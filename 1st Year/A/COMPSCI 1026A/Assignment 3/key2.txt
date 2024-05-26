@@ -1,0 +1,9 @@
+hard,5
+hardest,4
+like,8
+love,10
+life,7
+need,3
+figure,3
+lost,1
+change,5
