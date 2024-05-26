@@ -1,0 +1,22 @@
+Program ignores this line. Second line: #rows, #columns, optional delay, optional map cell size. Other lines: C-road crossing, B-block of houses, R-road going right, L-road going left, U-road going up, D-road going down, S-starting location, E-destination
+20 20 10
+B B B B B B B B B B B B B B B B B B B B
+B B S C B B B C C C B B B B C C B B B B
+B B C B B B B B C B B B B C C B B C C B 
+B C C R C C R R C B B B C B B B B C B B
+B B D B B C C B B C B B C B B B B C B B
+B B D B C L C R C D B C C B B B U B B B
+B B C R C B D R R C B B C L B B B U B B
+B B D B B B D B B C B C B C B B B C B B
+B C C B C L C B B B C C B B C C C C B B
+B D B B D B C B B B B B C B B B B B B B
+B C C B R R C R R C C R R C C C C C C B
+B R C R C B B B B C C C L L U B B B C B
+B B B C C B B L C C B B B B C C B B C B
+B B C C C B B C B U R E C C C D L C B B
+B B D B B C C B B C R C B B B C B B B B
+B B D B B C C B B U B B B B C D B B B B
+B B C R B B C C B C L L C B C C C B B B
+B C D B B B C B C B B B C C C B C B B B
+B B C R R R C R C R R R C B B B B C B B
+B B B B B B B B B B B B B B B B B B B B
