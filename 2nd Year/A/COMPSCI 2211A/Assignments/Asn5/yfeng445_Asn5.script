@@ -1,0 +1,29 @@
+Script started on 2020-11-27 08:33:17-05:00 [TERM="xterm" TTY="/dev/pts/2" COLUMNS="80" LINES="24"]
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn5[yfeng445@compute asn5]$ date
+Fri 27 Nov 2020 08:33:21 AM EST
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn5[yfeng445@compute asn5]$ who am i
+yfeng445 pts/4        2020-11-27 08:33
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn5[yfeng445@compute asn5]$ ps[Kwd
+/home/yfeng445/courses/cs2211a/Asn/asn5
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn5[yfeng445@compute asn5]$ ls
+Asn_SubmissionForm.txt      paragraph.c  sentence.h  yfeng445_Asn5.script
+CS2211_F20_Assignment5.pdf  paragraph.h  word.c
+main.c                      sentence.c   word.h
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn5[yfeng445@compute asn5]$ gcc main.c
+/usr/bin/ld: /tmp/cc16wNA4.o: in function `begin':
+main.c:(.text+0x15c): undefined reference to `newParagraph'
+/usr/bin/ld: main.c:(.text+0x173): undefined reference to `newSentence'
+/usr/bin/ld: main.c:(.text+0x185): undefined reference to `addSentence'
+/usr/bin/ld: main.c:(.text+0x1b7): undefined reference to `printParagraph'
+/usr/bin/ld: main.c:(.text+0x1d4): undefined reference to `newSentence'
+/usr/bin/ld: main.c:(.text+0x1fd): undefined reference to `searchParagraph'
+/usr/bin/ld: main.c:(.text+0x215): undefined reference to `freeSentence'
+/usr/bin/ld: main.c:(.text+0x258): undefined reference to `newSentence'
+/usr/bin/ld: main.c:(.text+0x2a5): undefined reference to `deleteLine'
+/usr/bin/ld: main.c:(.text+0x2bd): undefined reference to `freeSentence'
+/usr/bin/ld: main.c:(.text+0x2ff): undefined reference to `freeParagraph'
+collect2: error: ld returned 1 exit status
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn5[yfeng445@compute asn5]$ exit
+exit
+
+Script done on 2020-11-27 08:33:56-05:00 [COMMAND_EXIT_CODE="1"]

@@ -1,0 +1,32 @@
+Script started on 2020-11-15 02:50:50-05:00 [TERM="xterm" TTY="/dev/pts/18" COLUMNS="80" LINES="24"]
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn4[yfeng445@compute asn4]$ pw[K[Kdate
+Sun 15 Nov 2020 02:51:00 AM EST
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn4[yfeng445@compute asn4]$ who am i
+yfeng445 pts/23       2020-11-15 02:50
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn4[yfeng445@compute asn4]$ pwd
+/home/yfeng445/courses/cs2211a/Asn/asn4
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn4[yfeng445@compute asn4]$ ls
+inputFunction.c  main.c  yfeng445_asn4.script
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn4[yfeng445@compute asn4]$ gcc main.c
+[01m[Kmain.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kmain.c:13:9:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[KinputFunction[m[K’ [[01;35m[K-Wimplicit-function-declaration[m[K]
+   13 |  printf([01;35m[KinputFunction[m[K());
+      |         [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[Kmain.c:13:9:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kprintf[m[K’ makes pointer from integer without a cast [[01;35m[K-Wint-conversion[m[K]
+   13 |  printf([01;35m[KinputFunction()[m[K);
+      |         [01;35m[K^~~~~~~~~~~~~~~[m[K
+      |         [01;35m[K|[m[K
+      |         [01;35m[Kint[m[K
+In file included from [01m[Kmain.c:7[m[K:
+[01m[K/usr/include/stdio.h:332:43:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst char * restrict[m[K’ but argument is of type ‘[01m[Kint[m[K’
+  332 | extern int printf ([01;36m[Kconst char *__restrict __format[m[K, ...);
+      |                    [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+/usr/bin/ld: /tmp/ccpTELiw.o: in function `main':
+main.c:(.text+0xa): undefined reference to `inputFunction'
+collect2: error: ld returned 1 exit status
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn4[yfeng445@compute asn4]$ exitt
+bash: exitt: command not found
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn4[yfeng445@compute asn4]$ exit
+exit
+
+Script done on 2020-11-15 02:52:22-05:00 [COMMAND_EXIT_CODE="127"]

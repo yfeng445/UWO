@@ -1,0 +1,47 @@
+Script started on 2020-10-16 10:15:04-04:00 [TERM="xterm" TTY="/dev/pts/13" COLUMNS="80" LINES="24"]
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn3[yfeng445@compute asn3]$ p[Kdate
+Fri 16 Oct 2020 10:15:13 AM EDT
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn3[yfeng445@compute asn3]$ pwd[K[K[Kwho am i
+yfeng445 pts/16       2020-10-16 10:15
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn3[yfeng445@compute asn3]$ pwd
+/home/yfeng445/courses/cs2211a/Asn/asn3
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn3[yfeng445@compute asn3]$ gcc asn3a.c
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn3[yfeng445@compute asn3]$ cat asn3a.c[K[K[K[K[K[K[K[K[K[K[Kvi asn3a.c
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;24r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[24;1H"asn3a.c" [noeol][dos] 145L, 3653C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<stdio.h>[m
+
+
+[32mint[m main() {[6;9H[32mint[m Array[] = { [31m12[m,[31m63[m,[31m44[m,[31m89[m,[31m3[m,[31m55[m,[31m73[m,[31m27[m,[31m37[m,[31m18[m,[31m518[m,[31m258[m,[31m158[m,[31m78[m,[31m25[m };[7;9H[32mint[m A[] = { [31m12[m,[31m63[m,[31m44[m,[31m89[m,[31m3[m,[31m55[m,[31m73[m,[31m27[m,[31m37[m,[31m18[m,[31m518[m,[31m258[m,[31m158[m,[31m78[m,[31m25[m };[8;9Hprintf([31m"Size of array:[m[35m%d%s\n[m[31m"[m, [33msizeof[m(Array),[31m" bytes"[m);[9;9Hprintf([31m"Length of array:[m[35m%d%s\n[m[31m"[m, [33msizeof[m(Array)/[33msizeof[m([32mint[m),[31m" elements"[m);[10;9Hprintf([31m"[m[35m\n[m[31m"[m);[12;9H[34m/*Part [m[31m1[m[34m*/[m[13;9Hprintf([31m"PART 1:[m[35m\n[m[31m"[m);[14;9Hprintf([31m"The values store into the array are: [m[35m\n[m[31m"[m);[15;9H[33mfor[m ([32mint[m i = [31m0[m; i < [33msizeof[m(Array) / [33msizeof[m([32mint[m); i++) {[16;17Hprintf([31m"[m[35m%d[m[31m     "[m,Array[i]);[17;9H}[18;9Hprintf([31m"[m[35m\n[m[31m"[m);[19;9Hprintf([31m"[m[35m\n[m[31m"[m);[21;9H[34m/*Part [m[31m2[m[34m*/[m[22;9Hprintf([31m"PART 2: [m[35m\n[m[31m"[m);[23;9Hprintf([31m"The values store into the array in reverse are: [m[35m\n[m[31m"[m);[24;63H1,1[11CTop[1;1H[?25h[?25l[24;53H^[[1;1H[24;53H  [1;1H[24;53H^[[1;1H[24;53H  [1;1H[?25h[?25l[24;53H:[1;1H[24;1H[K[24;1H:[?2004h[?25hwq[?25l[?2004l"asn3a.c" [dos] 145L, 3655C written[23;2t[23;1t
+[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t]0;yfeng445@compute:~/courses/cs2211a/Asn/asn3[yfeng445@compute asn3]$ 
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn3[yfeng445@compute asn3]$ gcc asn3a.c
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn3[yfeng445@compute asn3]$ vi asn3b.c
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;24r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[24;1H"asn3b.c" [noeol][dos] 25L, 575C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<stdio.h>[m
+
+[34m/*sum of primes smaller than the given number*/[m
+[32mint[m main()
+{[6;9H[32mint[m sum, base, num, find;[8;9H[33mwhile[m ([31m1[m) {[9;17Hsum = [31m0[m;[10;17Hprintf([31m"Input? "[m);[11;17Hscanf_s([31m"[m[35m%d[m[31m"[m, &num);[12;17H[33mif[m (num == [31m0[m) [33mbreak[m;    [34m//exit the  program[m[14;17H[33mfor[m ([32mint[m i = [31m1[m; i <= num; i++) {[8C[34m//go through all numberss[15;1H smaller than the given number[m[16;25Hfind = [31m0[m;[17;25H[33mfor[m (base = [31m2[m; base <= i; base++) {[13C[34m//find aa[18;1H base [m[19;33H[33mif[m (i % base == [31m0[m) find++;[20;25H}[21;25H[33mif[m (find == [31m1[m) sum = sum + i;   [34m//add up bases[m[22;17H}[23;17Hprintf([31m"sum of primes smaller than the given number: [m[35m%d\n[m[31m"[m, sum)[23;1H[1m[34m@@@                                                                             [m[24;63H1,1[11CTop[1;1H[?25h[?25l[24;53H^[[1;1H[24;53H  [1;1H[24;53H^[[1;1H[24;53H  [1;1H[?25h[?25l[24;53H:[1;1H[24;1H[K[24;1H:[?2004h[?25hwq[?25l[?2004l"asn3b.c" [dos] 25L, 577C written[23;2t[23;1t
+[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t]0;yfeng445@compute:~/courses/cs2211a/Asn/asn3[yfeng445@compute asn3]$ gcc asn3b.c
+[01m[Kasn3b.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kasn3b.c:11:3:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kscanf_s[m[K’; did you mean ‘[01m[Kscanf[m[K’? [[01;35m[K-Wimplicit-function-declaration[m[K]
+   11 |   [01;35m[Kscanf_s[m[K("%d", &num);
+      |   [01;35m[K^~~~~~~[m[K
+      |   [32m[Kscanf[m[K
+/usr/bin/ld: /tmp/ccXnagTC.o: in function `main':
+asn3b.c:(.text+0x30): undefined reference to `scanf_s'
+collect2: error: ld returned 1 exit status
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn3[yfeng445@compute asn3]$ vi asn3b.c
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;24r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[24;1H"asn3b.c" [dos] 25L, 577C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m<stdio.h>[m
+
+[34m/*sum of primes smaller than the given number*/[m
+[32mint[m main()
+{[6;9H[32mint[m sum, base, num, find;[8;9H[33mwhile[m ([31m1[m) {[9;17Hsum = [31m0[m;[10;17Hprintf([31m"Input? "[m);[11;17Hscanf_s([31m"[m[35m%d[m[31m"[m, &num);[12;17H[33mif[m (num == [31m0[m) [33mbreak[m;    [34m//exit the  program[m[14;17H[33mfor[m ([32mint[m i = [31m1[m; i <= num; i++) {[8C[34m//go through all numberss[15;1H smaller than the given number[m[16;25Hfind = [31m0[m;[17;25H[33mfor[m (base = [31m2[m; base <= i; base++) {[13C[34m//find aa[18;1H base [m[19;33H[33mif[m (i % base == [31m0[m) find++;[20;25H}[21;25H[33mif[m (find == [31m1[m) sum = sum + i;   [34m//add up bases[m[22;17H}[23;17Hprintf([31m"sum of primes smaller than the given number: [m[35m%d\n[m[31m"[m, sum)[23;1H[1m[34m@@@                                                                             [m[24;63H1,1[11CTop[1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [2;1H[24;63H2,0-1[2;1H[?25h[?25l[24;53H~@k[2;1H[24;53H   [3;1H[24;63H3,1  [3;1H[?25h[?25l[24;53H~@k[3;1H[24;53H   [2;1H[24;63H2,0-1[2;1H[?25h[?25l[24;53H~@k[2;1H[24;53H   [1;1H[24;63H1,1  [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;2H[24;65H2[1;2H[?25h[?25l[24;53H~@k[1;2H[24;53H   [1;3H[24;65H3[1;3H[?25h[?25l[24;53H~@k[1;3H[24;53H   [2;1H[24;63H2,0-1[2;1H[?25h[?25l[24;53H~@k[2;1H[24;53H   [3;3H[24;63H3,3  [3;3H[?25h[?25l[24;53H~@k[3;3H[24;53H   [4;3H[24;63H4[4;3H[?25h[?25l[24;53H~@k[4;3H[24;53H   [5;1H[24;63H5,1[5;1H[?25h[?25l[24;53H~@k[5;1H[24;53H   [6;8H[24;63H6,1-8[6;8H[?25h[?25l[24;53H~@k[6;8H[24;53H   [7;1H[24;63H7,0-1[7;1H[?25h[?25l[24;53H~@k[7;1H[24;53H   [6;8H[24;63H6,1-8[6;8H[?25h[?25l[24;53H~@k[6;8H[24;53H   [7;1H[24;63H7,0-1[7;1H[?25h[?25l[24;53H~@k[7;1H[24;53H   [8;8H[24;63H8,1-8[8;8H[?25h[?25l[24;53H~@k[8;8H[24;53H   [9;8H[24;63H9[9;8H[?25h[?25l[24;53H~@k[9;8H[24;53H   [10;8H[24;63H10,1-8[10;8H[?25h[?25l[24;53H~@k[10;8H[24;53H   [11;8H[24;64H1[11;8H[?25h[?25l[24;53H~@k[11;8H[24;53H   [11;16H[24;66H2-16[11;16H[?25h[?25l[24;53H~@k[11;16H[24;53H   [11;17H[24;66H3-17[11;17H[?25h[?25l[24;53H~@k[11;17H[24;53H   [11;18H[24;66H4-18[11;18H[?25h[?25l[24;53H~@k[11;18H[24;53H   [11;19H[24;66H5-19[11;19H[?25h[?25l[24;53H~@k[11;19H[24;53H   [11;20H[24;66H6-20[11;20H[?25h[?25l[24;53H~@k[11;20H[24;53H   [11;21H[24;66H7-21[11;21H[?25h[?25l[24;53H~@k[11;21H[24;53H   [11;20H[24;66H6-20[11;20H[?25h[?25l[24;53H~@k[11;20H[24;53H   [11;21H[24;66H7-21[11;21H[?25h[?25l[24;53H~@k[11;21H[24;53H   [11;22H[24;66H8-22[11;22H[?25h[?25l[24;53H~@k[11;22H[24;53H   [11;23H[24;66H9-23[11;23H[?25h[?25l[24;53H~@k[11;23H[24;53H   [11;22H[24;66H8-22[11;22H[?25h[?25l[24;53H~@k[11;22H[24;53H   [11;23H[24;66H9-23[11;23H[?25h[?25l[24;53H~@k[11;23H[24;53H   [11;22H[24;66H8-22[11;22H[?25h[?25l[24;53H~@k[11;22H[24;53H   [11;22H[24;53Hdl[11;22H[24;53H  [11;22Hs([31m"[m[35m%d[m[31m"[m, &num);[11;36H[K[11;22H[?25h[?25l[24;53H~@k[11;22H[24;53H   [11;22H[24;53Hdl[11;22H[24;53H  [11;22H[46m([m[31m"[m[35m%d[m[31m"[m, &num[46m)[m;[11;35H[K[11;22H[?25h[?25l[24;53H~@k[11;22H[24;53H   [11;21Hf([10C)[24;66H7-21[11;21H[?25h[?25l[24;53H^[[11;21H[24;53H  [11;21H[24;53H^[[11;21H[24;53H  [11;21H[?25h[?25l[24;53H:[11;21H[24;1H[K[24;1H:[?2004h[?25hwq[?25l[?2004l"asn3b.c" [dos] 25L, 575C written[23;2t[23;1t
+[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t]0;yfeng445@compute:~/courses/cs2211a/Asn/asn3[yfeng445@compute asn3]$ gcc asn3b.c
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn3[yfeng445@compute asn3]$ mv asn3a.c yfeng445_asn3a.c
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn3[yfeng445@compute asn3]$ mv asn3b.c yfeng445_asn3b.c
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn3[yfeng445@compute asn3]$ ls
+[0m[01;32ma.out[0m                                yfeng445_asn3a.c
+Asn_SubmissionForm.txt               yfeng445_asn3b.c
+CS2211_F20_Assignment3.pdf.filepart  yfeng445_Asnpart3.script
+]0;yfeng445@compute:~/courses/cs2211a/Asn/asn3[yfeng445@compute asn3]$ exit
+exit
+
+Script done on 2020-10-16 10:19:06-04:00 [COMMAND_EXIT_CODE="0"]
