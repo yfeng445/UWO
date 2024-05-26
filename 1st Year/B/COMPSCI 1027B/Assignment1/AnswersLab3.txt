@@ -1,0 +1,40 @@
+Answer the following questions.
+
+Exercise 1
+
+1. Why did testArray[0][0] not change?
+
+2. What are the values of i and j?
+
+2. Is it correct that the program tries to store the value (i+1)*j in testArray[i][j]? Explain your
+answer.
+
+3. Run the program to see what the output for "Test 1" is. Explain why the program produce this output. Is this output what you expected?
+
+Exercise 2
+
+4. What are the values of i, step, result, and load?
+
+Exercise 3
+
+5. What is the value of load? 
+
+6. Why does the program crash?
+
+Exercise 4
+
+7. Which line causes the compilation error? 
+
+Why the compiler shows this error even though i has been declared in the loop: for (int i = 1; i < 2; ++i)?
+
+8. What do you think is the values of var1 and the string stored in obj1 immediately after method2(obj1) is 
+   executed?
+
+   What are the actual values for these variables?
+
+9. What do you think is the value of var1 and the string stored in obj1 immediately after method(var1) is 
+   executed?
+
+   What are the actual values of these variables?
+   
+10. Why is (obj1 == obj2) false even though both objects contain the same string "joe"?

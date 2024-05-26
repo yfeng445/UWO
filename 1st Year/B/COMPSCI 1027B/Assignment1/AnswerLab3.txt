@@ -1,0 +1,13 @@
+1.
+testArray[0][0] is always the same value.
+6 0 No
+2.
+i = 4, step = -468, result = 472, load = 234
+3.
+load = 0, Exception in thread "main" java.lang.ArithmeticException: / by zero at DebuggingExercise2.main(DebuggingExercise2.java:11)
+4.
+Line 28 cause the complies error.
+Because  i is outside of the loop.
+var1 = -20, obj1 = joe
+var1 = -20, obj1 = joe
+Because the two strings have different location.
