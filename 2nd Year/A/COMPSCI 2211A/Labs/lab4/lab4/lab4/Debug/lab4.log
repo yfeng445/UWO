@@ -1,0 +1,20 @@
+﻿  lab04B.c
+C:\Users\56111\OneDrive - The University of Western Ontario\PrevCourses\2nd Year\A\COMPSCI 2211A\Labs\lab4\lab04B.c(41,4): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\56111\OneDrive - The University of Western Ontario\PrevCourses\2nd Year\A\COMPSCI 2211A\Labs\lab4\lab04B.c(49,8): warning C4013: “gets”未定义；假设外部返回 int
+C:\Users\56111\OneDrive - The University of Western Ontario\PrevCourses\2nd Year\A\COMPSCI 2211A\Labs\lab4\lab04B.c(88,33): error C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\56111\OneDrive - The University of Western Ontario\PrevCourses\2nd Year\A\COMPSCI 2211A\Labs\lab4\lab04B.c(95,34): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\56111\OneDrive - The University of Western Ontario\PrevCourses\2nd Year\A\COMPSCI 2211A\Labs\lab4\lab04B.c(129,22): warning C4474: printf: 格式字符串中传递的参数太多
+C:\Users\56111\OneDrive - The University of Western Ontario\PrevCourses\2nd Year\A\COMPSCI 2211A\Labs\lab4\lab04B.c(129,22): message : 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
+C:\Users\56111\OneDrive - The University of Western Ontario\PrevCourses\2nd Year\A\COMPSCI 2211A\Labs\lab4\lab04B.c(130,22): warning C4474: printf: 格式字符串中传递的参数太多
+C:\Users\56111\OneDrive - The University of Western Ontario\PrevCourses\2nd Year\A\COMPSCI 2211A\Labs\lab4\lab04B.c(130,22): message : 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
+C:\Users\56111\OneDrive - The University of Western Ontario\PrevCourses\2nd Year\A\COMPSCI 2211A\Labs\lab4\lab04B.c(131,22): warning C4474: printf: 格式字符串中传递的参数太多
+C:\Users\56111\OneDrive - The University of Western Ontario\PrevCourses\2nd Year\A\COMPSCI 2211A\Labs\lab4\lab04B.c(131,22): message : 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
+C:\Users\56111\OneDrive - The University of Western Ontario\PrevCourses\2nd Year\A\COMPSCI 2211A\Labs\lab4\lab04B.c(132,23): warning C4474: printf: 格式字符串中传递的参数太多
+C:\Users\56111\OneDrive - The University of Western Ontario\PrevCourses\2nd Year\A\COMPSCI 2211A\Labs\lab4\lab04B.c(132,23): message : 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
+C:\Users\56111\OneDrive - The University of Western Ontario\PrevCourses\2nd Year\A\COMPSCI 2211A\Labs\lab4\lab04B.c(133,22): warning C4474: printf: 格式字符串中传递的参数太多
+C:\Users\56111\OneDrive - The University of Western Ontario\PrevCourses\2nd Year\A\COMPSCI 2211A\Labs\lab4\lab04B.c(133,22): message : 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
+C:\Users\56111\OneDrive - The University of Western Ontario\PrevCourses\2nd Year\A\COMPSCI 2211A\Labs\lab4\lab04B.c(134,22): warning C4474: printf: 格式字符串中传递的参数太多
+C:\Users\56111\OneDrive - The University of Western Ontario\PrevCourses\2nd Year\A\COMPSCI 2211A\Labs\lab4\lab04B.c(134,22): message : 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
+C:\Users\56111\OneDrive - The University of Western Ontario\PrevCourses\2nd Year\A\COMPSCI 2211A\Labs\lab4\lab04B.c(135,23): warning C4474: printf: 格式字符串中传递的参数太多
+C:\Users\56111\OneDrive - The University of Western Ontario\PrevCourses\2nd Year\A\COMPSCI 2211A\Labs\lab4\lab04B.c(135,23): message : 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
+C:\Users\56111\OneDrive - The University of Western Ontario\PrevCourses\2nd Year\A\COMPSCI 2211A\Labs\lab4\lab04B.c(116,1): warning C4305: “初始化”: 从“double”到“float”截断

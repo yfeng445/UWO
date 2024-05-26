@@ -1,0 +1,35 @@
+Script started on 2020-09-19 23:25:06-04:00 [TERM="xterm" TTY="/dev/pts/7" COLUMNS="117" LINES="62"]
+]0;yfeng445@compute:~[yfeng445@compute ~]$ ls
+[0m[01;34mcourses[0m  filename  [01;34mnew_dir[0m  [01;34mpublic_html[0m  [01;34mtmp[0m
+]0;yfeng445@compute:~[yfeng445@compute ~]$ cd tmp
+]0;yfeng445@compute:~/tmp[yfeng445@compute tmp]$ ls
+]0;yfeng445@compute:~/tmp[yfeng445@compute tmp]$ cd ..
+]0;yfeng445@compute:~[yfeng445@compute ~]$ cd courses
+]0;yfeng445@compute:~/courses[yfeng445@compute courses]$ cd cs2211a
+]0;yfeng445@compute:~/courses/cs2211a[yfeng445@compute cs2211a]$ cd Labs
+]0;yfeng445@compute:~/courses/cs2211a/Labs[yfeng445@compute Labs]$ cd lab1
+]0;yfeng445@compute:~/courses/cs2211a/Labs/lab1[yfeng445@compute lab1]$ ls
+text.txt
+]0;yfeng445@compute:~/courses/cs2211a/Labs/lab1[yfeng445@compute lab1]$ cat text.txt
+Hello world!
+]0;yfeng445@compute:~/courses/cs2211a/Labs/lab1[yfeng445@compute lab1]$ more txext[K[K[K[K[Ktexr[Kt.txt
+Hello world!
+]0;yfeng445@compute:~/courses/cs2211a/Labs/lab1[yfeng445@compute lab1]$ cp text.txt ~/tmp
+]0;yfeng445@compute:~/courses/cs2211a/Labs/lab1[yfeng445@compute lab1]$ cd ..
+]0;yfeng445@compute:~/courses/cs2211a/Labs[yfeng445@compute Labs]$ cd ..
+]0;yfeng445@compute:~/courses/cs2211a[yfeng445@compute cs2211a]$ cd ..
+]0;yfeng445@compute:~/courses[yfeng445@compute courses]$ cd ..
+]0;yfeng445@compute:~[yfeng445@compute ~]$ cd tmp
+]0;yfeng445@compute:~/tmp[yfeng445@compute tmp]$ rm -i tx[Kext [K.txt
+rm: remove regular file 'text.txt'? y
+]0;yfeng445@compute:~/tmp[yfeng445@compute tmp]$ cd ..
+]0;yfeng445@compute:~[yfeng445@compute ~]$ date
+Sat 19 Sep 2020 11:28:07 PM EDT
+]0;yfeng445@compute:~[yfeng445@compute ~]$ who a [Km i
+yfeng445 pts/24       2020-09-19 23:25
+]0;yfeng445@compute:~[yfeng445@compute ~]$ pwd
+/home/yfeng445
+]0;yfeng445@compute:~[yfeng445@compute ~]$ exit
+exit
+
+Script done on 2020-09-19 23:28:23-04:00 [COMMAND_EXIT_CODE="0"]
