@@ -1,0 +1,7 @@
+a = int(input("Please enter the first value:"))
+b = int(input("Please enter another number: "))
+print("Sum:          ",a+b)
+print("Product:     ",a*b)
+print("Distance:     ",abs(a-b))
+print("Average:     ",(a+b)/2)
+print("Maximum: ",max(a,b))

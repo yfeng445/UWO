@@ -1,0 +1,228 @@
+1:Qatar:98900
+2:Liechtenstein:89400
+3:Luxembourg:80600
+4:Bermuda:69900
+5:Singapore:59700
+6:Jersey:57000
+7:Falkland Islands (Islas Malvinas):55400
+8:Norway:53400
+9:Brunei:49500
+10:Hong Kong:49400
+11:United States:48300
+12:United Arab Emirates:47700
+13:Guernsey:44600
+14:Switzerland:44500
+15:Cayman Islands:43800
+16:Gibraltar:43000
+17:Netherlands:42000
+18:Kuwait:41700
+19:Austria:41600
+20:Ireland:40800
+21:Australia:40800
+22:Sweden:40700
+23:Canada:40500
+24:British Virgin Islands:38500
+25:Iceland:38100
+26:Germany:38100
+27:Belgium:37800
+28:Taiwan:37700
+29:Greenland:37400
+30:Andorra:37200
+31:Denmark:37000
+32:United Kingdom:36500
+33:San Marino:36200
+34:Finland:36000
+35:France:35100
+36:Isle of Man:35000
+37:Japan:34700
+38:European Union:34100
+39:Macau:33000
+40:Israel:31500
+41:Korea South:31200
+42:Spain:30500
+43:Faroe Islands:30500
+44:Italy:30500
+45:Bahamas The:30400
+46:Slovenia:28800
+47:New Zealand:28000
+48:Bahrain:27700
+49:Oman:27600
+50:Cyprus:27500
+51:Czech Republic:27100
+52:Greece:26300
+53:Malta:25600
+54:Seychelles:25400
+55:Barbados:25000
+56:Saudi Arabia:24400
+57:Portugal:23400
+58:Slovakia:23300
+59:Aruba:21800
+60:Estonia:20400
+61:Poland:20200
+62:Trinidad and Tobago:20000
+63:Hungary:19600
+64:Equatorial Guinea:19300
+65:Lithuania:19100
+66:Croatia:18000
+67:French Polynesia:18000
+68:Argentina:17700
+69:Chile:17400
+70:Antigua and Barbuda:17100
+71:Latvia:16800
+72:Russia:16700
+73:Puerto Rico:16300
+74:Gabon:16300
+75:Malaysia:16200
+76:Botswana:16100
+77:Saint Kitts and Nevis:15600
+78:Lebanon:15500
+79:Saint Maarten:15400
+80:Uruguay:15100
+81:New Caledonia:15000
+82:Mauritius:15000
+83:Belarus:15000
+84:Curacao:15000
+85:Guam:15000
+86:Mexico:14700
+87:Virgin Islands:14500
+88:Turkey:14400
+89:Dominica:14300
+90:Panama:14100
+91:Grenada:13800
+92:Bulgaria:13800
+93:Iran:13200
+94:Saint Lucia:13100
+95:Kazakhstan:13000
+96:Venezuela:12600
+97:Northern Mariana Islands:12500
+98:Romania:12500
+99:Anguilla:12200
+100:Costa Rica:11900
+101:Suriname:11800
+102:Brazil:11800
+103:Montenegro:11500
+104:Turks and Caicos Islands:11500
+105:Saint Vincent and the Grenadines:11500
+106:South Africa:11000
+107:Macedonia:10500
+108:Serbia:10400
+109:Azerbaijan:10200
+110:Colombia:10200
+111:Peru:10100
+112:Cuba:9900
+113:Tunisia:9400
+114:Thailand:9400
+115:Dominican Republic:9300
+116:Cook Islands:9100
+117:Jamaica:8900
+118:Timor-Leste:8700
+119:Maldives:8600
+120:Ecuador:8500
+121:Montserrat:8500
+122:China:8400
+123:Belize:8200
+124:Bosnia and Herzegovina:8100
+125:Palau:8100
+126:American Samoa:8000
+127:Albania:7800
+128:Turkmenistan:7800
+129:Guyana:7600
+130:El Salvador:7500
+131:Namibia:7500
+132:Algeria:7300
+133:Tonga:7300
+134:Ukraine:7200
+135:Saint Pierre and Miquelon:7000
+136:Kosovo:6500
+137:Egypt:6500
+138:Paraguay:6200
+139:Libya:6000
+140:Samoa:6000
+141:Jordan:5900
+142:Angola:5900
+143:Bhutan:5800
+144:Niue:5800
+145:Kiribati:5700
+146:Sri Lanka:5700
+147:Georgia:5500
+148:Armenia:5400
+149:Swaziland:5300
+150:Morocco:5100
+151:Guatemala:5100
+152:Syria:5100
+153:Nauru:5000
+154:Mongolia:4800
+155:Bolivia:4800
+156:Vanuatu:4800
+157:Indonesia:4700
+158:Fiji:4600
+159:Congo Republic of the:4500
+160:Honduras:4400
+161:Iraq:4200
+162:Philippines:4100
+163:Cape Verde:3900
+164:Wallis and Futuna:3800
+165:India:3700
+166:Vietnam:3400
+167:Moldova:3400
+168:Uzbekistan:3300
+169:Tuvalu:3300
+170:Solomon Islands:3200
+171:Nicaragua:3200
+172:Ghana:3100
+173:West Bank:2900
+174:Laos:2800
+175:Pakistan:2800
+176:Sudan:2700
+177:Djibouti:2600
+178:Nigeria:2600
+179:Papua New Guinea:2500
+180:Marshall Islands:2500
+181:Western Sahara:2500
+182:Saint Helena Ascension and Tristan da Cunha:2500
+183:Kyrgyzstan:2400
+184:Sao Tome and Principe:2300
+185:Cameroon:2300
+186:Yemen:2300
+187:Micronesia Federated States of:2200
+188:Cambodia:2200
+189:Tajikistan:2100
+190:South Sudan:2100
+191:Mauritania:2000
+192:Senegal:2000
+193:Chad:1900
+194:Gambia The:1900
+195:Bangladesh:1900
+196:Lesotho:1900
+197:Korea North:1800
+198:Kenya:1700
+199:Tanzania:1600
+200:Benin:1600
+201:Cote d'Ivoire:1600
+202:Zambia:1600
+203:Uganda:1400
+204:Burma:1300
+205:Burkina Faso:1300
+206:Rwanda:1300
+207:Nepal:1200
+208:Haiti:1200
+209:Comoros:1200
+210:Guinea:1100
+211:Ethiopia:1100
+212:Sierra Leone:1100
+213:Mali:1100
+214:Mozambique:1100
+215:Guinea-Bissau:1100
+216:Togo:1000
+217:Afghanistan:1000
+218:Tokelau:1000
+219:Madagascar:900
+220:Malawi:900
+221:Central African Republic:800
+222:Niger:800
+223:Eritrea:700
+224:Somalia:600
+225:Liberia:600
+226:Burundi:600
+227:Zimbabwe:500
+228:Congo Democratic Republic of the:300

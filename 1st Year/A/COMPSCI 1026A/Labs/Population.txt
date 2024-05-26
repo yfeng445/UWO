@@ -1,0 +1,13 @@
+Afghanistan:32738376
+Albania:3619778
+Algeria:33769669
+Jamaica:2804332
+Japan:127288419
+Paraguay:6831306
+Peru:29180899
+Philippines:92681453
+Pitcairn Islands:48
+Tajikistan:7211884
+Turkmenistan:5179571
+Zambia:11669534
+Zimbabwe:12382920

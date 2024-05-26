@@ -1,0 +1,10 @@
+love,20
+like,0
+hate,-10
+happy,20
+greatest,20
+hurt,-10
+alone,-10
+tired,0
+sad,-10
+regrets,-10
