@@ -1,0 +1,45 @@
+Answers for Lab 2
+-----------------------------------------------
+
+
+
+EXERCISE 1
+
+1. Should instance variable interestRate be declared as static? Explain.
+No. It can be used in all methods.
+2. Write the output from the test harness for class SavingsAccount. 
+SavingsAccount: balance $115.0, interest rate 0.15
+
+
+EXERCISE 2
+
+3. Which method(s) of the class CheckingAccount demonstrate overriding? Which methods demonstrate overloading?
+toString()
+4. Is bacc0 = chacc1 legal? Why?
+Yes. Because checking account is a specific type of bank account.
+5. Is chacc1 = bacc1 legal? Why?
+No. Because checking aaount is extends from bank account.
+6. On which variables bacc1, chacc1, sacc1 was the invocation to method
+deductFees() valid? Explain.
+chacc1 Because this method is in class CheckingAccount 
+7. Which compilation error(s) could be fixed through casting? Which one(s)
+could not be fixed? Why?
+BankAccount could be fixed through casting because it is the father class of CheckingAccout.
+8. Does the program run after deleting the line causing the compilation 
+error? If the program crashed, why did it crash?
+No. BankAccount cannot be cast to class CheckingAccount
+9. What was the runtime error obtained when changing super.deposit(amount)
+to deposit(amount) in class CheckingAccount.java? 
+java.lang.StackOverflowError
+10. How many times is method deposit invoked?
+infinity
+
+
+EXERCISE 3
+
+11. Why does the compiler issue an error message when invoking newAcc.getTransactionCount()? Why does the compiler issue an error message when invoking newAcc.getInterestRate()?
+The method getTransactionCount() is undefined. Because bothe of the methods are belongs to its child classes.
+12. Can you tell whether in the statement String accountInfo = newAcc.toString(); the
+method toString() being invoked is from the class CheckingAccount or from the class
+SavingsAccount? Explain your answer.
+No. Because the type of the account is determined by the if statement above.
