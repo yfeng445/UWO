@@ -1,0 +1,22 @@
+city name,x,y
+Calgary
+367
+661
+Edmonton
+375
+625
+Montreal
+802
+737
+Ottawa
+780
+740
+Toronto
+750
+762
+Vancouver
+273
+683
+Winnipeg
+546
+670

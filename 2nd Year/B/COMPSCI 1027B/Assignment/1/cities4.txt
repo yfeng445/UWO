@@ -1,0 +1,19 @@
+city name,x,y
+Calgary
+367
+661
+London
+723
+770
+Ottawa
+780
+740
+Regina
+465
+664
+St. John's
+1024
+712
+Victoria
+262
+698

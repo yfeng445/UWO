@@ -1,0 +1,16 @@
+city name,x,y
+Charlottetown
+914
+728
+Iqaluit
+857
+465
+Quebec City
+823
+720
+Whitehorse
+140
+517
+Yellowknife
+377
+485
