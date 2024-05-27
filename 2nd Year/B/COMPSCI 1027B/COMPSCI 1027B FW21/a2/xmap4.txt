@@ -1,0 +1,9 @@
+Second line: #rows, #columns #num targets #quiver size Other lines: H-horizontal path, V-vertical path, C-cross path, W-wall, S-starting point, J- Target
+7 7 4 4
+C C C H H S C
+J V V W C C V
+V V J V C H C
+C C H C V H C
+H V H H C V C
+J V C H H C W
+H C C W J V C

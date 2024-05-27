@@ -1,0 +1,19 @@
+city name,x,y
+Edmonton
+375
+625
+Halifax
+913
+748
+London
+723
+770
+Quebec City
+823
+720
+Regina
+465
+664
+Victoria
+262
+698
