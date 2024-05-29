@@ -1,0 +1,27 @@
+Answers for Lab 1
+-----------------------------------------------
+
+
+PRE-LAB
+
+1. What information is needed in a method's javadoc? What tags will you need to use?
+methods, variables, and return values.
+
+
+EXERCISE 1
+
+2. Why do we need to use the "this" keyword? What happens if we don't use it? 
+Because input parameters have same name as the class variables.
+
+
+EXERCISE 2
+
+3. Which of the lines in Step 11 do you expect to print out ("Same player" or "Different player")?
+Different player
+
+
+EXERCISE 3
+
+4. Which class contains the equals() method being called here? Is it calling itself?
+equals(). No
+
