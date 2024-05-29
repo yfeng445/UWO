@@ -1,0 +1,126 @@
+body {
+    background-color:darkcyan;
+    margin:0;
+}
+
+.wrapper {
+    width:1020px;
+    margin:auto;
+}
+
+ul {
+    list-style-type:square;
+    font-size:30px;
+    
+}
+
+h1.sect-header {
+    font-family: 'Sniglet', cursive;
+    font-size:40px;
+}
+
+ul.nav {
+    margin: 20px 0;
+    padding:0;
+    text-align: center;
+    
+}
+
+ul.nav li {
+    background-color:rgba(0,0,0,0.5);
+    color:white;
+    font-size:28px;
+    list-style:none;
+    width:200px;
+    height:40px;
+    line-height:40px;
+    font-size:32px;
+    text-align:center;
+}
+
+
+ul.nav a {
+    text-decoration: none;
+}
+
+ul.nav li:hover {
+    background-color:rgba(255,255,255,0.5);
+    color:black;
+}
+
+.box {
+    display:inline-block;
+    vertical-align: top;
+}
+
+section {
+    margin-bottom:50px;
+    padding-top:50px;
+}
+
+.sect-img {
+    width:500px;
+}
+
+.menu-group {
+    font-size:22px;
+    width:450px;
+    margin-left:10px;
+}
+.banner {
+    text-align: center;
+}
+.banner img {
+    width:90%;
+}
+
+.emptyspace {
+    height:700px;
+}
+
+#navsect {
+    background-color: black;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    padding-top:0;
+    z-index:999;
+}
+
+.special-container {
+    position:relative;
+    overflow-x:hidden;
+}
+
+.special-img {
+    width:100%;
+}
+
+.special-cover {
+    background-color:gold;
+    background: linear-gradient(to bottom, rgba(255, 215, 0, 0.25) , rgba(255, 215, 0, 1));
+    position:absolute;
+    top:0;
+    font-family: Verdana;
+    width:100%;
+    height:100%;
+    left:100%;
+
+}
+
+.special-container h1 {
+    font-size:75px;
+    padding:30px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+}
+
+.special-container h2 {
+    font-size:40px;
+    padding:30px;
+}
+
+.special-container p {
+    font-size:30px;
+    padding:30px;
+}

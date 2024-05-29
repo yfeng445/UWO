@@ -1,0 +1,87 @@
+
+<!-- saved from url=(0066)https://www.csd.uwo.ca/courses/CS2033b/labs/lab07/exer1/exer1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Lab 7 - Exer 1 | Image Carousel</title>
+    <style>
+        body {
+            margin:0;
+            padding:0;
+        }
+        .wrapper {
+            width:100%;
+        }
+        .carousel-box {
+            background-color:#353535;
+            width:1200px;
+            position:relative;
+        }
+        #carousel-img {
+            width:1000px;
+        }
+        #carousel-controls {
+            width:200px;
+            position:relative;
+            float:right;
+            text-align:center;
+        }
+        #carousel-controls img {
+            display:block;
+            margin:auto;
+            margin-top:50px;
+        }
+        #tint {
+            background-color: rgba(0,0,0,0.75);
+            position:absolute;
+            left:0;
+            top:0;
+            width:100%;
+            height:100%;
+        }
+        #tint p {
+            position:absolute;
+            top:50%;
+            width:1000px;
+            height:100px;
+            line-height:100px;
+            margin-top:-50px;
+            text-align:center;
+            color:white;
+            font-size:40px;
+            font-family:Verdana;
+        }
+    </style>
+
+
+
+    <script type="text/javascript">
+        
+        var images = ["img/beach.jpg","img/autumn.jpg","img/mystical.jpg"."img/","img/valley.jpg","img/bridge.jpg"];
+        var index = 0;
+        var numImages = imags.length;
+        var timer;
+        
+
+    </script>
+
+
+
+</head>
+
+
+<body>
+
+    <div class="wrapper">
+        <div class="carousel-box" id="a">
+            <img src="./Lab 7 - Exer 1 _ Image Carousel_files/beach.jpg" id="carousel-img">
+            <div id="tint"><p>PAUSED</p></div>
+            
+            <div id="carousel-controls">
+                <img id="playBtn" src="./Lab 7 - Exer 1 _ Image Carousel_files/play.png" onmouseover="hoverPlay();" onmouseout="unhoverPlay();" onclick="play();">
+                <img id="pauseBtn" src="./Lab 7 - Exer 1 _ Image Carousel_files/pause.png" onmouseover="hoverPause();" onmouseout="unhoverPause();" onclick="pause();">
+            </div>
+        </div>
+    </div>
+
+
+
+</body></html>

@@ -1,0 +1,61 @@
+html, body {
+    margin: 0;
+    padding:0;
+}
+
+.banner {
+    width:100%;
+}
+
+.quote {
+    font-size:20px;
+    margin:10px;
+}
+
+.space {
+    margin-bottom:60px;
+}
+.special-desc {
+    font-size:28px;
+}
+
+.special-img {
+    width:400px;
+    float:right;
+}
+
+.large-img {
+    background-image: url("../img/casserole.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width:100%;
+    height:400px;
+    position:relative;
+}
+
+.tint {
+    background-color:rgba(0,0,0,0.85);
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+}
+
+.large-img-caption {
+    position:absolute;
+    width:100%;
+    height:60px;
+    line-height:60px;    
+    text-align:center;
+    top:50%;
+    margin-top:-30px;
+    font-size:50px;
+    color:white;
+}
+
+.button-container {
+    padding:30px;
+    text-align:center;
+}

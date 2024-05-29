@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My First Bootstrap Website</title>
+        <link rel = "stylesheet" herf = "css/style-2.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    </head>
+    
+    <body>
+                
+        <a name = "top"></a>
+        <div class="cointer">
+        <!--
+
+NAVBAR
+
+-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="#top">London Restaurant</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	<ul class="navbar-nav mr-auto">
+	  <li class="nav-item active">
+		<!--<a class="nav-link" href="#specials">Home <span class="sr-only">(current)</span></a>-->
+		<a class="nav-link" href="#reviews">Reviews</a>
+	  </li>
+
+	  <li class="nav-item dropdown">
+		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		  Specials
+		</a>
+		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		  <a class="dropdown-item" href="#specials" onclick="$('#collapseOne').collapse('show');">Breakfast</a>
+		  <a class="dropdown-item" href="#specials" onclick="$('#collapseTwo').collapse('show');">Lunch</a>
+		  <a class="dropdown-item" href="#specials" onclick="$('#collapseThree').collapse('show');">Dinner</a>
+		  <a class="dropdown-item" href="#specials" onclick="$('#collapseFour').collapse('show');">Desserts</a>
+		</div>
+	  </li>
+	  <li class="nav-item">
+		<a class="nav-link" href="#jumbo">Jumbo</a>
+	  </li>
+	</ul>
+  </div>
+</nav>
+        
+        
+        </div><!-- close cointer div-->
+        
+        <div class="space">
+        
+        
+        </div>
+        
+        <!--
+
+CAROUSEL
+
+-->
+<section>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+	<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+	<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+	<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+	<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner">
+	<div class="carousel-item active">
+	  <img class="d-block w-100" src="img/burger.jpg" alt="First slide">
+	</div>
+	<div class="carousel-item">
+	  <img class="d-block w-100" src="img/cake.jpg" alt="Second slide">
+	</div>
+	<div class="carousel-item">
+	  <img class="d-block w-100" src="img/pancakes.jpg" alt="Third slide">
+	</div>
+	<div class="carousel-item">
+	  <img class="d-block w-100" src="img/burrito.jpg" alt="Fourth slide">
+	</div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	<span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+	<span class="sr-only">Next</span>
+  </a>
+</div>
+</section> <!--GRID BLOCKS-->
+        <!--
+
+ACCORDION
+
+-->
+<a name="specials"></a>
+<div id="accordion">
+  <div class="card">
+	<div class="card-header" id="headingOne">
+	  <h5 class="mb-0">
+		<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+		  Breakfast special of the week
+		</button>
+	  </h5>
+	</div>
+
+	<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+	  <div class="card-body">
+		  <img src="img/parfait.jpg" class="special-img" />
+		  <p class="special-desc">A beautiful blend of fresh berries combined with whipped cream or yogurt and topped with honey-covered granola.</p>
+	  </div>
+	</div>
+  </div>
+  <div class="card">
+	<div class="card-header" id="headingTwo">
+	  <h5 class="mb-0">
+		<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+		  Lunch special of the week
+		</button>
+	  </h5>
+	</div>
+	<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+	  <div class="card-body">
+		  <img src="img/salad.jpg" class="special-img" />
+		  <p class="special-desc">Spring greens, raisins, onion, cranberries, grilled chicken, and dressed with a homemade vinaigrette.</p>
+	  </div>
+	</div>
+  </div>
+  <div class="card">
+	<div class="card-header" id="headingThree">
+	  <h5 class="mb-0">
+		<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+		  Dinner special of the week
+		</button>
+	  </h5>
+	</div>
+	<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+	  <div class="card-body">
+		  <img src="img/casserole.jpg" class="special-img" />
+		  <p class="special-desc">A casserole of broccoli, onion, potato, chicken, and loads of cheese, baked to perfection!</p>
+	  </div>
+	</div>
+  </div>
+  <div class="card">
+	<div class="card-header" id="headingFour">
+	  <h5 class="mb-0">
+		<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+		  Dessert special of the week
+		</button>
+	  </h5>
+	</div>
+	<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+	  <div class="card-body">
+		  <img src="img/brownie.jpg" class="special-img" />
+		  <p class="special-desc">A warm, mouth-watering brownie with chocolate chips and topped with a dark chocolate syrup drizzle.</p>
+	  </div>
+	</div>
+  </div>
+</div>
+        
+<!-- 
+
+LARGE IMAGE WITH TEXT 
+
+-->
+        <div class="large-img">
+            <div class="tint">
+                <div class="large-img-caption">NEW MENU ITEMS!</div>
+            </div>
+        </div>
+        
+        
+        <a class="reviews"></a>
+        <div class="row">
+            <div class="col_sm">
+                <p class="quote">"This resturant is great!"</p>
+                <p class="quote">~ Krel J.</p>
+            </div>
+            <div class="col_sm">
+                <p class="quote">"Burgers here has the best taste!"</p>
+                <p class="quote">~ Bob W.</p>
+            </div>
+            <div class="col_sm">
+                <p class="quote">"The resturant that I come every week!"</p>
+                <p class="quote">~ Alan Z.</p>
+            </div>
+            <div class="col_sm">
+                <p class="quote">"I love this resturant!"</p>
+                <p class="quote">~ Mike C.</p>
+            </div>
+        </div>
+        
+        <!--
+
+MODAL WINDOW
+
+-->
+<a name="button"></a>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<h5 class="modal-title" id="exampleModalLabel">Order Online</h5>
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>
+	  <div class="modal-body">
+		Use our online menu system to order any of our delicious dishes to be delivered right to your door!
+	  </div>
+	  <div class="modal-footer">
+		<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+	  </div>
+	</div>
+  </div>
+</div>
+<div class="button-container">
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Order Online</button>
+</div>
+
+
+
+
+
+<script>
+$('#exampleModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+</script>
+        
+        
+        <!--
+
+JUMBOTRON
+
+-->
+<a name="jumbo"></a>
+<div class="jumbotron">
+  <h1 class="display-4">Rated #1 restaurant in London!</h1>
+  <p class="lead">A common hangout for Western students and those who work or live near the Richmond Row.</p>
+  <hr class="my-4">
+  <p>Book us for your next party or event. We cater, we deliver, we satisfy!</p>
+  <p class="lead">
+	<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p>
+</div>
+        
+        <!--
+
+FOOTER
+
+-->
+<footer class="page-footer font-small blue pt-4">
+	<div class="container-fluid text-center text-md-left">
+	  <div class="row">
+		<div class="col-md-6 mt-md-0 mt-3">
+		  <h5 class="text-uppercase">London Restaurant &copy; 2020</h5>
+		</div>
+		<hr class="clearfix w-100 d-md-none pb-3">
+		<div class="col-md-3 mb-md-0 mb-3">
+			<h5 class="text-uppercase">Links</h5>
+			<ul class="list-unstyled">
+			  <li>
+				<a href="#">Privacy Policy</a>
+			  </li>
+			  <li>
+				<a href="#">Terms of Service</a>
+			  </li>
+			</ul>
+		  </div>
+		  <div class="col-md-3 mb-md-0 mb-3">
+			<h5 class="text-uppercase">Links</h5>
+			<ul class="list-unstyled">
+			  <li>
+				<a href="#!">Contact</a>
+			  </li>
+			  <li>
+				<a href="#!">Careers</a>
+			  </li>
+			</ul>
+		  </div>
+	  </div>
+	</div>
+</footer>
+        
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+
+
+</html>
