@@ -1,0 +1,11 @@
+Second line: #rows, #columns. Other lines: X-Covid, D-Donut, H-horizontal path, V-vertical path, C-cross path, W-wall, S-starting point, E-end point
+9 9
+W W E H H H D W W
+W W W W W W C W W
+W W X H H D C W W
+W W W W W W C W W
+W W X H H D C W W
+W W W W W W C W W
+W W X H H D C W W
+W W W W W W C W W
+W W S H H D C W W
