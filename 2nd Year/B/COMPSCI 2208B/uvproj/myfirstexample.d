@@ -1,0 +1,1 @@
+.\myfirstexample.o: myFirstExample.s
