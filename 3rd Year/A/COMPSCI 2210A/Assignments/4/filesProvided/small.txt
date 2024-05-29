@@ -1,0 +1,52 @@
+course
+A series of talks or lessons, for example, CS2210.
+homework
+Very enjoyable work that students need to complete outside the classroom.
+nap
+Something that students should try to avoid doing in class.
+roar
+roar.wav
+tree
+The data structure preferred by CS2210 students.
+tree
+tree.gif
+programming
+programming.gif
+loon
+loon.wav
+nap
+nap.gif
+cute
+cute.gif
+computer
+An electronic machine frequently used by Computer Science students.
+spring
+spring.wav
+exam
+Delightful exercises to check whether the students have learned the class material.
+matrix
+A rectangular array of numbers
+matrix
+A substance in which other things are fixed
+matrix
+Matrices.html
+matrix
+matrix.gif
+fireworks
+fireworks.gif
+fireworks
+fireworks.wav
+OhCanada
+OhCanada.mid
+cube
+Game where you try to pick up all the blue squares by moving the cube.
+cube
+A 3D figure with square sides
+cube
+cube2.gif
+dancing
+dancing.gif
+lightning
+lightning.gif
+lightning
+lightning.wav
