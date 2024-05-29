@@ -1,2 +1,0 @@
-Dependencies for Project 't7', Target 'Target 1': (DO NOT MODIFY !)
-F (.\myFirstExample.s)(0x6050B172)(--cpu ARM7TDMI --bi --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include--list .\myfirstexample.lst --xref -o .\myfirstexample.o --depend .\myfirstexample.d)
