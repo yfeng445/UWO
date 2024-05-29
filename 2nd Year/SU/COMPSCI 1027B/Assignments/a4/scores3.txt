@@ -1,0 +1,13 @@
+Golden Knights,Canadiens,4,1
+Golden Knights,Canadiens,2,3
+Golden Knights,Canadiens,2,3
+Golden Knights,Canadiens,2,1
+Golden Knights,Canadiens,1,4
+Golden Knights,Canadiens,2,3
+Islanders,Lightning,2,1
+Islanders,Lightning,2,4
+Islanders,Lightning,1,2
+Islanders,Lightning,3,2
+Islanders,Lightning,0,8
+Islanders,Lightning,3,2
+Islanders,Lightning,0,1

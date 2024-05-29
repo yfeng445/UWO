@@ -1,0 +1,45 @@
+Avalanche,Blues,4,1
+Avalanche,Blues,6,3
+Avalanche,Blues,5,1
+Avalanche,Blues,5,2
+Golden Knights,Wild,0,1
+Golden Knights,Wild,2,1
+Golden Knights,Wild,5,2
+Golden Knights,Wild,4,0
+Golden Knights,Wild,2,4
+Golden Knights,Wild,3,0
+Golden Knights,Wild,6,2
+Maple Leafs,Canadiens,1,2
+Maple Leafs,Canadiens,5,2
+Maple Leafs,Canadiens,2,1
+Maple Leafs,Canadiens,4,0
+Maple Leafs,Canadiens,3,4
+Maple Leafs,Canadiens,2,3
+Maple Leafs,Canadiens,1,3
+Panthers,Lightning,4,5
+Panthers,Lightning,1,3
+Panthers,Lightning,6,5
+Panthers,Lightning,2,6
+Panthers,Lightning,4,1
+Panthers,Lightning,0,4
+Hurricanes,Predators,5,2
+Hurricanes,Predators,3,0
+Hurricanes,Predators,4,5
+Hurricanes,Predators,3,4
+Hurricanes,Predators,3,2
+Hurricanes,Predators,4,3
+Capitals,Bruins,3,2
+Capitals,Bruins,3,4
+Capitals,Bruins,2,3
+Capitals,Bruins,1,4
+Capitals,Bruins,1,3
+Penguins,Islanders,3,4
+Penguins,Islanders,2,1
+Penguins,Islanders,5,4
+Penguins,Islanders,1,4
+Penguins,Islanders,2,3
+Penguins,Islanders,3,5
+Oilers,Jets,1,4
+Oilers,Jets,0,1
+Oilers,Jets,4,5
+Oilers,Jets,3,4

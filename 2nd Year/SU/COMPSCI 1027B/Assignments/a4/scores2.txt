@@ -1,0 +1,21 @@
+Canadiens,Jets,5,3
+Canadiens,Jets,1,0
+Canadiens,Jets,5,1
+Canadiens,Jets,3,2
+Islanders,Bruins,2,5
+Islanders,Bruins,4,3
+Islanders,Bruins,1,2
+Islanders,Bruins,4,1
+Islanders,Bruins,5,4
+Islanders,Bruins,6,2
+Hurricanes,Lightning,1,2
+Hurricanes,Lightning,0,2
+Hurricanes,Lightning,3,2
+Hurricanes,Lightning,4,6
+Hurricanes,Lightning,0,2
+Avalanche,Golden Knights,7,1
+Avalanche,Golden Knights,3,2
+Avalanche,Golden Knights,2,3
+Avalanche,Golden Knights,1,5
+Avalanche,Golden Knights,2,3
+Avalanche,Golden Knights,3,6
