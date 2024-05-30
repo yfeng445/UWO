@@ -1,0 +1,23 @@
+﻿  L13.cpp
+C:\Users\56111\source\repos\Project2\Project2\Axes.hpp(36,62): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\Users\56111\source\repos\Project2\Project2\Axes.hpp(38,62): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\Users\56111\source\repos\Project2\Project2\Axes.hpp(50,62): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\Users\56111\source\repos\Project2\Project2\Axes.hpp(52,62): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\Users\56111\source\repos\Project2\Project2\Axes.hpp(64,22): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\Users\56111\source\repos\Project2\Project2\Axes.hpp(67,22): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\Users\56111\source\repos\Project2\Project2\L13.cpp(72,18): warning C4244: “+=”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\Users\56111\source\repos\Project2\Project2\L13.cpp(73,17): warning C4244: “+=”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\Users\56111\source\repos\Project2\Project2\L13.cpp(75,14): warning C4244: “-=”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\Users\56111\source\repos\Project2\Project2\L13.cpp(78,19): warning C4244: “=”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\Users\56111\source\repos\Project2\Project2\L13.cpp(81,18): warning C4305: “=”: 从“double”到“GLfloat”截断
+C:\Users\56111\source\repos\Project2\Project2\L13.cpp(93,18): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\56111\source\repos\Project2\Project2\L13.cpp(136,20): warning C4305: “初始化”: 从“double”到“float”截断
+C:\Users\56111\source\repos\Project2\Project2\L13.cpp(139,17): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+C:\Users\56111\source\repos\Project2\Project2\L13.cpp(142,17): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+C:\Users\56111\source\repos\Project2\Project2\L13.cpp(145,18): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\56111\source\repos\Project2\Project2\L13.cpp(161,38): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\56111\source\repos\Project2\Project2\L13.cpp(161,29): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+glew32s.lib(glew.obj) : warning LNK4099: 未找到 PDB“”(使用“glew32s.lib(glew.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+  Project2.vcxproj -> C:\Users\56111\source\repos\Project2\x64\Debug\Project2.exe
