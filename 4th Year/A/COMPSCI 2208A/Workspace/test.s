@@ -1,0 +1,4 @@
+	AREA prog, CODE, READONLY
+    ENTRY
+	LDR R1, [R2]
+    END

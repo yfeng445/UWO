@@ -1,0 +1,29 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             prog, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000 E5921000        LDR              R1, [R2]
+    4 00000004                 END
+Command Line: --debug --xref --bi --apcs=interwork --depend=.\test.d -o.\test.o
+ -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL SETA 1"
+ --list=.\test.lst test.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+prog 00000000
+
+Symbol: prog
+   Definitions
+      At line 1 in file test.s
+   Uses
+      None
+Comment: prog unused
+1 symbol
+332 symbols in table
