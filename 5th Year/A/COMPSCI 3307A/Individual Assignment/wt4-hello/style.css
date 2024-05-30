@@ -1,0 +1,24 @@
+html, body {
+    height: 100%;
+    margin: 50px;
+    font-family: Calibri, sans-serif;
+    background-color: lightcyan;
+}
+
+body {
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center;     /* Vertically center content */
+}
+
+.greenColor{
+    color: green;
+}
+.redColor {
+    color: red;
+}
+.greyColor {
+    color: grey;
+}
+
+
