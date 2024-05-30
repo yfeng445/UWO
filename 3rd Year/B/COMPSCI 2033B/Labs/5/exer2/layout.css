@@ -1,0 +1,34 @@
+body {
+    margin-top:20px;
+}
+.wrapper {
+    width:1200px;
+    margin:auto;
+}
+section {
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+
+.ib {
+    display:inline-block;
+    min-height: 50px;
+    overflow:hidden;
+    margin: 1px;
+    padding:0;
+    vertical-align: top;
+}
+
+.i1 {
+    width:1198px;
+}
+.i2 {
+    width:598px;
+}
+.i3 {
+    width:398px
+}
+.i4 {
+    width:298px;
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise 3 - Transitions and Animations</title>
+	<style type="text/css">
+        * {
+            outline:none
+        }
+        body {
+			background-color:darkseagreen;
+            margin:0;
+            padding:0;
+		}
+        .wrapper {
+            width:50%;
+            margin:auto;
+            background-color: rgba(255,255,255,0.5)
+        }
+        .banner {
+            text-align: center;
+        }
+        .banner img {
+            width:100%;
+        }
+        
+        .categorySection {
+            margin:30px;
+            text-align:center;
+        }
+        .category {
+            background-color:darkgreen;
+            width:250px;
+            height:250px;
+            border-radius: 20px;
+            color:white;
+            display: inline-block;
+            margin:30px;
+            font-size:26px;
+            position:relative;
+        }
+        .category p {
+            position:absolute;
+            width:100%;
+            left:0;
+            top:25px;
+        }
+        .contactSection {
+            background-color:tan;
+            padding:30px;
+            
+        }
+        input, textarea {
+            width:400px;
+            margin:10px;
+            padding:10px;
+            border: solid 1px silver;
+            display:block;
+            font-family:Arial;
+            font-size:14px;
+        }
+        textarea {
+            height:100px;
+            resize:none;
+        }
+
+        .animationSection {
+            background-color:tan;
+            
+            
+        }
+        .rookBox {
+            position:relative;
+            width:700px;
+            height:200px;
+            margin:auto;
+        }
+        .chessPiece {
+            background-image: url('images/rook.png');
+            width:100px;
+            height:100px;
+            position:absolute;
+            left:0;
+            top:50px;
+            
+        }
+        
+
+        /* =============== ADD STYLES BELOW THIS LINE =============== */
+        
+        
+        .category:hover { 
+            background-color:darkblue; 
+            transition: background-color 2s;
+        } 
+        .category:hover p {
+            top:60px;
+            transition: top 2s;
+        }
+        @keyframes moveRook { 
+            0% { left:0px; }
+            50%{left:600px;}
+            100% { left:0px; }
+        } 
+        #rook {
+            animation: moveRook 3s infinite linear;
+        }  
+        input:focus, textarea:focus {
+            border: solid 1px blue;
+            margin-left:20px;
+        }
+        input, textarea {
+            transition: all .5s;
+        }
+
+
+
+
+
+
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+	</style>
+</head>
+<body>
+
+    
+    
+    
+    
+    <div class='wrapper'>
+        
+        
+        <div class='banner'>
+            <img src='images/banner.jpg' />
+        </div>
+        
+        
+        
+        
+        
+        <section class='categorySection'>
+        
+            <div class='category'><p>Card Games</p></div>
+            <div class='category'><p>Dice Games</p></div>
+            <div class='category'><p>Classic Games</p></div>
+            <div class='category'><p>Board Games</p></div>
+        
+        
+        </section>
+        
+        
+        
+        <section class='animationSection'>
+            <div class='rookBox'>
+                <div class='chessPiece' id='rook'></div>
+            </div>
+        </section>
+        
+        
+        
+        <section class='contactSection'>
+
+            <form method='post'>
+                <input type='text' placeholder='Name' />
+                <input type='text' placeholder='Email' />
+                <input type='text' placeholder='City' />
+                <textarea placeholder='Message' ></textarea>
+            </form>
+
+        </section>
+        
+        
+        
+    </div>
+    
+    
+</body>
+</html>
+
+

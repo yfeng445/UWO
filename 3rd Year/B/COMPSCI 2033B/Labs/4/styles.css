@@ -1,0 +1,11 @@
+body{
+                background-color: steelblue;
+                padding: 10px;
+            }
+            h1{
+                color: yellow;
+                font-size: 45px;
+            }
+            p{
+                font-size: 22px;
+            }
