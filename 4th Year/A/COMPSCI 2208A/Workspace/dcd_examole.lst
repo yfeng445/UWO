@@ -1,0 +1,50 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             prog, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000 E3A0000C        MOV              r0, #0xC
+    4 00000004 E3A01001        MOV              r1, #0x1
+    5 00000008 E3A02008        MOV              r2, #0x8
+    6 0000000C E3A03020        MOV              r3, #0x20
+    7 00000010 E6534142        LDRB             r4,[r3],-r2, ASR #2
+    8 00000014 E0831012        ADD              r1, r3,  r2, LSL r0
+    9 00000018 EAFFFFFE 
+                       Loop    B                Loop
+   10 0000001C 11 22 33 
+              44 55            DCB              0x11, 0x22, 0x33, 0x44, 0x55
+   11 00000021 66 77 88 
+              99 AA            DCB              0x66, 0x77, 0x88, 0x99, 0xAA
+   12 00000026 BB CC DD 
+              EE FF            DCB              0xBB, 0xCC, 0xDD, 0xEE, 0xFF
+   13 0000002B                 END
+Command Line: --debug --xref --bi --apcs=interwork --depend=.\dcd_examole.d -o.
+\dcd_examole.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="
+__EVAL SETA 1" --list=.\dcd_examole.lst DCD_Examole.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Loop 00000018
+
+Symbol: Loop
+   Definitions
+      At line 9 in file DCD_Examole.s
+   Uses
+      At line 9 in file DCD_Examole.s
+Comment: Loop used once
+prog 00000000
+
+Symbol: prog
+   Definitions
+      At line 1 in file DCD_Examole.s
+   Uses
+      None
+Comment: prog unused
+2 symbols
+333 symbols in table

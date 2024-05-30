@@ -1,0 +1,35 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             Lab2Q2, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000 E3A01006        MOV              R1, #6
+    4 00000004 E3A02004        MOV              R2, #4
+    5 00000008 E3A03006        MOV              R3, #6
+    6 0000000C E3A04007        MOV              R4, #7
+    7 00000010 E0810002        ADD              R0, R1, R2
+    8 00000014 E0050493        MUL              R5, R3, R4
+    9 00000018 E0400005        SUB              R0, R0, R5
+   10 0000001C                 END
+Command Line: --debug --xref --bi --apcs=interwork --depend=.\q2.d -o.\q2.o -IC
+:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --l
+ist=.\q2.lst Q2.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Lab2Q2 00000000
+
+Symbol: Lab2Q2
+   Definitions
+      At line 1 in file Q2.s
+   Uses
+      None
+Comment: Lab2Q2 unused
+1 symbol
+332 symbols in table

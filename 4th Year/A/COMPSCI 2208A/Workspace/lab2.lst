@@ -1,0 +1,114 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             prog, CODE, READWRITE
+    2 00000000                 ENTRY
+    3 00000000 E59FD05C        LDR              SP, =STACK
+    4 00000004 E3A00011        MOV              r0, #0x11
+    5 00000008 E3A01022        MOV              r1, #0x22
+    6 0000000C E52D0004 
+                       PUSH_R0 STR              R0,[SP,#-4]!
+    7 00000010 E52D1004 
+                       PUSH_R1 STR              R1, [SP, #-4]!
+    8 00000014 E49D2004 
+                       POP_R0  LDR              R2, [SP], #4
+    9 00000018 E49D3004 
+                       POP_R1  LDR              R3, [SP], #4
+   10 0000001C EAFFFFFE 
+                       Loop    B                Loop
+   11 00000020 00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00            space            32
+   12 00000040 00000000 
+                       STACK   DCD              0x0
+   13 00000044 00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00            space            32
+   14 00000064                 END
+              00000000 
+Command Line: --debug --xref --bi --apcs=interwork --depend=.\lab2.d -o.\lab2.o
+ -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL SETA 1"
+ --list=.\lab2.lst Lab2.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Loop 0000001C
+
+Symbol: Loop
+   Definitions
+      At line 10 in file Lab2.s
+   Uses
+      At line 10 in file Lab2.s
+Comment: Loop used once
+POP_R0 00000014
+
+Symbol: POP_R0
+   Definitions
+      At line 8 in file Lab2.s
+   Uses
+      None
+Comment: POP_R0 unused
+POP_R1 00000018
+
+Symbol: POP_R1
+   Definitions
+      At line 9 in file Lab2.s
+   Uses
+      None
+Comment: POP_R1 unused
+PUSH_R0 0000000C
+
+Symbol: PUSH_R0
+   Definitions
+      At line 6 in file Lab2.s
+   Uses
+      None
+Comment: PUSH_R0 unused
+PUSH_R1 00000010
+
+Symbol: PUSH_R1
+   Definitions
+      At line 7 in file Lab2.s
+   Uses
+      None
+Comment: PUSH_R1 unused
+STACK 00000040
+
+Symbol: STACK
+   Definitions
+      At line 12 in file Lab2.s
+   Uses
+      At line 3 in file Lab2.s
+Comment: STACK used once
+prog 00000000
+
+Symbol: prog
+   Definitions
+      At line 1 in file Lab2.s
+   Uses
+      None
+Comment: prog unused
+7 symbols
+340 symbols in table

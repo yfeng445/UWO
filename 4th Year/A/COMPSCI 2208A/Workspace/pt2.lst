@@ -1,0 +1,19 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             pt2, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000 E51F1008        LDR              R1, A
+    4 00000004 E51F200C        LDR              R2, B
+    5 00000008 E51F3010        LDR              R3, C
+    6 0000000C E51F4014        LDR              R4, D
+    7 00000010 E0815002        ADD              R5, R1,R2
+    8 00000014 E0060493        MUL              R6, R3, R4
+    9 00000018 E0450006        SUB              R0, R5, R6
+   10 0000001C                 END
+Command Line: --debug --xref --bi --apcs=interwork --depend=.\pt2.d -o.\pt2.o -
+IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL SETA 1" -
+-list=.\pt2.lst uVision\pt2.s

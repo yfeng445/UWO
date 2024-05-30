@@ -1,0 +1,192 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             Asmt1, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000 E28F1088        ADR              R1, UPC3
+    4 00000004 E3A0B000        MOV              R11, #0     ;counter
+    5 00000008 E3A0A000        MOV              R10, #0     ;1st sum
+    6 0000000C E3A09000        MOV              R9, #0      ; 2nd sum
+    7 00000010 E5D1200B        LDRB             R2, [R1, #11] ; Check Number
+    8 00000014 E2422030        SUB              R2, #48     ;
+    9 00000018 E7D1300B 
+                       Loo     LDRB             R3, [R1,R11] ;
+   10 0000001C E31B0001        TST              R11, #1     ;
+   11 00000020 1A000002        BNE              Odd
+   12 00000024 E0899003        ADD              R9, R9, R3  ;
+   13 00000028 E2499030        SUB              R9, R9, #48 ;
+   14 0000002C EA000001        B                Cont        ;
+   15 00000030 E08AA003 
+                       Odd     ADD              R10, R10, R3 ;
+   16 00000034 E24AA030        SUB              R10, R10, #48 ; 
+   17 00000038 E28BB001 
+                       Cont    ADD              R11, R11, #1
+   18 0000003C E35B000B        CMP              R11, #11    ;
+   19 00000040 0A000000        BEQ              Next
+   20 00000044 EAFFFFF3        B                Loo
+   21 00000048 E3A07003 
+                       Next    mov              r7, #3      ;
+   22 0000004C E028A799        MLA              R8, R9, R7, R10 ;
+   23 00000050 E0888002        ADD              R8, R2      ;
+   24 00000054 E358000A 
+                       Lo      CMP              R8,#10      ;
+   25 00000058 BA000002        BLT              Invalid     ;
+   26 0000005C 0A000003        BEQ              Valid       ;
+   27 00000060 E248800A        SUB              R8, #10     ;
+   28 00000064 CAFFFFFA        BGT              Lo
+   29 00000068 E3A00001 
+                       Invalid MOV              R0, #1      ;
+   30 0000006C EA000000        B                Continue
+   31 00000070 E3A00002 
+                       Valid   MOV              R0, #2      ;
+   32 00000074         Continue
+   33 00000074 EAFFFFFE 
+                       Loop    B                Loop
+   34 00000078 30 31 33 
+              38 30 30 
+              31 35 30 
+              37 33 38 UPC     DCB              "013800150738" 
+                                                            ;correct UPC string
+                                                            
+   35 00000084 30 36 30 
+              33 38 33 
+              37 35 35 
+              35 37 37 UPC2    DCB              "060383755577" 
+                                                            ;correct UPC string
+                                                            
+   36 00000090 30 36 35 
+              36 33 33 
+              34 35 34 
+              37 31 32 UPC3    DCB              "065633454712" ;correct UPC str
+                                                            ing 
+   37 0000009C                 END
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+Command Line: --debug --xref --bi --apcs=interwork --depend=.\asmt1.d -o.\asmt1
+.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL SETA 
+1" --list=.\asmt1.lst Asmt1.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Asmt1 00000000
+
+Symbol: Asmt1
+   Definitions
+      At line 1 in file Asmt1.s
+   Uses
+      None
+Comment: Asmt1 unused
+Cont 00000038
+
+Symbol: Cont
+   Definitions
+      At line 17 in file Asmt1.s
+   Uses
+      At line 14 in file Asmt1.s
+Comment: Cont used once
+Continue 00000074
+
+Symbol: Continue
+   Definitions
+      At line 32 in file Asmt1.s
+   Uses
+      At line 30 in file Asmt1.s
+Comment: Continue used once
+Invalid 00000068
+
+Symbol: Invalid
+   Definitions
+      At line 29 in file Asmt1.s
+   Uses
+      At line 25 in file Asmt1.s
+Comment: Invalid used once
+Lo 00000054
+
+Symbol: Lo
+   Definitions
+      At line 24 in file Asmt1.s
+   Uses
+      At line 28 in file Asmt1.s
+Comment: Lo used once
+Loo 00000018
+
+Symbol: Loo
+   Definitions
+      At line 9 in file Asmt1.s
+   Uses
+      At line 20 in file Asmt1.s
+Comment: Loo used once
+Loop 00000074
+
+Symbol: Loop
+   Definitions
+      At line 33 in file Asmt1.s
+   Uses
+      At line 33 in file Asmt1.s
+Comment: Loop used once
+Next 00000048
+
+Symbol: Next
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Relocatable symbols
+
+   Definitions
+      At line 21 in file Asmt1.s
+   Uses
+      At line 19 in file Asmt1.s
+Comment: Next used once
+Odd 00000030
+
+Symbol: Odd
+   Definitions
+      At line 15 in file Asmt1.s
+   Uses
+      At line 11 in file Asmt1.s
+Comment: Odd used once
+UPC 00000078
+
+Symbol: UPC
+   Definitions
+      At line 34 in file Asmt1.s
+   Uses
+      None
+Comment: UPC unused
+UPC2 00000084
+
+Symbol: UPC2
+   Definitions
+      At line 35 in file Asmt1.s
+   Uses
+      None
+Comment: UPC2 unused
+UPC3 00000090
+
+Symbol: UPC3
+   Definitions
+      At line 36 in file Asmt1.s
+   Uses
+      At line 3 in file Asmt1.s
+Comment: UPC3 used once
+Valid 00000070
+
+Symbol: Valid
+   Definitions
+      At line 31 in file Asmt1.s
+   Uses
+      At line 26 in file Asmt1.s
+Comment: Valid used once
+13 symbols
+344 symbols in table

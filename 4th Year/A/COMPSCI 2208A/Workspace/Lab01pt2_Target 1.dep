@@ -1,0 +1,2 @@
+Dependencies for Project 'Lab01pt2', Target 'Target 1': (DO NOT MODIFY !)
+F (.\uVision\pt2.s)(0x634EA033)(--cpu ARM7TDMI --bi --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include--list .\pt2.lst --xref -o .\pt2.o --depend .\pt2.d)
