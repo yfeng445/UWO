@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Hop</title>
+    <link rel="stylesheet" href="../static/css/dash.css">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/calibre">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.min.css">
+</head>
+
+<body>
+    <!-- Top navbar -->
+    <header>
+        <nav class="container">
+            <h1><a href="/">Database - Hop</a></h1>
+            <ul>
+                <li><a title="Edit my profile" href="user.php">User Profile</a></li>
+                <li><a title="View my list" href="list.php">My List</a></li>
+                <li><a title="Explore popular registry" href="#explore">Explore</a></li>
+                <li>
+                    <div></div><a class="btn dark" href="javascript:void(0)">
+                        <?php echo $username ?>
+                    </a>
+                </li>
+            </ul>
+            <div class="dropdown">
+                <ul>
+                    <li><a title="Sweet Registry homepage" href="/">Home</a></li>
+                    <li><a title="Edit my profile" href="user.php">User Profile</a></li>
+                    <li><a href="user.php?logout=1">Logout</a></li>
+                </ul>
+            </div>
+            <details>
+                <summary>
+                    <span></span>
+                </summary>
+                <ul>
+                    <a title="Edit my profile" href="user.php">User Profile</a></li>
+                    <li><a title="View my list" href="list.php">My List</a></li>
+                    <li><a title="Explore popular registry" href="#explore">Explore</a></li>
+                    <li><a href="user.php">
+                            Username
+                        </a></li>
+                    <li><a href="user.php?logout=1">Logout</a></li>
+                </ul>
+            </details>
+        </nav>
+    </header>
+    <main>
+        <div class="profile">
+            <!-- hidden form for self-processing and honeypot -->
+            <form method="post">
+                <input type="text" name="input">
+            </form>
+            <div>
+                <h2>
+                    {{ username }}'s Profile
+                </h2>
+                <img src="#" width="64px">
+                <form method="post">
+                    <ul>
+                        <li>
+                            <label for="username">Username</label>
+                            <input type="text" name="username" value="{{ username }}">
+                            <button class="btn round" onclick="edit()" type="button"><i
+                                    class="ri-edit-line"></i>Edit</button>
+                        </li>
+                        <li>
+                            <label for="username">Email</label>
+                            <input type="email" name="email" value="{{ email }}">
+                            <button class="btn round" onclick="edit()" type="button"><i
+                                    class="ri-edit-line"></i>Edit</button>
+                        </li>
+                        <li>
+                            <label for="username">Password</label>
+                            <input type="password" name="password" placeholder="Please enter your new password">
+                            <button class="btn round" onclick="edit()" type="button"><i
+                                    class="ri-edit-line"></i>Edit</button>
+                        </li>
+                    </ul>
+                    <div>
+                        <button class="btn round" type="submit">Submit all changes</button>
+                        <button class="btn round" onclick="deleteUser()" type="button">Delete Account</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <ul>
+            </ul>
+            <ul>
+            </ul>
+        </div>
+        <p><span>&copy;</span>2023 Hop</p>
+    </footer>
+    <script defer src="assets/dash.script.js"></script>
+</body>
+
+</html>
