@@ -1,0 +1,755 @@
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools>curl -XGET "localhost:9200/_search?pretty" -H "Content-Type: application/json" -d"{ \"query\": { \"match\" : { \"body\" : { \"query\" : \"cat\"} } } }"
+{
+  "took" : 110,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 90,
+      "relation" : "eq"
+    },
+    "max_score" : 10.503806,
+    "hits" : [
+      {
+        "_index" : "comments",
+        "_id" : "xe2ofo0BkTw9Zp_MyiV3",
+        "_score" : 10.503806,
+        "_ignored" : [
+          "body.keyword"
+        ],
+        "_source" : {
+          "id" : "cv4ps",
+          "edited" : false,
+          "parent_id" : "t1_cv3d1",
+          "author_flair_text" : null,
+          "author" : "glguy",
+          "retrieved_on" : 1473808769,
+          "distinguished" : null,
+          "gilded" : 0,
+          "link_id" : "t3_v34f",
+          "stickied" : false,
+          "subreddit_id" : "t5_2fwo",
+          "body" : "Here is some example code that handles both cat with, and cat without arguments. (and as an added bonus, handles failures in a way similar to standard cat)\r\n\r\n    main = do\r\n       args ← getArgs\r\n       result ← cat args\r\n       exitWith $ if result\r\n                   then ExitSuccess\r\n                   else ExitFailure 1\r\n    \r\n    cat [   ] = getContents &gt;&gt;= putStr &gt;&gt; return True\r\n    cat files = liftM and $ forM files handleFile\r\n    \r\n    handleFile filename =\r\n       (readFile filename &gt;&gt;= putStr &gt;&gt; return True)\r\n       `catch`\r\n       (\\ exception -&gt; do\r\n           hPutStrLn stderr $ \"Open failed: \" ++ filename\r\n           return False)\r\n",
+          "controversiality" : 0,
+          "author_flair_css_class" : null,
+          "created_utc" : 1166381984,
+          "score" : 6,
+          "ups" : 6,
+          "subreddit" : "programming"
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "A-2ofo0BkTw9Zp_Myhlz",
+        "_score" : 10.453398,
+        "_source" : {
+          "subreddit" : "reddit.com",
+          "author_flair_css_class" : null,
+          "created_utc" : 1166205885,
+          "score" : 1,
+          "ups" : 1,
+          "body" : "* emacs\r\n\r\n* nano\r\n\r\n* cat\r\n\r\n* ?",
+          "controversiality" : 0,
+          "link_id" : "t3_uxp4",
+          "stickied" : false,
+          "subreddit_id" : "t5_6",
+          "gilded" : 0,
+          "retrieved_on" : 1473808636,
+          "distinguished" : null,
+          "author_flair_text" : null,
+          "author" : "[deleted]",
+          "id" : "cuxra",
+          "edited" : false,
+          "parent_id" : "t3_uxp4"
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "w-yofo0BkTw9Zp_MyuhW",
+        "_score" : 10.276775,
+        "_source" : {
+          "author" : "lilia12",
+          "author_flair_text" : null,
+          "id" : "cu8xa",
+          "edited" : false,
+          "parent_id" : "t3_u8x7",
+          "gilded" : 0,
+          "retrieved_on" : 1473808171,
+          "distinguished" : null,
+          "body" : "masturbating cat..so coool",
+          "controversiality" : 0,
+          "stickied" : false,
+          "link_id" : "t3_u8x7",
+          "subreddit_id" : "t5_6",
+          "subreddit" : "reddit.com",
+          "created_utc" : 1165683892,
+          "author_flair_css_class" : null,
+          "score" : 0,
+          "ups" : 0
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "3-2ofo0BkTw9Zp_Myh51",
+        "_score" : 10.276775,
+        "_source" : {
+          "distinguished" : null,
+          "retrieved_on" : 1473808702,
+          "gilded" : 0,
+          "edited" : false,
+          "parent_id" : "t3_v16e",
+          "id" : "cv16f",
+          "author" : "GrrlScientist",
+          "author_flair_text" : null,
+          "score" : 1,
+          "ups" : 1,
+          "created_utc" : 1166286184,
+          "author_flair_css_class" : null,
+          "subreddit" : "reddit.com",
+          "subreddit_id" : "t5_6",
+          "stickied" : false,
+          "link_id" : "t3_v16e",
+          "body" : "Copy Cat has kittens.",
+          "controversiality" : 0
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "Zuyofo0BkTw9Zp_MyslF",
+        "_score" : 9.780994,
+        "_source" : {
+          "gilded" : 0,
+          "retrieved_on" : 1473807861,
+          "distinguished" : null,
+          "author_flair_text" : null,
+          "author" : "Mr_Smartypants",
+          "edited" : false,
+          "parent_id" : "t3_tp7n",
+          "id" : "cts95",
+          "subreddit" : "reddit.com",
+          "created_utc" : 1165373876,
+          "author_flair_css_class" : null,
+          "score" : 3,
+          "ups" : 3,
+          "controversiality" : 0,
+          "body" : "This reminds me of Kircher's \"cat piano\"",
+          "stickied" : false,
+          "link_id" : "t3_tp7n",
+          "subreddit_id" : "t5_6"
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "auyofo0BkTw9Zp_Myt5W",
+        "_score" : 9.780994,
+        "_source" : {
+          "body" : "...and the cat and mouse game continues.",
+          "controversiality" : 0,
+          "subreddit_id" : "t5_2fwo",
+          "stickied" : false,
+          "link_id" : "t3_u3fr",
+          "subreddit" : "programming",
+          "ups" : 8,
+          "score" : 8,
+          "created_utc" : 1165587560,
+          "author_flair_css_class" : null,
+          "author_flair_text" : null,
+          "author" : "[deleted]",
+          "edited" : false,
+          "parent_id" : "t3_u3fr",
+          "id" : "cu446",
+          "gilded" : 0,
+          "distinguished" : null,
+          "retrieved_on" : 1473808080
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "Au2ofo0BkTw9Zp_Myglp",
+        "_score" : 9.780994,
+        "_source" : {
+          "controversiality" : 0,
+          "body" : "A giant cat and a giant toilet!",
+          "stickied" : false,
+          "link_id" : "t3_uouq",
+          "subreddit_id" : "t5_6",
+          "subreddit" : "reddit.com",
+          "created_utc" : 1166044735,
+          "author_flair_css_class" : null,
+          "score" : 3,
+          "ups" : 3,
+          "author" : "hotlemon",
+          "author_flair_text" : null,
+          "edited" : false,
+          "parent_id" : "t3_uouq",
+          "id" : "cup1w",
+          "gilded" : 0,
+          "retrieved_on" : 1473808474,
+          "distinguished" : null
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "7u2ofo0BkTw9Zp_Myg9v",
+        "_score" : 9.780994,
+        "_source" : {
+          "retrieved_on" : 1473808546,
+          "distinguished" : null,
+          "gilded" : 0,
+          "edited" : false,
+          "parent_id" : "t1_cus1z",
+          "id" : "cusx1",
+          "author" : "[deleted]",
+          "author_flair_text" : null,
+          "created_utc" : 1166125397,
+          "author_flair_css_class" : null,
+          "score" : 5,
+          "ups" : 5,
+          "subreddit" : "reddit.com",
+          "stickied" : false,
+          "link_id" : "t3_uphi",
+          "subreddit_id" : "t5_6",
+          "controversiality" : 0,
+          "body" : "That's easy... [ceiling cat!](http://www.surrenderthesoul.com/ceiling_cat.jpg)"
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "xu2ofo0BkTw9Zp_Mym-a",
+        "_score" : 9.780994,
+        "_source" : {
+          "gilded" : 0,
+          "retrieved_on" : 1473809478,
+          "distinguished" : null,
+          "author_flair_text" : null,
+          "author" : "fishandchips",
+          "id" : "cw5tm",
+          "edited" : false,
+          "parent_id" : "t3_w5t9",
+          "subreddit" : "reddit.com",
+          "author_flair_css_class" : null,
+          "created_utc" : 1167237470,
+          "score" : 1,
+          "ups" : 1,
+          "controversiality" : 0,
+          "body" : "shame the cat one isnt an illusion",
+          "link_id" : "t3_w5t9",
+          "stickied" : false,
+          "subreddit_id" : "t5_6"
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "1u2ofo0BkTw9Zp_Mygxv",
+        "_score" : 9.682518,
+        "_source" : {
+          "author" : "[deleted]",
+          "author_flair_text" : null,
+          "edited" : false,
+          "parent_id" : "t1_cuqj6",
+          "id" : "cur91",
+          "gilded" : 0,
+          "distinguished" : null,
+          "retrieved_on" : 1473808514,
+          "controversiality" : 0,
+          "body" : "My mother's cat used to do that.\r\n\r\nI think she got a new cat after this happened at around 3 AM one morning and she called the police...",
+          "subreddit_id" : "t5_6",
+          "link_id" : "t3_uouq",
+          "stickied" : false,
+          "subreddit" : "reddit.com",
+          "score" : 2,
+          "ups" : 2,
+          "author_flair_css_class" : null,
+          "created_utc" : 1166098548
+        }
+      }
+    ]
+  }
+}
+
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools>curl -XGET "localhost:9200/_search?pretty" -H "Content-Type: application/json" -d"{ \"query\": { \"match\" : { \"body\" : { \"query\" : \"cats\"} } } }"
+{
+  "took" : 8,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 43,
+      "relation" : "eq"
+    },
+    "max_score" : 11.629242,
+    "hits" : [
+      {
+        "_index" : "comments",
+        "_id" : "o-yofo0BkTw9Zp_Myu1f",
+        "_score" : 11.629242,
+        "_source" : {
+          "score" : 3,
+          "ups" : 3,
+          "created_utc" : 1165738497,
+          "author_flair_css_class" : null,
+          "subreddit" : "reddit.com",
+          "subreddit_id" : "t5_6",
+          "stickied" : false,
+          "link_id" : "t3_uaft",
+          "body" : "http://www.knitemare.org/cats/",
+          "controversiality" : 0,
+          "distinguished" : null,
+          "retrieved_on" : 1473808214,
+          "gilded" : 0,
+          "id" : "cub52",
+          "parent_id" : "t3_uaft",
+          "edited" : false,
+          "author_flair_text" : null,
+          "author" : "[deleted]"
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "5u2ofo0BkTw9Zp_Myhhz",
+        "_score" : 11.629242,
+        "_source" : {
+          "author_flair_text" : null,
+          "author" : "Rafe",
+          "edited" : false,
+          "parent_id" : "t3_uxd7",
+          "id" : "cuxp1",
+          "gilded" : 0,
+          "distinguished" : null,
+          "retrieved_on" : 1473808636,
+          "body" : "Stop piping cats!",
+          "controversiality" : 0,
+          "subreddit_id" : "t5_6",
+          "link_id" : "t3_uxd7",
+          "stickied" : false,
+          "subreddit" : "reddit.com",
+          "score" : 28,
+          "ups" : 28,
+          "author_flair_css_class" : null,
+          "created_utc" : 1166205025
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "nOyofo0BkTw9Zp_MyuRW",
+        "_score" : 11.242794,
+        "_source" : {
+          "author" : "lemmikins",
+          "author_flair_text" : null,
+          "parent_id" : "t1_cu23m",
+          "edited" : false,
+          "id" : "cu6wx",
+          "gilded" : 0,
+          "distinguished" : null,
+          "retrieved_on" : 1473808134,
+          "body" : "I thought he had cats.",
+          "controversiality" : 0,
+          "subreddit_id" : "t5_2fwo",
+          "link_id" : "t3_u0vv",
+          "stickied" : false,
+          "subreddit" : "programming",
+          "score" : 1,
+          "ups" : 1,
+          "author_flair_css_class" : null,
+          "created_utc" : 1165627748
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "ye2ofo0BkTw9Zp_Myjh_",
+        "_score" : 11.242794,
+        "_source" : {
+          "edited" : false,
+          "id" : "cved2",
+          "parent_id" : "t1_cvdpt",
+          "author_flair_text" : null,
+          "author" : "recursive",
+          "distinguished" : null,
+          "retrieved_on" : 1473808951,
+          "gilded" : 0,
+          "subreddit_id" : "t5_6",
+          "link_id" : "t3_vd24",
+          "stickied" : false,
+          "controversiality" : 0,
+          "body" : "Because cats do funny things.",
+          "score" : 6,
+          "ups" : 6,
+          "author_flair_css_class" : null,
+          "created_utc" : 1166557879,
+          "subreddit" : "reddit.com"
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "t-2ofo0BkTw9Zp_Myglp",
+        "_score" : 10.708994,
+        "_source" : {
+          "id" : "cupft",
+          "edited" : false,
+          "parent_id" : "t3_uouq",
+          "author" : "greenknight",
+          "author_flair_text" : null,
+          "retrieved_on" : 1473808482,
+          "distinguished" : null,
+          "gilded" : 0,
+          "stickied" : false,
+          "link_id" : "t3_uouq",
+          "subreddit_id" : "t5_6",
+          "body" : "Works on ferrets, dogs, cats, and kids too!",
+          "controversiality" : 0,
+          "created_utc" : 1166052433,
+          "author_flair_css_class" : null,
+          "ups" : 3,
+          "score" : 3,
+          "subreddit" : "reddit.com"
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "kO2ofo0BkTw9Zp_Myi13",
+        "_score" : 10.708994,
+        "_source" : {
+          "stickied" : false,
+          "link_id" : "t3_v5s8",
+          "subreddit_id" : "t5_6",
+          "body" : "I agree.  I've lost 5 cats that way.",
+          "controversiality" : 0,
+          "created_utc" : 1166463401,
+          "author_flair_css_class" : null,
+          "ups" : 13,
+          "score" : 13,
+          "subreddit" : "reddit.com",
+          "edited" : false,
+          "parent_id" : "t1_cv6sw",
+          "id" : "cv8oy",
+          "author_flair_text" : null,
+          "author" : "coglethorpe",
+          "retrieved_on" : 1473808843,
+          "distinguished" : null,
+          "gilded" : 0
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "te2ofo0BkTw9Zp_Myh11",
+        "_score" : 10.602863,
+        "_source" : {
+          "author" : "Rafe",
+          "author_flair_text" : null,
+          "id" : "cv07s",
+          "edited" : false,
+          "parent_id" : "t1_cuxp1",
+          "gilded" : 0,
+          "distinguished" : null,
+          "retrieved_on" : 1473808684,
+          "controversiality" : 0,
+          "body" : "I'm amazed at the replies to my comment.  I just found the phrase funny out of context and repeated it because it sounded funny.  Stop piping cats.  Stop piping cats.",
+          "subreddit_id" : "t5_6",
+          "link_id" : "t3_uxd7",
+          "stickied" : false,
+          "subreddit" : "reddit.com",
+          "score" : 6,
+          "ups" : 6,
+          "author_flair_css_class" : null,
+          "created_utc" : 1166255120
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "h-yofo0BkTw9Zp_Myvxm",
+        "_score" : 10.380423,
+        "_source" : {
+          "author_flair_text" : null,
+          "author" : "LizaP",
+          "id" : "cui7r",
+          "parent_id" : "t3_uh34",
+          "edited" : false,
+          "gilded" : 0,
+          "distinguished" : null,
+          "retrieved_on" : 1473808348,
+          "body" : "Seems like she should have gotten rid of her cats",
+          "controversiality" : 0,
+          "subreddit_id" : "t5_6",
+          "link_id" : "t3_uh34",
+          "stickied" : false,
+          "subreddit" : "reddit.com",
+          "ups" : -4,
+          "score" : -4,
+          "author_flair_css_class" : null,
+          "created_utc" : 1165882884
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "Xe2ofo0BkTw9Zp_Myglp",
+        "_score" : 10.380423,
+        "_source" : {
+          "subreddit" : "reddit.com",
+          "score" : 11,
+          "ups" : 11,
+          "created_utc" : 1166049238,
+          "author_flair_css_class" : null,
+          "body" : "fuck you psychology 101 for saying you can't train cats!",
+          "controversiality" : 0,
+          "subreddit_id" : "t5_6",
+          "stickied" : false,
+          "link_id" : "t3_uouq",
+          "gilded" : 0,
+          "distinguished" : null,
+          "retrieved_on" : 1473808478,
+          "author_flair_text" : null,
+          "author" : "[deleted]",
+          "parent_id" : "t3_uouq",
+          "edited" : false,
+          "id" : "cup9l"
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "_O2ofo0BkTw9Zp_Myhhz",
+        "_score" : 10.380423,
+        "_source" : {
+          "subreddit" : "reddit.com",
+          "created_utc" : 1166205654,
+          "author_flair_css_class" : null,
+          "score" : 6,
+          "ups" : 6,
+          "body" : "What about treeing cats?  Would that make for bonsai kittens?",
+          "controversiality" : 0,
+          "stickied" : false,
+          "link_id" : "t3_uxd7",
+          "subreddit_id" : "t5_6",
+          "gilded" : 0,
+          "retrieved_on" : 1473808636,
+          "distinguished" : null,
+          "author_flair_text" : null,
+          "author" : "petrov76",
+          "id" : "cuxqr",
+          "edited" : false,
+          "parent_id" : "t1_cuxp1"
+        }
+      }
+    ]
+  }
+}
+
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools>curl -XGET "localhost:9200/_search?pretty" -H "Content-Type: application/json" -d"{ \"query\": { \"match\" : { \"body\" : { \"query\" : \"cat cats\", \"operator\" : \"and\" } } } }"
+{
+  "took" : 20,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 7,
+      "relation" : "eq"
+    },
+    "max_score" : 18.84402,
+    "hits" : [
+      {
+        "_index" : "comments",
+        "_id" : "BO2ofo0BkTw9Zp_Myn6d",
+        "_score" : 18.84402,
+        "_source" : {
+          "subreddit" : "reddit.com",
+          "ups" : 0,
+          "score" : 0,
+          "created_utc" : 1167405741,
+          "author_flair_css_class" : null,
+          "controversiality" : 0,
+          "body" : "Lemur photos: The next [funny cat](http://www.knitemare.org/cats/index.php?type=all) fad?",
+          "subreddit_id" : "t5_6",
+          "stickied" : false,
+          "link_id" : "t3_wcss",
+          "gilded" : 0,
+          "distinguished" : null,
+          "retrieved_on" : 1473809613,
+          "author" : "Darkmeerkat",
+          "author_flair_text" : null,
+          "id" : "cwd0x",
+          "parent_id" : "t3_wcss",
+          "edited" : false
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "f-2ofo0BkTw9Zp_Myglp",
+        "_score" : 17.08958,
+        "_source" : {
+          "distinguished" : null,
+          "retrieved_on" : 1473808480,
+          "gilded" : 0,
+          "id" : "cupbx",
+          "edited" : false,
+          "parent_id" : "t1_cupam",
+          "author_flair_text" : null,
+          "author" : "skinnydog777",
+          "score" : 1,
+          "ups" : 1,
+          "created_utc" : 1166050306,
+          "author_flair_css_class" : null,
+          "subreddit" : "reddit.com",
+          "subreddit_id" : "t5_6",
+          "stickied" : false,
+          "link_id" : "t3_uouq",
+          "controversiality" : 0,
+          "body" : "Cats are good jumpers. \r\nI once saw a cat clear a fence.\r\nRichard Norton can teach Zimba I am confident."
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "w-2ofo0BkTw9Zp_Myjp_",
+        "_score" : 14.7185955,
+        "_ignored" : [
+          "body.keyword"
+        ],
+        "_source" : {
+          "body" : "I'm not sure where you're getting that from.  Cats can have both hunger and pain.  Ask any cat with an empty food dish.  Also, it does matter if you have time to look after them properly.  However, looking after cats properly requires much less time than kids.\r\n\r\nYou have some strange ideas, sir.",
+          "controversiality" : 0,
+          "stickied" : false,
+          "link_id" : "t3_vd24",
+          "subreddit_id" : "t5_6",
+          "subreddit" : "reddit.com",
+          "created_utc" : 1166569173,
+          "author_flair_css_class" : null,
+          "score" : 1,
+          "ups" : 1,
+          "author" : "recursive",
+          "author_flair_text" : null,
+          "edited" : false,
+          "id" : "cvfaz",
+          "parent_id" : "t1_cvf5s",
+          "gilded" : 0,
+          "retrieved_on" : 1473808969,
+          "distinguished" : null
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "0u2ofo0BkTw9Zp_MymuY",
+        "_score" : 12.698342,
+        "_ignored" : [
+          "body.keyword"
+        ],
+        "_source" : {
+          "author_flair_text" : null,
+          "author" : "md5",
+          "parent_id" : "t3_w377",
+          "id" : "cw3z2",
+          "edited" : false,
+          "gilded" : 0,
+          "distinguished" : null,
+          "retrieved_on" : 1473809442,
+          "controversiality" : 0,
+          "body" : "&gt; On the other hand, infected women tend to be more outgoing, friendly, more promiscuous, and are considered more attractive to men compared with non-infected controls.\r\n\r\nSo how long before cat shit is classified as a social drug, and cats are banned or heavily taxed?",
+          "subreddit_id" : "t5_mouw",
+          "link_id" : "t3_w377",
+          "stickied" : false,
+          "subreddit" : "science",
+          "score" : 16,
+          "ups" : 16,
+          "author_flair_css_class" : null,
+          "created_utc" : 1167185967
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "_Oyofo0BkTw9Zp_MysJD",
+        "_score" : 10.878263,
+        "_ignored" : [
+          "body.keyword"
+        ],
+        "_source" : {
+          "subreddit" : "reddit.com",
+          "score" : 0,
+          "ups" : 0,
+          "author_flair_css_class" : null,
+          "created_utc" : 1165329487,
+          "body" : "It's not really about cats.  Basically, I said something along the lines of \"If you do X, Y might happen,\" and you said \"But I know of times where X was done and Y didn't happen.\"  So your argument really only does anything if it's in response to a claim like \"Whenever X happens, Y *always* happens.\"  So it's like me saying that throwing a cat off a roof is a bad idea and that the cat is likely to get hurt; then you say \"But my cousin did it and his cat was fine.\"  It's still a risky practice.\r\n\r\nAnd about it being a major contributing factor, I dunno.  I'm sure there are studies about this but I'm too lazy to look them up.",
+          "controversiality" : 1,
+          "subreddit_id" : "t5_6",
+          "link_id" : "t3_tl3j",
+          "stickied" : false,
+          "gilded" : 0,
+          "distinguished" : null,
+          "retrieved_on" : 1473807801,
+          "author" : "mpecsek",
+          "author_flair_text" : null,
+          "edited" : false,
+          "parent_id" : "t1_ctot3",
+          "id" : "ctp2u"
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "yuyofo0BkTw9Zp_Myqku",
+        "_score" : 10.780571,
+        "_ignored" : [
+          "body.keyword"
+        ],
+        "_source" : {
+          "author_flair_css_class" : null,
+          "created_utc" : 1165018713,
+          "score" : 1,
+          "ups" : 1,
+          "subreddit" : "reddit.com",
+          "link_id" : "t3_t9sp",
+          "stickied" : false,
+          "subreddit_id" : "t5_6",
+          "controversiality" : 0,
+          "body" : "I call nearly all of those tags overly picky relics of the day when HTML was trying to be a purely abstract markup in the style of docbook. On today's web they're as dumb as having a &lt;cat&gt; tag for talking about cats.\r\n\r\nOf all of those, only abbr and acronym make sense - because they actually add something new, a mouseover popup of the expansion.",
+          "retrieved_on" : 1473807530,
+          "distinguished" : null,
+          "gilded" : 0,
+          "id" : "ctapx",
+          "parent_id" : "t3_t9sp",
+          "edited" : false,
+          "author_flair_text" : null,
+          "author" : "JulianMorrison"
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "Lu2ofo0BkTw9Zp_MykOC",
+        "_score" : 10.430511,
+        "_ignored" : [
+          "body.keyword"
+        ],
+        "_source" : {
+          "subreddit" : "reddit.com",
+          "score" : 6,
+          "ups" : 6,
+          "author_flair_css_class" : null,
+          "created_utc" : 1166648443,
+          "body" : "Probably the same stuff europe is doing. Tax refunds, and better/cheaper childcare, yadda yadda yadda. No idea whether it's effective.\r\n\r\nThough, the real thing would be to convince someone that a kid isn't just an expensive pet. Lord knows how to do that though.\r\n\r\nMost yuppies would rather spend money on anything but, and even if they do get lonely would still prefer getting a cat. Cats never wear diapers.",
+          "controversiality" : 0,
+          "subreddit_id" : "t5_6",
+          "link_id" : "t3_vix8",
+          "stickied" : false,
+          "gilded" : 0,
+          "distinguished" : null,
+          "retrieved_on" : 1473809054,
+          "author" : "NoMoreNicksLeft",
+          "author_flair_text" : null,
+          "edited" : false,
+          "id" : "cvjki",
+          "parent_id" : "t1_cvjes"
+        }
+      }
+    ]
+  }
+}

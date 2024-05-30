@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="" data-darkreader-mode="dynamic" data-darkreader-scheme="dark">
+<head><style class="darkreader darkreader--fallback" media="screen" /><style class="darkreader darkreader--text" media="screen" /><style class="darkreader darkreader--invert" media="screen">.jfk-bubble.gtx-bubble, .captcheck_answer_label &gt; input + img, span#closed_text &gt; img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] &gt; #icon, #bit-notification-bar-iframe, ::-webkit-calendar-picker-indicator, img.Wirisformula {
+    filter: invert(100%) hue-rotate(180deg) brightness(105%) contrast(90%) !important;
+}</style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}
+[data-darkreader-inline-stopcolor] {
+  stop-color: var(--darkreader-inline-stopcolor) !important;
+}
+[data-darkreader-inline-bg] {
+  background: var(--darkreader-inline-bg) !important;
+}</style><style class="darkreader darkreader--variables" media="screen">:root {
+   --darkreader-neutral-background: #141617;
+   --darkreader-neutral-text: #e3dfd9;
+   --darkreader-selection-background: #0051b3;
+   --darkreader-selection-text: #f4f2ee;
+}</style><style class="darkreader darkreader--root-vars" media="screen" /><style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191b1c !important;
+}
+html {
+    color-scheme: dark !important;
+}
+html, body {
+    background-color: #191b1c;
+}
+html, body {
+    border-color: #797063;
+    color: #f4f2ee;
+}
+a {
+    color: #3698ff;
+}
+table {
+    border-color: #586063;
+}
+::placeholder {
+    color: #bbb4a9;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #434700 !important;
+    color: #f4f2ee !important;
+}
+::-webkit-scrollbar {
+    background-color: #222526;
+    color: #b4aca1;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #484e51;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #5b6367;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #4c5255;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191b1c;
+}
+::selection {
+    background-color: #0051b3 !important;
+    color: #f4f2ee !important;
+}
+::-moz-selection {
+    background-color: #0051b3 !important;
+    color: #f4f2ee !important;
+}</style>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>CS4417 Assignment 3 - MongoDB, Aggregation, and MapReduce</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: none;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li &gt; ol, li &gt; ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC &gt; ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style><style class="darkreader darkreader--sync" media="screen" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+<meta name="darkreader" content="89a1bf5705e04b379f3e640f6ad1231d" /><style class="darkreader darkreader--override" media="screen">.vimvixen-hint {
+    background-color: #815700 !important;
+    border-color: #e3b914 !important;
+    color: #fff4d2 !important;
+}
+#vimvixen-console-frame {
+    color-scheme: light !important;
+}
+::placeholder {
+    opacity: 0.5 !important;
+}
+#edge-translate-panel-body,
+.MuiTypography-body1,
+.nfe-quote-text {
+    color: var(--darkreader-neutral-text) !important;
+}
+gr-main-header {
+    background-color: #103d4c !important;
+}
+.tou-z65h9k,
+.tou-mignzq,
+.tou-1b6i2ox,
+.tou-lnqlqk {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.tou-75mvi {
+    background-color: #03222b !important;
+}
+.tou-ta9e87,
+.tou-1w3fhi0,
+.tou-1b8t2us,
+.tou-py7lfi,
+.tou-1lpmd9d,
+.tou-1frrtv8,
+.tou-17ezmgn {
+    background-color: #0a0a0a !important;
+}
+.tou-uknfeu {
+    background-color: #251703 !important;
+}
+.tou-6i3zyv {
+    background-color: #1a5c72 !important;
+}
+div.mermaid-viewer-control-panel .btn {
+    background-color: var(--darkreader-neutral-background);
+    fill: var(--darkreader-neutral-text);
+}
+svg g rect.er {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.entityBox {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.attributeBoxOdd {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.attributeBoxEven {
+    fill: var(--darkreader-selection-background);
+    fill-opacity: 0.8 !important;
+}
+svg rect.er.relationshipLabelBox {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g g.nodes rect,
+svg g g.nodes polygon {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.task {
+    fill: var(--darkreader-selection-background) !important;
+}
+svg line.messageLine0,
+svg line.messageLine1 {
+    stroke: var(--darkreader-neutral-text) !important;
+}
+div.mermaid .actor {
+    fill: var(--darkreader-neutral-background) !important;
+}
+.google-material-icons {
+    font-family: 'Google Material Icons' !important;
+}
+.google-symbols {
+    font-family: 'Google Symbols Subset', 'Google Symbols' !important;
+}
+.material-icons-extended {
+    font-family: 'Material Icons Extended' !important;
+}
+mitid-authenticators-code-app &gt; .code-app-container {
+    background-color: white !important;
+    padding-top: 1rem;
+}
+iframe#unpaywall[src$="unpaywall.html"] {
+    color-scheme: light !important;
+}
+.oui-icon {
+    font-family: 'Oui Icons' !important;
+}</style></head>
+<body>
+<header id="title-block-header">
+<h1 class="title">CS4417 Assignment 3 - MongoDB, Aggregation, and
+MapReduce</h1>
+<p class="date">16 March 2024</p>
+</header>
+<p>The goal of this assignment is for you to gain familiarity with
+MongoDB, one of the most widely-used tools for the management and
+querying of big, unstructured data.</p>
+<p>MongoDB uses the JSON (and related BSON) format for data, as we saw
+in class.<br />
+The MongoDB shell provides an interactive JavaScript interface to
+MongoDB.<br />
+</p>
+<p>The mongodb manual is here: <a href="https://www.mongodb.com/docs/" class="uri">https://www.mongodb.com/docs/</a></p>
+<h1 id="installing-mongodb">Installing MongoDB</h1>
+<p>There are various ways of installing MongoDB on different systems.
+You can use any approach you want. We are providing detailed
+instructions using <code>docker</code> which should work in a
+platform-independent fashion. You will need at least a few GB of free
+hard drive space to install.</p>
+<h2 id="if-installing-using-docker-on-your-own-machine">If Installing
+using Docker on your Own Machine</h2>
+<p><em>Windows alert</em>: If after installing docker desktop and
+restarting the PC you get a message that states, “WSL 2 installation is
+incomplete,” then going to <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package" class="uri">https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package</a>
+and installing <code>wsl_update_x64</code> and then restarting the PC
+should fix this problem.</p>
+<p>First, install <a href="https://www.docker.com/" class="uri">https://www.docker.com/</a> Docker Desktop or Engine. We’ll
+use the Docker command line <a href="https://docs.docker.com/engine/reference/commandline/docker/" class="uri">https://docs.docker.com/engine/reference/commandline/docker/</a>
+to install mongodb.</p>
+<p>Make sure docker has fully started before issuing the following
+commands. Then, from a command prompt on your machine:</p>
+<p>Download a docker image containing mongodb.</p>
+<pre><code>    docker pull mongo:6.0</code></pre>
+<p>Create a new container from this image.</p>
+<pre><code>    docker run --name my-mongo -d mongo:6.0</code></pre>
+<p>Running <code>docker ps</code> should show something like</p>
+<pre><code>    CONTAINER ID   IMAGE       COMMAND                  CREATED          STATUS          PORTS       NAMES
+    4a442375f0ff   mongo:6.0   "docker-entrypoint.s…"   32 seconds ago   Up 32 seconds   27017/tcp   my-mongo</code></pre>
+<p>You can now start a shell from within your docker container like
+so:</p>
+<pre><code>    docker exec -it my-mongo bash</code></pre>
+<p>If your docker container is stopped for whatever reason after you do
+the original <code>docker run</code>, you can start it again with</p>
+<pre><code>    docker start my-mongo</code></pre>
+<p>You can also use the Dashboard of the Docker Desktop application. If
+you run into trouble with docker and the <code>docker</code> commands
+stop working, you can re-start it using “Restart Docker” in the Docker
+Desktop application. You can also use it to see all of the containers
+you’ve created and delete any that you don’t need.</p>
+
+<h1 id="copying-tweets-for-import">Copying Tweets for Import</h1>
+<p>We will use the same <code>tweets-utf-8.json</code> file as for
+assignment 2.</p>
+<h2 id="docker-on-own-machine">Docker on own machine</h2>
+<p>If you are using docker, copy the <code>tweets-utf-8.json</code> file
+to your container. From the command prompt of your operating system (for
+this command, <em>not</em> the prompt in your docker container) in the
+folder where you saved the <code>tweets-utf-8.json</code> file, run the
+following command.</p>
+<pre><code>    docker cp tweets-utf-8.json my-mongo:/</code></pre>
+
+<h1 id="importing-the-tweet-data">Importing the Tweet Data</h1>
+<p>From this point onward, we assume you are running a shell, either in
+the docker container as described above.</p>
+<p>You can now import our example twitter data, contained in the
+<code>tweets.json</code> file, by typing</p>
+<pre><code>    mongoimport --db tweetdb --collection tweets --file tweets-utf-8.json</code></pre>
+<p>MongoDB organizes data into <em>databases</em> and
+<em>collections</em>. In this case, you will use the <em>tweetdb</em>
+database and the <em>tweets</em> collection of documents.</p>
+<p>MongoDB uses its own shell that allows users to run queries. To start
+the shell, run the following command:</p>
+<pre><code>    mongosh</code></pre>
+<p>Once you have started the shell, to access the <em>tweetdb</em>
+database, type</p>
+<pre><code>    use tweetdb</code></pre>
+<p>Having done so, you can now access the <em>tweets</em> collection.
+For example, to print an example tweet, type</p>
+<pre><code>    db.tweets.findOne()</code></pre>
+<p>Have a look at the resulting JSON object.</p>
+<p>MongoDB <em>queries</em> are written in JavaScript. They are in some
+ways analogous to SQL. The following tutorial has many examples:</p>
+<p><a href="https://docs.mongodb.com/v6.0/tutorial/query-documents/" class="uri">https://docs.mongodb.com/v6.0/tutorial/query-documents/</a></p>
+<p>The following reference page gives the different operators that can
+be used in queries:</p>
+<p><a href="https://docs.mongodb.com/v6.0/reference/operator/query/" class="uri">https://docs.mongodb.com/v6.0/reference/operator/query/</a></p>
+<p><em>For this assignment, we recommend you compose your queries in a
+local file on your computer, and copy-and-paste it into the mongo shell
+to try them out.</em></p>
+<h2 id="submit-a-file-called-queries.js-that-contains-a-query-for-each-of-the-following-questions.">Submit
+a file called <code>queries.js</code> that contains a query for each of
+the following questions.</h2>
+<h3 id="pts-retrieve-all-tweets-that-are-replying-to-the-user-with-screen-name-globeandmail">1)
+[5pts] Retrieve all tweets that are replying to the user with screen
+name “globeandmail”</h3>
+<h3 id="pts-retrieve-all-tweets-made-by-the-user-with-screen-name-mlhealthunit">2)
+[5pts] Retrieve all tweets made by the user with screen name
+“MLHealthUnit”</h3>
+<h2 id="submit-a-file-called-aggregations.js-that-contains-a-query-for-each-of-the-following-questions-using-the-mongodb-aggregation-framework.">Submit
+a file called <code>aggregations.js</code> that contains a query for
+each of the following questions, using the MongoDB aggregation
+framework.</h2>
+<p>Aggregations in MongoDB are summaries of a collection. They are
+similar in concept to the operations performed in a MapReduce. MongoDB
+aggregations are more restrictive than MapReduce, but their
+implementation is very efficient. See the following documents for
+details.</p>
+<p><a href="https://docs.mongodb.com/v6.0/core/aggregation-introduction/" class="uri">https://docs.mongodb.com/v6.0/core/aggregation-introduction/</a></p>
+<p><a href="https://docs.mongodb.com/manual/reference/operator/aggregation/" class="uri">https://docs.mongodb.com/manual/reference/operator/aggregation/</a></p>
+<h3 id="pts-produce-a-list-of-users-together-with-the-total-number-of-times-they-tweeted-sorted-in-decreasing-order.">3)
+[10pts] Produce a list of users, together with the total number of times
+they tweeted, sorted in decreasing order.</h3>
+<h3 id="pts-produce-a-list-of-place-names-together-with-the-total-number-of-tweets-from-that-place-name-sorted-in-decreasing-order.">4)
+[10pts] Produce a list of place names, together with the total number of
+tweets from that place name, sorted in decreasing order.</h3>
+<h3 id="pts-produce-a-list-of-users-together-with-the-total-number-of-replies-to-that-user-sorted-in-decreasing-order.">5)
+[15pts] Produce a list of users, together with the total number of
+replies to that user, sorted in decreasing order.</h3>
+<h3 id="pts-produce-a-list-of-users-together-with-the-total-number-of-hashtags-used-by-that-user-sorted-in-decreasing-order.">6)
+[15pts] Produce a list of users, together with the total number of
+hashtags used by that user, sorted in decreasing order.</h3>
+<h2 id="submit-a-file-called-mapreduce.js-that-provides-a-mapper-reducer-and-mongodb-query-to-answer-the-question-below.">Submit
+a file called <code>mapreduce.js</code> that provides a mapper, reducer,
+and mongodb query to answer the question below.</h2>
+<p>MongoDB also provides a mechanism for MapReduce computations, though
+it is deprecated and <em>you will get a warning when you try to use it,
+but that is OK for this assignment.</em> Here is an example of mapreduce
+in mongodb:</p>
+<pre><code>    function myMapper() {
+        //The mapper function is called with each document, which has the special name 'this'
+        //Emit a key-value pair:
+        //(the mapper can emit many key-value pairs if needed)
+        emit(this.user.screen_name, 1);
+    }
+
+    function myReducer(key, values) {
+        //The reducer is called once for each key, and is passed an array
+        //containing all values corresponding to that key.
+        //Produce the desired result
+        return Array.sum( values );
+    }
+
+    db.tweets.mapReduce(myMapper, myReducer, { query: {}, out: "mroutput" })
+    db.mroutput.aggregate({$sort: {value: -1}})</code></pre>
+<p>Note that the output of the MapReduce has been placed in a new
+collection called <code>mroutput</code>, which is then queried to get
+the top answers. (This collection can be given any name.)</p>
+<p>Again, you can paste this whole code block into mongosh to try
+it.</p>
+<h3 id="pts-produce-a-new-collection-that-contains-each-hashtag-used-in-the-collection-of-tweets-along-with-the-number-of-times-that-hashtag-was-used.">7)
+[40pts] Produce a new collection that contains each hashtag used in the
+collection of tweets, along with the number of times that hashtag was
+used.</h3>
+<p>Hint:</p>
+<p>To do something with each object in an array in javascript, we can
+write:</p>
+<pre><code>for(obj of arr) {
+    //Do something with obj, or obj.field, or whatever...
+}</code></pre>
+</body>
+</html>

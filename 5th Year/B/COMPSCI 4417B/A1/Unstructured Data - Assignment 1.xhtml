@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2024-01-26" />
+  <title>Unstructured Data - Assignment 1</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Unstructured Data - Assignment 1</h1>
+<p class="date">26 January 2024</p>
+</header>
+<h1 id="part-1---elastic-search">Part 1 - Elastic Search</h1>
+<h2 id="goal">Goal</h2>
+<p>The goal of this assignment is to become familiar with a modern
+information retrieval system, Elasticsearch. Elasticsearch is an
+information retrieval system that can index documents as we saw in
+class, and can respond to queries. This assignment will help you begin
+to understand how modern search engines work, and how documents and
+queries can be represented for information retrieval tasks.</p>
+<h2 id="details">Details</h2>
+<p>This assignment is to be done individually. You may discuss the
+project with your classmates, but the work you turn in should be your
+own. The attached file <code>test.json</code> contains Reddit comments
+from December 2006, available by the <a href="https://pushshift.io"
+class="uri">https://pushshift.io</a> open data initiative.</p>
+<h2 id="setup">Setup</h2>
+<p>First, install Elasticsearch. This assignment was tested with version
+8.6.0. We have tried to provide simple instructions, but if you find a
+different way to install it that works for you, that’s fine. You
+<strong>do not</strong> have to sign up for a 30-day trial.</p>
+<p>We found it easiest to install from a <code>.zip</code> (Windows) or
+a <code>.tar.gz</code> file (Mac, Linux), downloaded from</p>
+<p><a href="https://www.elastic.co/downloads/elasticsearch"
+class="uri">https://www.elastic.co/downloads/elasticsearch</a></p>
+<p>Basically, you download the file and unzip it, and you can run
+elasticsearch directly in the unzipped folder. This keeps everything
+contained.</p>
+<p><strong>BEFORE YOU RUN ELASTICSEARCH FOR THE FIRST TIME,</strong>
+edit the <code>.\config\elasticsearch.yml</code> (Windows) or
+<code>./config/elasticsearch.yml</code> (Mac, Linux) file within your
+downloaded elasticsearch folder, and add a line</p>
+<pre><code>xpack.security.enabled: false</code></pre>
+<p><em>You would never do this on a production server but it’ll make it
+easier for our purposes.</em> I suggest adding a blank line to the end
+of the file also.</p>
+<h3 id="additionally-on-windows">Additionally, on
+<strong>Windows</strong></h3>
+<p>If you have previously installed Elasticsearch as a service, we
+recommend uninstalling and rebooting. You need to make sure there are no
+environment variables starting with <code>ES_</code> set or they may
+cause problems.</p>
+<p>You will need the command line program <code>curl</code>, which is
+supposed to come with Windows 10 and Windows 11. <strong>If you are
+using powershell, make sure you run it as <code>curl.exe</code></strong>
+If you need it, you can get curl here: <a href="https://curl.se"
+class="uri">https://curl.se</a></p>
+<h2 id="getting-started-with-elasticsearch">Getting Started with
+Elasticsearch</h2>
+<p>Elasticsearch uses a client-server model of operation. For this
+assignment, you will use two terminal windows. In one, you will run the
+elasticsearch server on your machine. In the other, you will run
+commands on your machine that access the server.</p>
+<p>To start the server on a Mac or Linux machine, open a terminal window
+go to the location where you downloaded elasticsearch and run</p>
+<pre><code>./bin/elasticsearch</code></pre>
+<p>On Windows, run</p>
+<pre><code>.\bin\elasticsearch.bat</code></pre>
+<p><strong>It may take a few minutes to start, especially on an older
+machine.</strong> You will see some text output eventually. Keep this
+window open and open another terminal window to run the commands below
+needed to complete the assignment. You can terminate the server when you
+are finished by pressing <code>ctrl-c</code> in that window, or by
+closing the window. If you close it by accident, just start it again and
+you will continue from where you left off.</p>
+<p>If you have correctly installed everything and Elasticsearch is
+running, clicking this link <a href="http://localhost:9200"
+class="uri">http://localhost:9200</a> should show you a JSON object
+similar to</p>
+<pre><code>{
+  &quot;name&quot; : &quot;borg.local&quot;,
+  &quot;cluster_name&quot; : &quot;elasticsearch&quot;,
+  &quot;cluster_uuid&quot; : &quot;einFyrjJTGiw0CHxEfxbvQ&quot;,
+  &quot;version&quot; : {
+    &quot;number&quot; : &quot;8.6.0&quot;,
+    &quot;build_flavor&quot; : &quot;default&quot;,
+    &quot;build_type&quot; : &quot;tar&quot;,
+    &quot;build_hash&quot; : &quot;f67ef2df40237445caa70e2fef79471cc608d70d&quot;,
+    &quot;build_date&quot; : &quot;2023-01-04T09:35:21.782467981Z&quot;,
+    &quot;build_snapshot&quot; : false,
+    &quot;lucene_version&quot; : &quot;9.4.2&quot;,
+    &quot;minimum_wire_compatibility_version&quot; : &quot;7.17.0&quot;,
+    &quot;minimum_index_compatibility_version&quot; : &quot;7.0.0&quot;
+  },
+  &quot;tagline&quot; : &quot;You Know, for Search&quot;
+}</code></pre>
+<h3 id="running-elasticsearch-commands">Running Elasticsearch
+Commands</h3>
+<p>Download <code>Assignment1.zip</code> and unpack it; check the Part1
+folder for the relevant files.</p>
+<p>For this assignment, we will use <code>curl</code>, which is a
+command-line program that communicates with the elasticnet server. The
+tasks below will involve running <code>curl</code> by copying and
+pasting commands into a terminal window (Mac or Linux) or a Command
+Prompt window (Windows) – on Windows, right clicking on a command window
+pastes in the command. Before you start, ensure you have the
+elasticsearch server running in a terminal window (MacOS,Linux) or start
+the service running as described above (Windows).</p>
+<h2 id="questions">Questions:</h2>
+<h3 id="indexing-20">Indexing (20)</h3>
+<h4 id="basic-indexing">Basic Indexing</h4>
+<ol type="1">
+<li>Follow along with the Getting Started Guide <strong>Exploring Your
+Cluster</strong> chapter <a
+href="https://www.elastic.co/guide/en/elasticsearch/reference/6.7/getting-started-explore.html"
+class="uri">https://www.elastic.co/guide/en/elasticsearch/reference/6.7/getting-started-explore.html</a>,
+from the <em>Cluster Health</em> up to and including the <em>Delete an
+Index</em> section of the chapter. For each command in the Starting
+Guide, click the <code>Copy as cURL</code> link and paste the command
+into your command window. Run the command, and copy <strong>the command
+and its output</strong> into a text file called
+<code>elasticcommands.txt</code> for submission. <em>Note that we want
+you to follow along with the old version (6.7) of the guide, but it will
+work with the newest version of elastic search.</em></li>
+<li>Explain in one sentence why we might break an index into
+shards.</li>
+<li>Explain in one sentence why we might replicate an index.</li>
+<li>Explain in one sentence why your cluster health is yellow.</li>
+</ol>
+<h4 id="indexing-reddit">Indexing Reddit</h4>
+<ol type="1">
+<li><p>Ensure that your Elasticsearch instance has no indices in it.
+Provide the command you used to verify this.</p></li>
+<li><p>Find the <code>test.json</code> file provided in the zip. Run the
+following command, ensuring that you do this from the same folder that
+has the <code>test.json</code> file in it. What is the name of the index
+created by the command? Mac or Linux:</p>
+<pre><code>curl -H &#39;Content-Type: application/json&#39; -XPOST localhost:9200/_bulk --data-binary @test.json &gt; /dev/null</code></pre>
+<p>Windows Command Prompt:</p>
+<pre><code>curl -H &quot;Content-Type: application/json&quot; -XPOST localhost:9200/_bulk --data-binary @test.json &gt; NUL</code></pre></li>
+<li><p>How large is the index? (pri.store.size)</p></li>
+</ol>
+<h3 id="search-15">Search (15)</h3>
+<p>Answer the following questions using the three example search queries
+below.</p>
+<ol type="1">
+<li>Do the three queries below return different sets of documents? How
+can you tell?</li>
+<li>Give the highest score for each query.</li>
+<li>What can you deduce about the default stemming procedure used by
+Elasticsearch?</li>
+<li>Give a query that could be used to check whether or not
+Elasticsearch removes a common English stopword.</li>
+</ol>
+<h5 id="query-1">Query 1</h5>
+<p>Mac or linux:</p>
+<pre><code>curl -XGET &#39;localhost:9200/_search?pretty&#39; -H &#39;Content-Type: application/json&#39; -d&#39;
+{ &quot;query&quot;: { &quot;match&quot; : { &quot;body&quot; : { &quot;query&quot; : &quot;cat&quot;} } } } &#39;</code></pre>
+<p>Windows Command Prompt:</p>
+<pre><code>curl -XGET &quot;localhost:9200/_search?pretty&quot; -H &quot;Content-Type: application/json&quot; -d&quot;{ \&quot;query\&quot;: { \&quot;match\&quot; : { \&quot;body\&quot; : { \&quot;query\&quot; : \&quot;cat\&quot;} } } }&quot;</code></pre>
+<h5 id="query-2">Query 2</h5>
+<p>Mac or linux:</p>
+<pre><code>curl -XGET &#39;localhost:9200/_search?pretty&#39; -H &#39;Content-Type: application/json&#39;  -d&#39;
+{ &quot;query&quot;: { &quot;match&quot; : { &quot;body&quot; : { &quot;query&quot; : &quot;cats&quot;} } } } &#39;</code></pre>
+<p>Windows command prompt:</p>
+<pre><code>curl -XGET &quot;localhost:9200/_search?pretty&quot; -H &quot;Content-Type: application/json&quot; -d&quot;{ \&quot;query\&quot;: { \&quot;match\&quot; : { \&quot;body\&quot; : { \&quot;query\&quot; : \&quot;cats\&quot;} } } }&quot;</code></pre>
+<h5 id="query-3">Query 3</h5>
+<p>Mac or linux:</p>
+<pre><code>curl -XGET &#39;localhost:9200/_search?pretty&#39; -H &#39;Content-Type: application/json&#39; -d&#39;
+{ &quot;query&quot;: { &quot;match&quot; : { &quot;body&quot; : { &quot;query&quot; : &quot;cat cats&quot;, &quot;operator&quot; : &quot;and&quot; } } } }&#39;</code></pre>
+<p>Windows Command Prompt:</p>
+<pre><code>curl -XGET &quot;localhost:9200/_search?pretty&quot; -H &quot;Content-Type: application/json&quot; -d&quot;{ \&quot;query\&quot;: { \&quot;match\&quot; : { \&quot;body\&quot; : { \&quot;query\&quot; : \&quot;cat cats\&quot;, \&quot;operator\&quot; : \&quot;and\&quot; } } } }&quot;</code></pre>
+<h3 id="analyzers-15">Analyzers (15)</h3>
+<p>Elasticsearch uses what it calls “analyzers” to process text data
+when indexing. <a
+href="https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyzers.html"
+class="uri">https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyzers.html</a></p>
+<ol type="1">
+<li>Delete the all indices in your Elasticsearch instance before
+beginning this section. Submit the code you use to do so.</li>
+<li>To change how Elasticsearch indexes documents, we provide
+<strong>settings</strong> for an index <em>before documents are added to
+it.</em> (This is why we had to delete all indices before running these
+next commands.) Run the following two (quite large) commands to change
+the default stemming behaviour. The first defines a new analyzer,
+<code>my_analyzer</code>, which uses a stemmer. It creates a
+<code>comments</code> index and adds this analyzer to it. The second
+informs Elasticsearch that it should use <code>my_analyzer</code> when
+analyzing the <code>body</code> field of documents going into the
+<code>comments</code> index.</li>
+</ol>
+<p>Mac or linux:</p>
+<pre><code>curl -XPUT &#39;localhost:9200/comments?pretty&#39; -H &#39;Content-Type: application/json&#39; -d&#39;
+{
+    &quot;settings&quot;: {
+        &quot;analysis&quot; : {
+            &quot;analyzer&quot; : {
+                &quot;my_analyzer&quot; : {
+                    &quot;tokenizer&quot; : &quot;standard&quot;,
+                    &quot;filter&quot; : [&quot;lowercase&quot;, &quot;my_stemmer&quot;]
+                }
+            },
+            &quot;filter&quot; : {
+                &quot;my_stemmer&quot; : {
+                    &quot;type&quot; : &quot;stemmer&quot;,
+                    &quot;name&quot; : &quot;english&quot;
+                }
+            }
+        }
+    }
+}&#39;</code></pre>
+<p>Windows Command Prompt:</p>
+<pre><code>curl -XPUT &quot;localhost:9200/comments?pretty&quot; -H &quot;Content-Type: application/json&quot; -d&quot;{\&quot;settings\&quot;:{\&quot;analysis\&quot;:{\&quot;analyzer\&quot;:{\&quot;my_analyzer\&quot;:{\&quot;tokenizer\&quot;:\&quot;standard\&quot;,\&quot;filter\&quot;:[\&quot;lowercase\&quot;,\&quot;my_stemmer\&quot;]}},\&quot;filter\&quot;:{\&quot;my_stemmer\&quot;:{\&quot;type\&quot;:\&quot;stemmer\&quot;,\&quot;name\&quot;:\&quot;english\&quot;}}}}}&quot;</code></pre>
+<p>Mac or linux:</p>
+<pre><code>curl -XPUT &#39;localhost:9200/comments/_mapping?pretty&#39; -H &#39;Content-Type: application/json&#39; -d&#39;
+{
+        &quot;properties&quot; : {
+          &quot;body&quot; : {
+            &quot;type&quot; : &quot;text&quot;,
+            &quot;analyzer&quot; : &quot;my_analyzer&quot;
+          }
+        }
+}&#39;</code></pre>
+<p>Windows Command Prompt:</p>
+<pre><code>curl -XPUT &quot;localhost:9200/comments/_mapping?pretty&quot; -H &quot;Content-Type: application/json&quot; -d&quot;{\&quot;properties\&quot; : {\&quot;body\&quot; : {\&quot;type\&quot; : \&quot;text\&quot;,\&quot;analyzer\&quot; : \&quot;my_analyzer\&quot;}}}&quot;</code></pre>
+<p>You can test your analyzer on a specific piece of text like so:</p>
+<p>Mac or linux:</p>
+<pre><code>curl -X POST &#39;localhost:9200/comments/_analyze?pretty&#39; -H &#39;Content-Type: application/json&#39; -d&#39;
+{
+  &quot;analyzer&quot;: &quot;my_analyzer&quot;,
+  &quot;text&quot;: &quot;I\u0027m a :) person, and you?&quot;
+}&#39;</code></pre>
+<p>Windows Command Prompt:</p>
+<pre><code>curl -X POST &quot;localhost:9200/comments/_analyze?pretty&quot; -H &quot;Content-Type: application/json&quot; -d&quot;{  \&quot;analyzer\&quot;: \&quot;my_analyzer\&quot;, \&quot;text\&quot;: \&quot;I\u0027m a :) person, and you?\&quot;}&quot;</code></pre>
+<p>Since you would have deleted your index as specified earlier in the
+section, before you answer the next questions you must re-index the
+documents by re-running the indexing command you did before.</p>
+<ol type="1">
+<li>Re-run the three queries from the previous section. In a few
+sentences, describe how the results have changed.</li>
+<li>Has the size of the index become larger or smaller compared with the
+previous runs? Why do you think this might be?</li>
+</ol>
+<h2 id="part-1-deliverables">Part 1 Deliverables</h2>
+<p><strong>Submissions will only be accepted through OWL.</strong></p>
+<ol type="1">
+<li>Submit your answers to all Part 1 questions as an attachment on OWL
+in a text file <code>part1.txt</code>.</li>
+<li>For the Indexing section, also upload your
+<code>elasticcommands.txt</code> file.</li>
+</ol>
+<hr />
+<h1 id="part-2---lucene">Part 2 - Lucene</h1>
+<h2 id="goal-1">Goal</h2>
+<p>The goal of this part of the assignment is to create, use, and modify
+a simple information retrieval system using Lucene. This will help you
+begin to understand how search engines work, and how documents and
+queries can be represented for information retrieval tasks. These
+representations will be valuable later as we discuss other tasks,
+including classification, clustering, and topic modeling.</p>
+<h2 id="details-1">Details</h2>
+<p>This assignment is to be done individually. You may discuss the
+project with your classmates, but the work you turn in should be your
+own.</p>
+<p>Lucene is an open-source project from Apache that consists of a set
+of Java classes that can easily be assembled to create a search engine
+that can be modified and customized. Note that Lucene has been ported to
+other languages. You may use a language other than Java, but no support
+from the instructor and TAs will be available for any language other than
+Java.</p>
+<p>The Java API is available online and can be very helpful: <a
+href="https://lucene.apache.org/core/8_7_0/index.html"
+class="uri">https://lucene.apache.org/core/8_7_0/index.html</a></p>
+<h2 id="setup-1">Setup</h2>
+<ol type="1">
+<li><p>If you are on a Mac, ensure that you have command line tools
+installed by running <code>xcode-select --install</code> in a terminal
+window.</p></li>
+<li><p>Make sure you have Java JDK 17 installed. This assignment was
+tested with java version <code>17.0.5</code>. (Check by executing the
+command <code>java -version</code> in a terminal window.) You should see
+something like</p>
+<pre><code>java version &quot;17.0.5&quot; 2022-10-18 LTS
+Java(TM) SE Runtime Environment (build 17.0.5+9-LTS-191) 
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.5+9-LTS-191, mixed mode, sharing)</code></pre>
+<p>Java can be downloaded at <a
+href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html"
+class="uri">https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html</a>.</p></li>
+<li><p>In a unix-like environment, you can use
+<code>. ./setclasspath.sh</code> while in your assignment directory to
+set your classpath; Windows users may need to use a different approach
+but can use <code>setclasspath.sh</code> as a reference and/or try the
+provided <code>setclasspath.bat</code>. If you are familiar with a Java
+IDE, you may use that. If you have problems with ClassPath, you can use the following method for the JAR files included in the assignment. For Windows, run <code>javac -cp ".;/dir/commons.jar;/dir/more_jar_files.jar" MyClass.java</code> For a Unix-like environment: <code>javac -cp ".:/dir/commons.jar:/dir/more_jar_files.jar" MyClass.java</code> However, keep in mind that if you use this method, you may need to run java commands like the ones listed above, e.g., for Windows: <code>java -cp ".;/dir/commons.jar;/dir/more_jar_files.jar" MyClass</code>, for a Unix-like environment: <code>java -cp ".:/dir/commons.jar:/dir/more_jar_files.jar" MyClass</code>.</p></li>
+<li><p>Compile the provided <code>MyStandardAnalyzer.java</code>,
+<code>MyIndexFiles.java</code>, and <code>MySearchFiles.java</code>
+sources, for example by running <code>javac *.java</code>. They have
+been copied directly from the Lucene demos: <a
+href="https://lucene.apache.org/core/8_7_0/demo/overview-summary.html"
+class="uri">https://lucene.apache.org/core/8_7_0/demo/overview-summary.html</a>
+and produce identical results.</p>
+<ol type="a">
+<li>To run the original indexing demo:
+<code>java org.apache.lucene.demo.IndexFiles -docs documents/</code></li>
+<li>To run the original query demo:
+<code>java org.apache.lucene.demo.SearchFiles</code></li>
+<li>To run our version of the indexing demo:
+<code>java MyIndexFiles -docs documents/</code></li>
+<li>To run our version of the query demo:
+<code>java MySearchFiles</code></li>
+</ol></li>
+</ol>
+<h2 id="questions-1">Questions:</h2>
+<p>You will need to refer to the Lucene API <a
+href="http://lucene.apache.org/core/8_7_0/"
+class="uri">http://lucene.apache.org/core/8_7_0/</a> and/or the Lucene
+source code <a
+href="https://github.com/apache/lucene/tree/releases/lucene-solr/8.7.0"
+class="uri">https://github.com/apache/lucene/tree/releases/lucene-solr/8.7.0</a>
+to answer some of these questions. You will also need to examine the
+documents we provided to develop appropriate queries to answer some of
+these questions.</p>
+<h3 id="the-lucene-demo-10">The Lucene Demo (10)</h3>
+<ol type="1">
+<li>Submit the following queries to the Lucene 8.7.0 demo and paste the
+results. Note that we have included a <code>testcases.txt</code> file
+that you can pipe in to simplify testing,
+e.g. <code>java MySearchFiles &lt; testcases.txt</code>
+<ol type="a">
+<li>his fiery sword</li>
+<li>ALAS O LOVE</li>
+<li>and</li>
+<li>reckon</li>
+<li>love</li>
+<li>fair</li>
+</ol></li>
+<li>Does the Lucene 8.7.0 demo use stopwords? Explain in one or two
+sentences how this can be deduced from the results of the queries
+above.</li>
+<li>Does the Lucene 8.7.0 demo do stemming? If so, what stemmer does it
+use? Explain in one or two sentences how this can be deduced from the
+results of the queries above.</li>
+<li>What is the default similarity metric used by the Lucene 8.7.0 demo
+to retrieve documents? Can this be deduced from the results of the above
+queries? If so, explain how.</li>
+</ol>
+<h3 id="modifying-the-demo">Modifying the Demo</h3>
+<p>In the three sections below, you will modify the provided code in the
+provided <code>MyStandardAnalyzer.java</code>,
+<code>MyIndexFiles.java</code>, and <code>MySearchFiles.java</code>
+sources to change how Lucene processes documents and queries. Rather
+than starting “from scratch” in each section, make changes to your files
+incrementally; e.g., after you have made modifications affecting
+stopping, keep those modifications as you make further modifications
+affecting stemming and similarity. You should submit one set of files
+that includes all modifications.</p>
+<p>Hint: When you modify files, it may be necessary to re-index your
+documents after compiling your sources in order to see those changes
+reflected at query time.</p>
+<h4 id="stopping-10">Stopping (10)</h4>
+<p>Modify the provided <code>.java</code> files to use a custom stopword
+list that consists of (only) the following words:
+<code>"about", "dost", "from", "hath", "his", "O", "that", "the", "thou"</code>
+Hint: Test your stop words thoroughly. <strong>Comment your code clearly
+to identify where you have made changes.</strong></p>
+<p>Hint: The easiest way to create a <code>CharArraySet</code> is:</p>
+<pre><code>// Preamble
+import java.util.Arrays;
+import java.util.List;
+
+// In a class
+static final List&lt;String&gt; wordList = Arrays.asList(&quot;these&quot;,&quot;are&quot;,&quot;words&quot;);
+static final CharArraySet wordCharArraySet = new CharArraySet(wordList, false);</code></pre>
+<p>Run the following queries using your modified demo and paste in the
+results:</p>
+<pre><code>a. his fiery sword
+b. ALAS O LOVE
+c. and
+d. reckon
+e. love
+f. fair</code></pre>
+<h4 id="stemming-15">Stemming (15)</h4>
+<p>Modify your version of the demo to use the Porter stemmer. Hint: The
+<code>PorterStemFilter</code> class implements Porter stemming.
+<strong>Comment your code clearly to identify where you have made
+changes.</strong></p>
+<p>Run the following queries using your modified demo and paste in the
+results:</p>
+<pre><code>a. his fiery sword
+b. ALAS O LOVE
+c. and
+d. reckon
+e. love
+f. fair</code></pre>
+<h4 id="similarity-15">Similarity (15)</h4>
+<p>Modify your version of the demo to use TFIDF similarity. Hint: The
+<code>ClassicSimilarity</code> class implements TFIDF scoring.
+<strong>Comment your code clearly to identify where you have made
+changes.</strong></p>
+<p>Run the following queries using your modified demo and paste in the
+results:</p>
+<pre><code>a. his fiery sword
+b. ALAS O LOVE
+c. and
+d. reckon
+e. love
+f. fair</code></pre>
+<h2 id="part-2-deliverables">Part 2 Deliverables</h2>
+<p><strong>Submissions will only be accepted through OWL.</strong></p>
+<ol type="1">
+<li>Submit your answers to all Part 2 questions as an attachment on OWL
+as a text file <code>part2.txt</code>.</li>
+<li>Submit your three <code>.java</code> files,
+<code>MyIndexFiles.java</code>, <code>MySearchFiles.java</code>, and
+<code>MyStandardAnalyzer.java</code>, as attachments through OWL. (Some
+of the files may not need modification but submit all three.)</li>
+</ol>
+<hr />
+<h1 id="checklist">Checklist</h1>
+<p>Your owl submission should include the following attachments and no
+additional files:</p>
+<ul>
+<li><code>part1.txt</code></li>
+<li><code>elasticcommands.txt</code></li>
+<li><code>part2.txt</code></li>
+<li><code>MyIndexFiles.java</code></li>
+<li><code>MySearchFiles.java</code></li>
+<li><code>MyStandardAnalyzer.java</code></li>
+</ul>
+</body>
+</html>

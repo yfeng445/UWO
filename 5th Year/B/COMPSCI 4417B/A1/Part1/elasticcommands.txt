@@ -1,0 +1,51 @@
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools>curl -X GET "localhost:9200/_cat/health?v&pretty"
+epoch      timestamp cluster       status node.total node.data shards pri relo init unassign pending_tasks max_task_wait_time active_shards_percent
+1707166407 20:53:27  elasticsearch yellow          1         1      1   1    0    0        1             0                  -                 50.0%
+
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools>curl -X GET "localhost:9200/_cat/indices?v&pretty"
+health status index    uuid                   pri rep docs.count docs.deleted store.size pri.store.size dataset.size
+yellow open   customer xPtJTxf7TGSiE473h7Vibw   1   1          0            0       227b
+ 227b         227b
+
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools>curl -X PUT "localhost:9200/customer?pretty&pretty"
+{
+  "error" : {
+    "root_cause" : [
+      {
+        "type" : "resource_already_exists_exception",
+        "reason" : "index [customer/xPtJTxf7TGSiE473h7Vibw] already exists",
+        "index_uuid" : "xPtJTxf7TGSiE473h7Vibw",
+        "index" : "customer"
+      }
+    ],
+    "type" : "resource_already_exists_exception",
+    "reason" : "index [customer/xPtJTxf7TGSiE473h7Vibw] already exists",
+    "index_uuid" : "xPtJTxf7TGSiE473h7Vibw",
+    "index" : "customer"
+  },
+  "status" : 400
+}
+
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools>curl -X GET "localhost:9200/_cat/indices?v&pretty"
+health status index    uuid                   pri rep docs.count docs.deleted store.size pri.store.size dataset.size
+yellow open   customer xPtJTxf7TGSiE473h7Vibw   1   1          0            0       227b
+ 227b         227b
+
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools>curl -X PUT "http://localhost:9200/customer/_doc/1?pretty" -H "Content-Type: application/json" -d "{ \"name\": \"John Doe\" }"
+{
+  "_index" : "customer",
+  "_id" : "1",
+  "_version" : 1,
+  "result" : "created",
+  "_shards" : {
+    "total" : 2,
+    "successful" : 1,
+    "failed" : 0
+  },
+  "_seq_no" : 0,
+  "_primary_term" : 1
+}
+
+
+
+

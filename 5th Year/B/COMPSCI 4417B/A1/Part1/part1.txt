@@ -1,0 +1,43 @@
+1. Basic Indexing
+Q1.1:
+Answered in elasticcommands.txt file
+Q1.2: 
+Breaking an index into shards could improve performance and scalability since it distribute the data across multiple nodes.
+Q1.3:
+Replicating an index could increase data availability and protecting from errors.
+Q1.4: 
+The cluster health is yellow since at least one replica shard has not been allocated.
+
+
+2. Indexing Reddit:
+Q2.1:
+curl -X GET "localhost:9200/_cat/indices?v"
+health status index uuid pri rep docs.count docs.deleted store.size pri.store.size dataset.size
+Q2.2: 
+The name of the index created by the command is comments
+Q2.3:
+pri.store.size=32mb
+
+
+3. Search:
+Q3.1:
+Yes, three queries given return different sets of documents.
+Because the `total` value under `hits` in the results of each query are different. In the first query (`"query": "cat"`) returns 90 documents, while the second query (`"query": "cats"`) returns 43 documents, and the third query (`"query": "cat cats", "operator": "and"`) returns 7 documents. 
+Q3.2:
+For the first query (`"query": "cat"`), the highest score is 10.503806.
+For the second query (`"query": "cats"`), the highest score is 11.629242.
+For the third query (`"query": "cat cats", "operator": "and"`), the highest score is 18.84402.
+Q3.3:
+In the default stemming procedure used by Elasticsearch, it may considered overlapped words "cat" and "cats" as different words.
+Q3.4:
+Compare the result from the following queries:
+curl -XGET "localhost:9200/_search?pretty" -H "Content-Type: application/json" -d"{ \"query\": { \"match\" : { \"body\" : \"the cat\" } } }"
+curl -XGET "localhost:9200/_search?pretty" -H "Content-Type: application/json" -d"{ \"query\": { \"match\" : { \"body\" : \"cat\" } } }"
+
+4. Analyzers:
+Q4.1: 
+curl -X DELETE "localhost:9200/comments"
+Q4.2.1:
+Using analyzers reduce time consumed, increase hits value with a penalty of slightly falls in relative score.
+Q4.2.2:
+The size of index becomes smaller since some unnecessary tokens are removed via stemming.

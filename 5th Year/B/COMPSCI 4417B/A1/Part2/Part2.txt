@@ -1,0 +1,9 @@
+1. The Lucene Demo
+Q1.2. 
+Yes, the demo use stopwords. It could be deduced from the return query for the word "and".
+It returns 8 total matching documents, indicating it was ignored in the search.
+Q1.3:
+No. Since no words form variations are reduced to base form.
+Q1.4:
+The default simiarity metric used by the Lucene 8.7.0 is BM25, which is mentioned in its official document.
+Using BM25 model improve search result relevance and quality.
