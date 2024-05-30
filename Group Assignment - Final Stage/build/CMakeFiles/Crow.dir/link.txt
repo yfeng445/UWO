@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/Crow.dir/main.cpp.o CMakeFiles/Crow.dir/Webserver.cpp.o CMakeFiles/Crow.dir/Router.cpp.o CMakeFiles/Crow.dir/API.cpp.o CMakeFiles/Crow.dir/Voice.cpp.o CMakeFiles/Crow.dir/Database.cpp.o -o Crow  /usr/lib/x86_64-linux-gnu/libcurl.so /usr/lib/x86_64-linux-gnu/libmysqlcppconn.so -lpthread 
