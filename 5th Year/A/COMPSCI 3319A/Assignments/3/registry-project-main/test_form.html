@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form method="get" id="1" style="display: none;">
+		<input type="text" name="name">
+	</form>
+	<form method="get">
+		<input type="text" name="username"><button onclick="sub()" type="button">submit1</button>
+		<input type="text" name="password"><button onclick="sub()" type="button">submit2</button>
+		<button>submit all</button>
+	</form>
+	<script>
+		function sub() {
+			let hiddenForm = document.getElementById("1");
+			let input = hiddenForm.querySelector("input");
+			let info = event.target.previousElementSibling;
+			input.name = info.name;
+			input.value = info.value;
+			hiddenForm.submit();
+		}
+	</script>
+</body>
+</html>

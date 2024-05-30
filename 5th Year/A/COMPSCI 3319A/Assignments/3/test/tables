@@ -1,0 +1,72 @@
+
+mysql> select * from course;
++-----------+-------------------------------+-------+------+
+| coursenum | coursename                    | level | year |
++-----------+-------------------------------+-------+------+
+| CS1026    | Intro to Programming          |     1 | 1995 |
+| CS1033    | Multimedia and Communications |     1 | 2003 |
+| CS3319    | Intro to Databases            |     3 | 1973 |
+| CS3342    | Programming Languages         |     3 | 2001 |
+| CS4411    | Advanced Databases            |     4 | 1987 |
++-----------+-------------------------------+-------+------+
+
+mysql> select * from courseoffer;
++------+------------+--------+------+-------------+
+| coid | numstudent | term   | year | whichcourse |
++------+------------+--------+------+-------------+
+| RD11 |         19 | Fall   | 2020 | CS3342      |
+| RD12 |        120 | Spring | 2022 | CS4411      |
+| RD13 |        130 | Spring | 1990 | CS1026      |
+| RD14 |         10 | Fall   | 2020 | CS3342      |
+| RD34 |        820 | Fall   | 2021 | CS1033      |
+| RD37 |        720 | Spring | 2021 | CS1033      |
+| RD44 |        200 | Fall   | 2023 | CS3319      |
+| RD45 |        198 | Fall   | 2020 | CS3342      |
+| RD55 |        250 | Fall   | 2020 | CS3319      |
+| RD66 |        170 | Fall   | 2021 | CS3319      |
+| RD99 |        600 | Fall   | 2001 | CS1033      |
++------+------------+--------+------+-------------+
+
+mysql> select * from hasworkedon;
++----------+------+-------+
+| tauserid | coid | hours |
++----------+------+-------+
+| mgeller  | RD12 |   100 |
+| mgeller  | RD34 |   100 |
+| mgeller  | RD37 |    50 |
+| mgeller  | RD44 |    20 |
+| mgeller  | RD99 |   100 |
+| rgeller  | RD34 |   200 |
+| rgreen   | RD34 |   200 |
++----------+------+-------+
+
+mysql> select * from ta;
++----------+-----------+----------+------------+------------+------------------------------------------------------------------------------+
+| tauserid | firstname | lastname | studentnum | degreetype | image                                                                        |
++----------+-----------+----------+------------+------------+------------------------------------------------------------------------------+
+| cgeller  | Chandler  | Geller   | 251000444  | PhD        | NULL                                                                         |
+| jbing    | Joey      | Bing     | 251000444  | PhD        | NULL                                                                         |
+| mgeller  | Monica    | Geller   | 251000123  | PhD        | https://  .gif |
+| pbing2   | Patty     | Bing     | 251000666  | Masters    | NULL                                                                         |
+| rgeller  | Ross      | Geller   | 251000222  | Masters    | NULL                                                                         |
+| rgreen   | Rachel    | Green    | 251000333  | PhD        | NULL                                                                         |
+| staki    | Shino     | Taki     | 251000255  | PhD        | NULL                                                                         |
++----------+-----------+----------+------------+------------+------------------------------------------------------------------------------+
+
+mysql> select * from loves;
++-----------+------------+
+| ltauserid | lcoursenum |
++-----------+------------+
+| rgreen    | CS1026     |
+| mgeller   | CS1033     |
+| rgreen    | CS1033     |
+| staki     | CS3342     |
+| mgeller   | CS4411     |
++-----------+------------+
+
+mysql> select * from hates;
++-----------+------------+
+| htauserid | hcoursenum |
++-----------+------------+
+| mgeller   | CS3319     |
++-----------+------------+
