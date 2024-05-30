@@ -1,0 +1,18 @@
+﻿  A6-Water.cpp
+C:\Users\56111\Desktop\6\A6-Water.cpp(70,18): warning C4244: “+=”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\Users\56111\Desktop\6\A6-Water.cpp(71,17): warning C4244: “+=”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\Users\56111\Desktop\6\A6-Water.cpp(73,14): warning C4244: “-=”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\Users\56111\Desktop\6\A6-Water.cpp(76,19): warning C4244: “=”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\Users\56111\Desktop\6\A6-Water.cpp(79,18): warning C4305: “=”: 从“double”到“GLfloat”截断
+C:\Users\56111\Desktop\6\A6-Water.cpp(91,18): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\56111\Desktop\6\A6-Water.cpp(125,17): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+C:\Users\56111\Desktop\6\A6-Water.cpp(128,17): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+C:\Users\56111\Desktop\6\A6-Water.cpp(131,18): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\56111\Desktop\6\A6-Water.cpp(134,14): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\56111\Desktop\6\A6-Water.cpp(137,14): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\56111\Desktop\6\A6-Water.cpp(153,37): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\56111\Desktop\6\A6-Water.cpp(153,28): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+glew32s.lib(glew.obj) : warning LNK4099: 未找到 PDB“”(使用“glew32s.lib(glew.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+  Project2.vcxproj -> C:\Users\56111\source\repos\Project2\x64\Debug\Project2.exe
