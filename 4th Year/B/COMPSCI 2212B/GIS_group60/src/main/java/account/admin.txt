@@ -1,0 +1,2 @@
+admin1	abc
+admin2	def
