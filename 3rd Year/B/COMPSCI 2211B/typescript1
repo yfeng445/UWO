@@ -1,0 +1,30 @@
+Script started on 2022-01-25 22:44:12-05:00 [TERM="xterm-256color" TTY="/dev/pts/43" COLUMNS="120" LINES="30"]
+]0;yfeng445@compute:~/2211/Assignments/Assignment1[?2004h[yfeng445@compute Assignment1]$ ls -la
+[?2004ltotal 22
+drwxr-xr-x 4 yfeng445 yfeng445 7 Jan 25 22:42 [0m[01;34m.[0m
+drwxr-xr-x 3 yfeng445 yfeng445 3 Jan 25 22:41 [01;34m..[0m
+-rw-rw-r-- 1 yfeng445 yfeng445 0 Jan 25 22:42 df0
+-rw-rw-r-- 1 yfeng445 yfeng445 0 Jan 25 22:42 df1
+drwxrwxr-x 2 yfeng445 yfeng445 3 Jan 25 22:42 [01;34mdir0[0m
+drwxrwxr-x 2 yfeng445 yfeng445 2 Jan 25 22:42 [01;34mdir1[0m
+-rw-r--r-- 1 yfeng445 yfeng445 0 Jan 25 22:44 typescript
+]0;yfeng445@compute:~/2211/Assignments/Assignment1[?2004h[yfeng445@compute Assignment1]$ ls -d
+[?2004l[0m[01;34m.[0m
+]0;yfeng445@compute:~/2211/Assignments/Assignment1[?2004h[yfeng445@compute Assignment1]$ ls -ld di*
+[?2004ldrwxrwxr-x 2 yfeng445 yfeng445 3 Jan 25 22:42 [0m[01;34mdir0[0m
+drwxrwxr-x 2 yfeng445 yfeng445 2 Jan 25 22:42 [01;34mdir1[0m
+]0;yfeng445@compute:~/2211/Assignments/Assignment1[?2004h[yfeng445@compute Assignment1]$ ls -ty[K
+[?2004ltypescript  [0m[01;34mdir0[0m  df1  df0  [01;34mdir1[0m
+]0;yfeng445@compute:~/2211/Assignments/Assignment1[?2004h[yfeng445@compute Assignment1]$ ls -r -la
+[?2004ltotal 22
+-rw-r--r-- 1 yfeng445 yfeng445 0 Jan 25 22:44 typescript
+drwxrwxr-x 2 yfeng445 yfeng445 2 Jan 25 22:42 [0m[01;34mdir1[0m
+drwxrwxr-x 2 yfeng445 yfeng445 3 Jan 25 22:42 [01;34mdir0[0m
+-rw-rw-r-- 1 yfeng445 yfeng445 0 Jan 25 22:42 df1
+-rw-rw-r-- 1 yfeng445 yfeng445 0 Jan 25 22:42 df0
+drwxr-xr-x 3 yfeng445 yfeng445 3 Jan 25 22:41 [01;34m..[0m
+drwxr-xr-x 4 yfeng445 yfeng445 7 Jan 25 22:42 [01;34m.[0m
+]0;yfeng445@compute:~/2211/Assignments/Assignment1[?2004h[yfeng445@compute Assignment1]$ exit
+[?2004lexit
+
+Script done on 2022-01-25 22:48:42-05:00 [COMMAND_EXIT_CODE="0"]

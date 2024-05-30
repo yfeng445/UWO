@@ -1,0 +1,14 @@
+Script started on 2022-01-25 22:42:12-05:00 [TERM="xterm-256color" TTY="/dev/pts/43" COLUMNS="120" LINES="30"]
+]0;yfeng445@compute:~/2211/Assignments/Assignment1[?2004h[yfeng445@compute Assignment1]$ mkdir dir0
+[?2004l]0;yfeng445@compute:~/2211/Assignments/Assignment1[?2004h[yfeng445@compute Assignment1]$ mkdir dir1
+[?2004l]0;yfeng445@compute:~/2211/Assignments/Assignment1[?2004h[yfeng445@compute Assignment1]$ touch df1[K0
+[?2004l]0;yfeng445@compute:~/2211/Assignments/Assignment1[?2004h[yfeng445@compute Assignment1]$ touch df1
+[?2004l]0;yfeng445@compute:~/2211/Assignments/Assignment1[?2004h[yfeng445@compute Assignment1]$ cd dir1[K0
+[?2004l]0;yfeng445@compute:~/2211/Assignments/Assignment1/dir0[?2004h[yfeng445@compute dir0]$ touch df0
+[?2004l]0;yfeng445@compute:~/2211/Assignments/Assignment1/dir0[?2004h[yfeng445@compute dir0]$ pwd
+[?2004l/home/yfeng445/2211/Assignments/Assignment1/dir0
+]0;yfeng445@compute:~/2211/Assignments/Assignment1/dir0[?2004h[yfeng445@compute dir0]$ cd ~
+[?2004l]0;yfeng445@compute:~[?2004h[yfeng445@compute ~]$ exit
+[?2004lexit
+
+Script done on 2022-01-25 22:43:03-05:00 [COMMAND_EXIT_CODE="0"]
