@@ -1,0 +1,18 @@
+body {
+        background-color:rgba(232, 213, 213,1);
+}
+a { 
+    background-color:rgb(219,202,202);
+    text-align:center;
+    color: black;
+    line-height:50px;
+    font-size:35px; 
+    border: solid 1px darkgoldenrod;
+} 
+a:hover {
+    background-color:rgb(194,178,178); 
+    color:white;
+}
+heading{
+    align-content: center;
+}

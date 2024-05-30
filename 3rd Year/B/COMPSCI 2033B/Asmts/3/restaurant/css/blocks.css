@@ -1,0 +1,35 @@
+/*
+
+	Do NOT edit styles in here or add your own styles to this sheet.
+	Create your own separate file for your own styles. In your own
+	file, you can even add rule-sets that override some of these, i.e.:
+	.ib {
+		background-color:tan;
+	}
+	Add those styles in your own, new CSS file and NOT in this blocks.css file.
+
+*/
+
+
+.wrapper {
+    width:1200px;
+    margin:auto;
+}
+
+.ib {
+    display:inline-block;
+    margin: 1px;
+}
+
+.i1 {
+    width:1195px;
+}
+.i2 {
+    width:595px;
+}
+.i3 {
+    width:395px
+}
+.i4 {
+    width:215px;
+}
