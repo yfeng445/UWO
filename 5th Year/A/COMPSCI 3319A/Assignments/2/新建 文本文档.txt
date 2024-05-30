@@ -1,0 +1,2 @@
+sudo mysql -nvvf --verbose -pFf1404545652 <  script1.sql  > outputscript1.txt 2>&1
+sudo mysql -nvvf --verbose -pFf1404545652 < 45_script2.sql  > 45_outputscript2.txt 2>&1

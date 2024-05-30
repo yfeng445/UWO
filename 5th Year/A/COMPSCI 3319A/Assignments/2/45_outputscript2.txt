@@ -1,0 +1,643 @@
+mysql: [Warning] Using a password on the command line interface can be insecure.
+--------------
+SELECT * FROM course
+--------------
+
++-----------+----------------------+-------+------+
+| coursenum | coursename           | level | year |
++-----------+----------------------+-------+------+
+| CS1026    | Intro to Programming |     1 | 1995 |
+| CS1033    | Multimedia           |     1 | 2003 |
+| CS3319    | Intro to Databases   |     3 | 1973 |
+| CS4411    | Advanced Databases   |     4 | 1987 |
++-----------+----------------------+-------+------+
+4 rows in set (0.00 sec)
+
+--------------
+UPDATE course SET coursename = "Multimedia and Communications" WHERE coursename = "Multimedia"
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+--------------
+UPDATE hasworkedon SET hours = 200 WHERE tauserid IN (SELECT tauserid FROM ta WHERE firstname LIKE 'R%')
+--------------
+
+Query OK, 2 rows affected (0.04 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+--------------
+SELECT * FROM course
+--------------
+
++-----------+-------------------------------+-------+------+
+| coursenum | coursename                    | level | year |
++-----------+-------------------------------+-------+------+
+| CS1026    | Intro to Programming          |     1 | 1995 |
+| CS1033    | Multimedia and Communications |     1 | 2003 |
+| CS3319    | Intro to Databases            |     3 | 1973 |
+| CS4411    | Advanced Databases            |     4 | 1987 |
++-----------+-------------------------------+-------+------+
+4 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM hasworkedon
+--------------
+
++----------+------+-------+
+| tauserid | coid | hours |
++----------+------+-------+
+| mgeller  | RD12 |   100 |
+| mgeller  | RD34 |   100 |
+| mgeller  | RD37 |    50 |
+| mgeller  | RD44 |    20 |
+| mgeller  | RD99 |   100 |
+| rgeller  | RD34 |   200 |
+| rgreen   | RD34 |   200 |
++----------+------+-------+
+7 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM course
+--------------
+
++-----------+-------------------------------+-------+------+
+| coursenum | coursename                    | level | year |
++-----------+-------------------------------+-------+------+
+| CS1026    | Intro to Programming          |     1 | 1995 |
+| CS1033    | Multimedia and Communications |     1 | 2003 |
+| CS3319    | Intro to Databases            |     3 | 1973 |
+| CS4411    | Advanced Databases            |     4 | 1987 |
++-----------+-------------------------------+-------+------+
+4 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM courseoffer
+--------------
+
++------+------------+--------+------+-------------+
+| coid | numstudent | term   | year | whichcourse |
++------+------------+--------+------+-------------+
+| RD12 |        120 | Spring | 2022 | CS4411      |
+| RD13 |        130 | Spring | 1990 | CS1026      |
+| RD34 |        820 | Fall   | 2021 | CS1033      |
+| RD37 |        720 | Spring | 2021 | CS1033      |
+| RD44 |        200 | Fall   | 2023 | CS3319      |
+| RD55 |        250 | Fall   | 2020 | CS3319      |
+| RD66 |        170 | Fall   | 2021 | CS3319      |
+| RD99 |        600 | Fall   | 2001 | CS1033      |
++------+------------+--------+------+-------------+
+8 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM ta
+--------------
+
++----------+-----------+----------+------------+------------+
+| tauserid | firstname | lastname | studentnum | degreetype |
++----------+-----------+----------+------------+------------+
+| cgeller  | Chandler  | Geller   | 251000444  | PhD        |
+| jbing    | Joey      | Bing     | 251000444  | PhD        |
+| mgeller  | Monica    | Geller   | 251000123  | PhD        |
+| pbing    | Phoebe    | Bing     | 251000555  | Masters    |
+| pbing2   | Patty     | Bing     | 251000666  | Masters    |
+| rgeller  | Ross      | Geller   | 251000222  | Masters    |
+| rgreen   | Rachel    | Green    | 251000333  | PhD        |
++----------+-----------+----------+------------+------------+
+7 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM loves
+--------------
+
++-----------+------------+
+| ltauserid | lcoursenum |
++-----------+------------+
+| rgreen    | CS1026     |
+| mgeller   | CS1033     |
+| rgreen    | CS1033     |
+| mgeller   | CS4411     |
++-----------+------------+
+4 rows in set (0.00 sec)
+
+--------------
+INSERT INTO course VALUES ('CS3342','Programming Languages', 3, 2001)
+--------------
+
+Query OK, 1 row affected (0.04 sec)
+
+--------------
+INSERT INTO courseoffer VALUES ('RD11',19, 'Fall',2020, 'CS3342')
+--------------
+
+Query OK, 1 row affected (0.00 sec)
+
+--------------
+INSERT INTO courseoffer VALUES ('RD45',198, 'Fall',2020, 'CS3342')
+--------------
+
+Query OK, 1 row affected (0.02 sec)
+
+--------------
+INSERT INTO courseoffer VALUES ('RD14',10, 'Fall',2020, 'CS3342')
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+
+--------------
+INSERT INTO ta VALUES ('staki','Shino','Taki','251000255','PhD')
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+
+--------------
+INSERT INTO loves VALUES ('staki','CS3342')
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+
+--------------
+SELECT * FROM course
+--------------
+
++-----------+-------------------------------+-------+------+
+| coursenum | coursename                    | level | year |
++-----------+-------------------------------+-------+------+
+| CS1026    | Intro to Programming          |     1 | 1995 |
+| CS1033    | Multimedia and Communications |     1 | 2003 |
+| CS3319    | Intro to Databases            |     3 | 1973 |
+| CS3342    | Programming Languages         |     3 | 2001 |
+| CS4411    | Advanced Databases            |     4 | 1987 |
++-----------+-------------------------------+-------+------+
+5 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM courseoffer
+--------------
+
++------+------------+--------+------+-------------+
+| coid | numstudent | term   | year | whichcourse |
++------+------------+--------+------+-------------+
+| RD11 |         19 | Fall   | 2020 | CS3342      |
+| RD12 |        120 | Spring | 2022 | CS4411      |
+| RD13 |        130 | Spring | 1990 | CS1026      |
+| RD14 |         10 | Fall   | 2020 | CS3342      |
+| RD34 |        820 | Fall   | 2021 | CS1033      |
+| RD37 |        720 | Spring | 2021 | CS1033      |
+| RD44 |        200 | Fall   | 2023 | CS3319      |
+| RD45 |        198 | Fall   | 2020 | CS3342      |
+| RD55 |        250 | Fall   | 2020 | CS3319      |
+| RD66 |        170 | Fall   | 2021 | CS3319      |
+| RD99 |        600 | Fall   | 2001 | CS1033      |
++------+------------+--------+------+-------------+
+11 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM ta
+--------------
+
++----------+-----------+----------+------------+------------+
+| tauserid | firstname | lastname | studentnum | degreetype |
++----------+-----------+----------+------------+------------+
+| cgeller  | Chandler  | Geller   | 251000444  | PhD        |
+| jbing    | Joey      | Bing     | 251000444  | PhD        |
+| mgeller  | Monica    | Geller   | 251000123  | PhD        |
+| pbing    | Phoebe    | Bing     | 251000555  | Masters    |
+| pbing2   | Patty     | Bing     | 251000666  | Masters    |
+| rgeller  | Ross      | Geller   | 251000222  | Masters    |
+| rgreen   | Rachel    | Green    | 251000333  | PhD        |
+| staki    | Shino     | Taki     | 251000255  | PhD        |
++----------+-----------+----------+------------+------------+
+8 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM loves
+--------------
+
++-----------+------------+
+| ltauserid | lcoursenum |
++-----------+------------+
+| rgreen    | CS1026     |
+| mgeller   | CS1033     |
+| rgreen    | CS1033     |
+| staki     | CS3342     |
+| mgeller   | CS4411     |
++-----------+------------+
+5 rows in set (0.00 sec)
+
+--------------
+SELECT lastname FROM ta
+--------------
+
++----------+
+| lastname |
++----------+
+| Geller   |
+| Bing     |
+| Geller   |
+| Bing     |
+| Bing     |
+| Geller   |
+| Green    |
+| Taki     |
++----------+
+8 rows in set (0.00 sec)
+
+--------------
+SELECT DISTINCT lastname FROM ta
+--------------
+
++----------+
+| lastname |
++----------+
+| Geller   |
+| Bing     |
+| Green    |
+| Taki     |
++----------+
+4 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM ta ORDER BY firstname
+--------------
+
++----------+-----------+----------+------------+------------+
+| tauserid | firstname | lastname | studentnum | degreetype |
++----------+-----------+----------+------------+------------+
+| cgeller  | Chandler  | Geller   | 251000444  | PhD        |
+| jbing    | Joey      | Bing     | 251000444  | PhD        |
+| mgeller  | Monica    | Geller   | 251000123  | PhD        |
+| pbing2   | Patty     | Bing     | 251000666  | Masters    |
+| pbing    | Phoebe    | Bing     | 251000555  | Masters    |
+| rgreen   | Rachel    | Green    | 251000333  | PhD        |
+| rgeller  | Ross      | Geller   | 251000222  | Masters    |
+| staki    | Shino     | Taki     | 251000255  | PhD        |
++----------+-----------+----------+------------+------------+
+8 rows in set (0.00 sec)
+
+--------------
+SELECT firstname, lastname, tauserid FROM ta WHERE degreetype = "Masters"
+--------------
+
++-----------+----------+----------+
+| firstname | lastname | tauserid |
++-----------+----------+----------+
+| Phoebe    | Bing     | pbing    |
+| Patty     | Bing     | pbing2   |
+| Ross      | Geller   | rgeller  |
++-----------+----------+----------+
+3 rows in set (0.00 sec)
+
+--------------
+SELECT courseoffer.coid, courseoffer.term, courseoffer.year, course.coursenum FROM (courseoffer JOIN course ON course.coursenum = courseoffer.whichcourse) WHERE course.coursename LIKE '%Database%'
+--------------
+
++------+--------+------+-----------+
+| coid | term   | year | coursenum |
++------+--------+------+-----------+
+| RD44 | Fall   | 2023 | CS3319    |
+| RD55 | Fall   | 2020 | CS3319    |
+| RD66 | Fall   | 2021 | CS3319    |
+| RD12 | Spring | 2022 | CS4411    |
++------+--------+------+-----------+
+4 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM (course JOIN courseoffer ON course.coursenum = courseoffer.whichcourse) WHERE (courseoffer.year < course.year)
+--------------
+
++-----------+-------------------------------+-------+------+------+------------+--------+------+-------------+
+| coursenum | coursename                    | level | year | coid | numstudent | term   | year | whichcourse |
++-----------+-------------------------------+-------+------+------+------------+--------+------+-------------+
+| CS1026    | Intro to Programming          |     1 | 1995 | RD13 |        130 | Spring | 1990 | CS1026      |
+| CS1033    | Multimedia and Communications |     1 | 2003 | RD99 |        600 | Fall   | 2001 | CS1033      |
++-----------+-------------------------------+-------+------+------+------------+--------+------+-------------+
+2 rows in set (0.00 sec)
+
+--------------
+SELECT course.coursename, course.coursenum FROM ((course JOIN loves ON course.coursenum = loves.lcoursenum) JOIN ta ON loves.ltauserid = ta.tauserid) WHERE (ta.lastname = "Geller")
+--------------
+
++-------------------------------+-----------+
+| coursename                    | coursenum |
++-------------------------------+-----------+
+| Multimedia and Communications | CS1033    |
+| Advanced Databases            | CS4411    |
++-------------------------------+-----------+
+2 rows in set (0.00 sec)
+
+--------------
+SELECT SUM(courseoffer.numstudent), course.coursename, course.coursenum FROM (course JOIN courseoffer ON course.coursenum = courseoffer.whichcourse) WHERE (course.coursenum = "CS1033")
+--------------
+
++-----------------------------+-------------------------------+-----------+
+| SUM(courseoffer.numstudent) | coursename                    | coursenum |
++-----------------------------+-------------------------------+-----------+
+|                        2140 | Multimedia and Communications | CS1033    |
++-----------------------------+-------------------------------+-----------+
+1 row in set (0.00 sec)
+
+--------------
+SELECT DISTINCT ta.firstname, ta.lastname, courseoffer.whichcourse FROM ((ta JOIN hasworkedon ON ta.tauserid = hasworkedon.tauserid) JOIN courseoffer ON hasworkedon.coid = courseoffer.coid) WHERE (courseoffer.whichcourse LIKE "CS1%")
+--------------
+
++-----------+----------+-------------+
+| firstname | lastname | whichcourse |
++-----------+----------+-------------+
+| Monica    | Geller   | CS1033      |
+| Ross      | Geller   | CS1033      |
+| Rachel    | Green    | CS1033      |
++-----------+----------+-------------+
+3 rows in set (0.00 sec)
+
+--------------
+SELECT ta.firstname, ta.lastname, hasworkedon.hours, courseoffer.whichcourse FROM ((ta JOIN hasworkedon ON ta.tauserid = hasworkedon.tauserid) JOIN courseoffer ON courseoffer.coid = hasworkedon.coid) WHERE (hasworkedon.hours = (SELECT MAX(hours) FROM hasworkedon))
+--------------
+
++-----------+----------+-------+-------------+
+| firstname | lastname | hours | whichcourse |
++-----------+----------+-------+-------------+
+| Ross      | Geller   |   200 | CS1033      |
+| Rachel    | Green    |   200 | CS1033      |
++-----------+----------+-------+-------------+
+2 rows in set (0.00 sec)
+
+--------------
+SELECT course.coursename, course.coursenum FROM ((course JOIN loves ON course.coursenum = loves.lcoursenum) JOIN hates ON course.coursenum = hates.hcoursenum) WHERE ((course.coursenum NOT IN (SELECT lcoursenum FROM loves)) AND (course.coursenum NOT IN (SELECT hcoursenum FROM hates)))
+--------------
+
+Empty set (0.00 sec)
+
+--------------
+SELECT ta.lastname, ta.firstname, COUNT(hasworkedon.coid) FROM ta JOIN hasworkedon ON ta.tauserid = hasworkedon.tauserid GROUP BY ta.tauserid, ta.lastname, ta.firstname HAVING COUNT(hasworkedon.coid) > 1
+--------------
+
++----------+-----------+-------------------------+
+| lastname | firstname | COUNT(hasworkedon.coid) |
++----------+-----------+-------------------------+
+| Geller   | Monica    |                       5 |
++----------+-----------+-------------------------+
+1 row in set (0.00 sec)
+
+--------------
+SELECT DISTINCT ta.firstname, ta.lastname, course.coursenum, course.coursename FROM (ta JOIN loves ON ta.tauserid = loves.ltauserid JOIN course ON course.coursenum = loves.lcoursenum)
+--------------
+
++-----------+----------+-----------+-------------------------------+
+| firstname | lastname | coursenum | coursename                    |
++-----------+----------+-----------+-------------------------------+
+| Rachel    | Green    | CS1026    | Intro to Programming          |
+| Monica    | Geller   | CS1033    | Multimedia and Communications |
+| Rachel    | Green    | CS1033    | Multimedia and Communications |
+| Shino     | Taki     | CS3342    | Programming Languages         |
+| Monica    | Geller   | CS4411    | Advanced Databases            |
++-----------+----------+-----------+-------------------------------+
+5 rows in set (0.00 sec)
+
+--------------
+CREATE VIEW FallCourseCounts AS SELECT co.whichcourse AS course_number, COUNT(co.coid) AS offering_count FROM courseoffer AS co WHERE co.term = 'Fall' GROUP BY co.whichcourse
+--------------
+
+Query OK, 0 rows affected (0.02 sec)
+
+--------------
+SELECT c.coursenum, c.coursename, f.offering_count FROM course AS c JOIN FallCourseCounts AS f ON c.coursenum = f.course_number WHERE f.offering_count = (SELECT MAX(offering_count) FROM FallCourseCounts)
+--------------
+
++-----------+-----------------------+----------------+
+| coursenum | coursename            | offering_count |
++-----------+-----------------------+----------------+
+| CS3319    | Intro to Databases    |              3 |
+| CS3342    | Programming Languages |              3 |
++-----------+-----------------------+----------------+
+2 rows in set (0.00 sec)
+
+--------------
+SELECT DISTINCT ta.firstname, ta.lastname, ta.tauserid, hasworkedon.coid, hasworkedon.hours from ta JOIN hasworkedon ON ta.tauserid = hasworkedon.tauserid ORDER BY hasworkedon.hours DESC
+--------------
+
++-----------+----------+----------+------+-------+
+| firstname | lastname | tauserid | coid | hours |
++-----------+----------+----------+------+-------+
+| Ross      | Geller   | rgeller  | RD34 |   200 |
+| Rachel    | Green    | rgreen   | RD34 |   200 |
+| Monica    | Geller   | mgeller  | RD12 |   100 |
+| Monica    | Geller   | mgeller  | RD34 |   100 |
+| Monica    | Geller   | mgeller  | RD99 |   100 |
+| Monica    | Geller   | mgeller  | RD37 |    50 |
+| Monica    | Geller   | mgeller  | RD44 |    20 |
++-----------+----------+----------+------+-------+
+7 rows in set (0.00 sec)
+
+--------------
+CREATE VIEW  tahate AS (SELECT ta.firstname, ta.lastname, ta.tauserid, course.coursenum, course.coursename FROM (ta JOIN hates ON ta.tauserid = hates.htauserid JOIN course ON coursenum = hates.hcoursenum))
+--------------
+
+Query OK, 0 rows affected (0.01 sec)
+
+--------------
+SELECT * FROM tahate
+--------------
+
++-----------+----------+----------+-----------+-------------------------------+
+| firstname | lastname | tauserid | coursenum | coursename                    |
++-----------+----------+----------+-----------+-------------------------------+
+| Phoebe    | Bing     | pbing    | CS1033    | Multimedia and Communications |
+| Monica    | Geller   | mgeller  | CS3319    | Intro to Databases            |
+| Phoebe    | Bing     | pbing    | CS3319    | Intro to Databases            |
++-----------+----------+----------+-----------+-------------------------------+
+3 rows in set (0.00 sec)
+
+--------------
+SELECT DISTINCT tahate.firstname, tahate.lastname, tahate.tauserid FROM (tahate JOIN hasworkedon ON tahate.tauserid = hasworkedon.tauserid JOIN courseoffer ON hasworkedon.coid = courseoffer.coid) ORDER BY tahate.firstname
+--------------
+
++-----------+----------+----------+
+| firstname | lastname | tauserid |
++-----------+----------+----------+
+| Monica    | Geller   | mgeller  |
++-----------+----------+----------+
+1 row in set (0.00 sec)
+
+--------------
+SELECT * FROM ta
+--------------
+
++----------+-----------+----------+------------+------------+
+| tauserid | firstname | lastname | studentnum | degreetype |
++----------+-----------+----------+------------+------------+
+| cgeller  | Chandler  | Geller   | 251000444  | PhD        |
+| jbing    | Joey      | Bing     | 251000444  | PhD        |
+| mgeller  | Monica    | Geller   | 251000123  | PhD        |
+| pbing    | Phoebe    | Bing     | 251000555  | Masters    |
+| pbing2   | Patty     | Bing     | 251000666  | Masters    |
+| rgeller  | Ross      | Geller   | 251000222  | Masters    |
+| rgreen   | Rachel    | Green    | 251000333  | PhD        |
+| staki    | Shino     | Taki     | 251000255  | PhD        |
++----------+-----------+----------+------------+------------+
+8 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM hates
+--------------
+
++-----------+------------+
+| htauserid | hcoursenum |
++-----------+------------+
+| pbing     | CS1033     |
+| mgeller   | CS3319     |
+| pbing     | CS3319     |
++-----------+------------+
+3 rows in set (0.00 sec)
+
+--------------
+DELETE FROM hasworkedon WHERE tauserid = 'pbing'
+--------------
+
+Query OK, 0 rows affected (0.01 sec)
+
+--------------
+DELETE FROM loves WHERE ltauserid = 'pbing'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+DELETE FROM hates WHERE htauserid = 'pbing'
+--------------
+
+Query OK, 2 rows affected (0.01 sec)
+
+--------------
+DELETE FROM ta WHERE tauserid = 'pbing'
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+
+--------------
+SELECT * FROM ta
+--------------
+
++----------+-----------+----------+------------+------------+
+| tauserid | firstname | lastname | studentnum | degreetype |
++----------+-----------+----------+------------+------------+
+| cgeller  | Chandler  | Geller   | 251000444  | PhD        |
+| jbing    | Joey      | Bing     | 251000444  | PhD        |
+| mgeller  | Monica    | Geller   | 251000123  | PhD        |
+| pbing2   | Patty     | Bing     | 251000666  | Masters    |
+| rgeller  | Ross      | Geller   | 251000222  | Masters    |
+| rgreen   | Rachel    | Green    | 251000333  | PhD        |
+| staki    | Shino     | Taki     | 251000255  | PhD        |
++----------+-----------+----------+------------+------------+
+7 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM hates
+--------------
+
++-----------+------------+
+| htauserid | hcoursenum |
++-----------+------------+
+| mgeller   | CS3319     |
++-----------+------------+
+1 row in set (0.00 sec)
+
+--------------
+SELECT * FROM loves
+--------------
+
++-----------+------------+
+| ltauserid | lcoursenum |
++-----------+------------+
+| rgreen    | CS1026     |
+| mgeller   | CS1033     |
+| rgreen    | CS1033     |
+| staki     | CS3342     |
+| mgeller   | CS4411     |
++-----------+------------+
+5 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM hasworkedon
+--------------
+
++----------+------+-------+
+| tauserid | coid | hours |
++----------+------+-------+
+| mgeller  | RD12 |   100 |
+| mgeller  | RD34 |   100 |
+| mgeller  | RD37 |    50 |
+| mgeller  | RD44 |    20 |
+| mgeller  | RD99 |   100 |
+| rgeller  | RD34 |   200 |
+| rgreen   | RD34 |   200 |
++----------+------+-------+
+7 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM ta
+--------------
+
++----------+-----------+----------+------------+------------+
+| tauserid | firstname | lastname | studentnum | degreetype |
++----------+-----------+----------+------------+------------+
+| cgeller  | Chandler  | Geller   | 251000444  | PhD        |
+| jbing    | Joey      | Bing     | 251000444  | PhD        |
+| mgeller  | Monica    | Geller   | 251000123  | PhD        |
+| pbing2   | Patty     | Bing     | 251000666  | Masters    |
+| rgeller  | Ross      | Geller   | 251000222  | Masters    |
+| rgreen   | Rachel    | Green    | 251000333  | PhD        |
+| staki    | Shino     | Taki     | 251000255  | PhD        |
++----------+-----------+----------+------------+------------+
+7 rows in set (0.00 sec)
+
+--------------
+ALTER TABLE ta ADD image VARCHAR(200)
+--------------
+
+Query OK, 0 rows affected (0.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+--------------
+SELECT * FROM ta
+--------------
+
++----------+-----------+----------+------------+------------+-------+
+| tauserid | firstname | lastname | studentnum | degreetype | image |
++----------+-----------+----------+------------+------------+-------+
+| cgeller  | Chandler  | Geller   | 251000444  | PhD        | NULL  |
+| jbing    | Joey      | Bing     | 251000444  | PhD        | NULL  |
+| mgeller  | Monica    | Geller   | 251000123  | PhD        | NULL  |
+| pbing2   | Patty     | Bing     | 251000666  | Masters    | NULL  |
+| rgeller  | Ross      | Geller   | 251000222  | Masters    | NULL  |
+| rgreen   | Rachel    | Green    | 251000333  | PhD        | NULL  |
+| staki    | Shino     | Taki     | 251000255  | PhD        | NULL  |
++----------+-----------+----------+------------+------------+-------+
+7 rows in set (0.00 sec)
+
+--------------
+UPDATE ta SET image = "https://i.pinimg.com/originals/bf/85/8d/bf858d262ce992754e2b78042c9e0fe8.gif" WHERE ta.tauserid = "mgeller"
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+--------------
+SELECT * FROM ta
+--------------
+
++----------+-----------+----------+------------+------------+------------------------------------------------------------------------------+
+| tauserid | firstname | lastname | studentnum | degreetype | image                                                                        |
++----------+-----------+----------+------------+------------+------------------------------------------------------------------------------+
+| cgeller  | Chandler  | Geller   | 251000444  | PhD        | NULL                                                                         |
+| jbing    | Joey      | Bing     | 251000444  | PhD        | NULL                                                                         |
+| mgeller  | Monica    | Geller   | 251000123  | PhD        | https://i.pinimg.com/originals/bf/85/8d/bf858d262ce992754e2b78042c9e0fe8.gif |
+| pbing2   | Patty     | Bing     | 251000666  | Masters    | NULL                                                                         |
+| rgeller  | Ross      | Geller   | 251000222  | Masters    | NULL                                                                         |
+| rgreen   | Rachel    | Green    | 251000333  | PhD        | NULL                                                                         |
+| staki    | Shino     | Taki     | 251000255  | PhD        | NULL                                                                         |
++----------+-----------+----------+------------+------------+------------------------------------------------------------------------------+
+7 rows in set (0.00 sec)
+
+Bye
