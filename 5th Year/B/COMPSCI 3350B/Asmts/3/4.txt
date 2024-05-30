@@ -1,0 +1,5 @@
+Q6.
+●Initially the data flows from the PC to execute an instruction incrementing the PC by4 using the Adder.
+●For “foo” we are expecting the value of Rd to be written in the memory which is notdone by the current MIPS datapath. Therefore, a wire of Rd directed to the RegFilewill output the value by the BusC.
+●The ALU adds both of Bus A and Bus B and passes the result of their values into theData Memory added which is for “WriteOnly”.  → writes the ALU result in memory,inputs the ALU’s result, the Rd address and the control signal that signifies foo to tellwhether to write or not.
+●There’s a multiplexer added after the ALU which chooses from Bus C whether it isfor “Foo '' or for the other instructions. If it is “foo”, then it will be reading the datafrom memory, for any other instruction it can either read or write
