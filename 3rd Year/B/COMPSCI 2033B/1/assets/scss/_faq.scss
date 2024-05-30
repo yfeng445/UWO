@@ -1,0 +1,57 @@
+/*-------- 31. Faq style ---------*/
+
+.faq-wrap {
+    margin: 0 0 20px;
+    h2 {
+        color: $theme-color;
+        font-size: 36px;
+        margin: 0 0 48px;
+        @media #{$md-layout} {
+            margin: 0 0 30px;
+        }
+        @media #{$xs-layout} {
+            margin: 0 0 20px;
+            font-size: 23px;
+        }
+    }
+    .single-faq-wrap {
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0 0 23px;
+            @media #{$md-layout} {
+                margin: 0 0 10px;
+            }
+            @media #{$xs-layout} {
+                margin: 0 0 10px;
+                font-size: 18px;
+            }
+        }
+        p {
+            line-height: 28px;
+            color: #777;
+            margin: 0;
+            width: 88%;
+            @media #{$xs-layout} {
+                width: 100%;
+            }
+        }
+        @media #{$xs-layout} {
+            &.mb-40 {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media #{$xs-layout} {
+    .faq-area {
+        &.pb-35 {
+            padding-bottom: 0px;
+        }
+    }
+}
+
+
+
+

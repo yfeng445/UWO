@@ -1,0 +1,133 @@
+/*-------- 25. Compare style ---------*/
+
+.compare-table {
+    & .table {
+        & tbody {
+            & tr {
+                & th {
+                    &.first-column {
+                        min-width: 200px;
+                        color: #262626;
+                        margin: 0;
+                        background-color: #f2f2f2;
+                        font-weight: 400;
+                        padding: 10px 10px;
+                        font-size: 13px;
+                        font-weight: 700;
+                        @media #{$md-layout} {
+                            min-width: 200px;
+                        }
+                        @media #{$xs-layout} {
+                            min-width: 150px;
+                            padding: 10px 20px;
+                        }
+                    }
+                }
+                &:first-child th {
+                    padding-top: 122px;
+                }
+                & td {
+                    text-align: center;
+                    padding: 11px 15px;
+                    vertical-align: middle;
+                    border-color: #e7e7e7;
+                    &.product-image-title {
+                        min-width: 293px;
+                        vertical-align: bottom;
+                        padding: 9px 10px 17px;
+                        @media #{$xs-layout} {
+                            min-width: 220px;
+                        }
+                        .compare-remove {
+                            a {
+                                font-size: 13px;
+                                color: #535353;
+                                text-transform: capitalize;
+                                i {
+                                    padding-right: 2px;
+                                }
+                                &:hover {
+                                    color: $theme-color;
+                                }
+                            }
+                        }
+                        & .image {
+                            clear: both;
+                            width: 100%;
+                            margin: 2px 0 6px;
+                            display: block;
+                            img {
+                                width: auto;
+                            }
+                        }
+                        & .category {
+                            float: left;
+                            clear: both;
+                            color: $theme-color;
+                            text-transform: capitalize;
+                            letter-spacing: 0.5px;
+                        }
+                        & .pro-title {
+                            display: block;
+                            overflow: hidden;
+                            > a {
+                                float: left;
+                                clear: both;
+                                font-size: 14px;
+                                font-weight: 400;
+                                text-transform: capitalize;
+                                margin-top: 5px;
+                                display: block;
+                                width: 100%;
+                                &:hover {
+                                    color: $theme-color;
+                                }
+                            }
+                        }
+                        .compare-btn {
+                            margin: 14px 0 0;
+                            a {
+                                background-color: #343538;
+                                padding: 5px 13px 6px;
+                                color: #fff;
+                                display: inline-block;
+                                font-size: 13px;
+                                &:hover {
+                                    background-color: $theme-color;
+                                }
+                            }
+                        }
+                    }
+                    &.pro-desc {
+                        & p {
+                            margin: 0;
+                            font-size: 13px;
+                            line-height: 1.88;
+                            color: #535353;
+                        }
+                    }
+                    &.pro-price {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #343538;
+                    }
+                    &.pro-sku , 
+                    &.pro-weight , 
+                    &.pro-dimensions {
+                        font-size: 13px;
+                        font-weight: 400;
+                        color: #535353;
+                    }
+                    &.pro-stock {
+                        p {
+                            font-size: 13px;
+                            color: #535353;
+                            line-height: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*------ end Compare Page Wrapper -----*/

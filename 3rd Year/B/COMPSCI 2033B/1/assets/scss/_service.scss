@@ -1,0 +1,147 @@
+/*-------- 11. Service style ---------*/
+
+.service-wrap {
+    .service-icon {
+        margin: 0 0 18px;
+        @media #{$md-layout} {
+            margin: 0 0 10px;
+        }
+        i {
+           font-size: 50px; 
+        }
+    }
+    .service-content {
+        h4 {
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0 0 15px;
+            @media #{$lg-layout} {
+                letter-spacing: 1px;
+            }
+        }
+        p {
+            font-size: 12px;
+            color: #777;
+            margin: 0 auto;
+            line-height: 1.714286;
+            width: 68%;
+            @media #{$xl-layout} {
+                width: 98%;
+            }
+            @media #{$lg-layout} {
+                width: 90%;
+            }
+            @media #{$xs-layout} {
+                width: 90%;
+            }
+            @media #{$sm-layout} {
+                width: 77%;
+            }
+        }
+        &.service-content-14 {
+            @media #{$xl-layout} {
+                h4 {
+                    font-size: 15px;
+                    letter-spacing: 1px;
+                }
+            }
+            p {
+               width: 86%;
+                @media #{$xl-layout} {
+                    width: 98%;
+                }
+            }
+        }
+    }
+}
+
+.service-wrap-2 {
+    display: flex;
+    align-items: center;
+    .service-icon-2 {
+        margin-right: 18px;
+        i {
+            display: inline-block;
+            font-size: 30px;
+            color: #262626;
+            width: 62px;
+            height: 62px;
+            line-height: 62px;
+            border-radius: 100%;
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.1) ;
+        }
+    }
+    .service-content-2 {
+        h4 {
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0 0 8px;
+        }
+        p {
+            font-size: 12px;
+            color: #535353;
+        }
+    }
+}
+
+.service-wrap-3 {
+    .service-icon-3 {
+        margin: 0 0 25px;
+        i {
+            border: 1px solid rgba(0,0,0,0.1);
+            font-size: 30px; 
+            width: 76px;
+            height: 76px;
+            line-height: 76px;
+            border-radius: 76px;
+            text-align: center;
+        }
+    }
+    .service-content-3 {
+        h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 17px;
+        }
+        p {
+            width: 72%;
+            margin: 0 auto;
+            @media #{$xl-layout} {
+                width: 100%;
+            }
+            @media #{$lg-layout} {
+                width: 100%;
+            }
+            @media #{$md-layout} {
+                width: 100%;
+            }
+            @media #{$xs-layout} {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media #{$md-layout} {
+    .service-area {
+        &.pb-100 {
+            padding-bottom: 50px;
+        }
+    }
+}
+
+@media #{$xs-layout} {
+    .service-area {
+        &.pb-100 {
+            padding-bottom: 20px;
+        }
+    }
+}
+
+
+
+
+

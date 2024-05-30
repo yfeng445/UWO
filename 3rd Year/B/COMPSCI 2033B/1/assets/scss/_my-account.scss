@@ -1,0 +1,161 @@
+/*-------- 27. My account style ---------*/
+
+.myaccount-tab-menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: #f7f7f7;
+    @media #{$xs-layout} {
+        padding: 10px 10px 5px;
+    }
+    @media #{$sm-layout} {
+        padding: 0px 0px 0px;
+    }
+    a {
+        font-weight: 400;
+        font-size: 16px;
+        display: inline-block;
+        padding: 13px 30px 12px;
+        text-transform: capitalize;
+        float: left;
+        margin: 0 3px 0 3px;
+        @media #{$md-layout} {
+            padding: 10px 15px 9px;
+        }
+        @media #{$xs-layout} {
+            padding: 4px 6px;
+            font-size: 14px;
+            margin: 0 2px 3px 2px;
+        }
+        @media #{$sm-layout} {
+            font-size: 13px;
+            margin: 0 2px 0px 2px;
+        }
+        &:hover,
+        &.active {
+            background-color: $theme-color;
+            border-color: $theme-color;
+            color: $white;
+        }
+    }
+}
+
+#myaccountContent {
+    margin-top: 30px;
+    @media #{$md-layout} {
+        margin-bottom: 50px;
+    }
+    @media #{$xs-layout} {
+        margin-bottom: 30px;
+    }
+}
+
+.myaccount-content {
+    p {
+        color: #535353;
+    }
+    form {
+        margin-top: -20px;
+    }
+    .welcome {
+        margin: 0 0 29px;
+        p {
+            color: #535353;
+            a {
+                color: #535353;
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+        strong {
+            color: #535353;
+        }
+    }
+    > p {
+        color: #535353;
+    }
+    fieldset {
+        margin-top: 20px;
+        & legend {
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+    .account-details-form {
+        margin-top: 50px;
+        .single-input-item {
+            margin-bottom: 25px;
+            label {
+                font-size: 14px;
+                text-transform: capitalize;
+                display: block;
+                margin: 0 0 5px;
+                span {
+                    color: red;
+                }
+            }
+            input {
+                border: 1px solid #CDCDCD;
+                height: 50px;
+                background-color: transparent;
+                padding: 2px 20px;
+                color: #262626;
+                font-size: 13px;
+                &:focus {
+                    border: 1px solid #262626;
+                }
+            }
+            button {
+                border: none;
+                background-color: #262626;
+                padding: 17px 32px;
+                color: #fff;
+                font-size: 14px;
+                &:hover {
+                    background-color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+.myaccount-table {
+    white-space: nowrap;
+    font-size: 14px;
+    table,
+    .table {
+        th {
+            padding: 10px;
+            font-weight: 600;
+            background-color: #f8f8f8;
+            border-color: #ccc;
+            border-bottom: 0;
+            color: #1f2226;
+        }
+
+        td {
+            padding: 10px;
+            vertical-align: middle;
+            border-color: #ccc;
+        }
+    }
+}
+
+.saved-message {
+    background-color: #fff;
+    border-top: 3px solid $theme-color;
+    font-size: 14px;
+    padding: 20px 0;
+    color: #333;
+}
+
+
+
+
+
+
+

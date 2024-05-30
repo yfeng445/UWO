@@ -1,0 +1,49 @@
+/*-------- 17. Brand logo style ---------*/
+
+.single-brand-logo {
+    padding: 10px 60px 10px 60px;
+    @media #{$xx-layout} {
+        padding: 10px 30px 10px 30px;
+    }
+    @media #{$xl-layout} {
+        padding: 10px 30px 10px 30px;
+    }
+    @media #{$lg-layout} {
+        padding: 10px 0px 10px 0px;
+    }
+    @media #{$md-layout} {
+        padding: 10px 20px 10px 20px;
+    }
+    @media #{$xs-layout} {
+        padding: 10px 0px 10px 0px;
+    }
+    a {
+        display: block;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.single-brand-logo-2 {
+    padding: 10px 10px 10px 10px;
+    a {
+        display: block;
+        img {
+            width: 100%;
+            transform: scale(1);
+            transition: all .3s ease 0s;
+        }
+    }
+    &:hover {
+        a {
+            img {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+
+
+

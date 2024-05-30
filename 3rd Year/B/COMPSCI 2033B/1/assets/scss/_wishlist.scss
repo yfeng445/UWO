@@ -1,0 +1,136 @@
+/*-------- 33. Wishlist style ---------*/
+
+.wishlist-main-area {
+    @media #{$xs-layout}{
+        &.pb-100 {
+            padding-bottom: 60px;
+        }
+    }
+}
+.wishlist-table-content {
+    table {
+        width: 100%;
+        thead {
+            background-color: #f7f7f7;
+            > tr {
+                th {
+                    border-top: medium none;
+                    font-size: 16px;
+                    text-transform: capitalize;
+                    vertical-align: middle; 
+                    white-space: nowrap;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                    padding: 13px 20px 12px 10px;
+                    color: #8A8A8A;
+                    letter-spacing: 1px;
+                    &.wishlist-cart-none {
+                        width: 100px;
+                        span {
+                            display: none;
+                        }
+                    }
+                    @media #{$xs-layout}{
+                        padding: 13px 10px 12px;
+                    }
+                }
+            }
+        }
+        tbody > tr {
+            td {
+                font-size: 12px;
+                padding: 30px 0px 0px;
+                color: #535353;
+                @media #{$xs-layout}{
+                    padding: 30px 12px 0px 10px;
+                }
+            }
+            td.wishlist-remove {
+                width: 30px;
+                a {
+                    color: #989898;
+                    font-size: 16px;
+                }
+            }
+            td.wishlist-img {
+                width: 80px;
+            }
+            td.wishlist-name {
+                width: 200px;
+                @media #{$md-layout}{
+                    width: 150px;
+                }
+                @media #{$xs-layout}{
+                    width: 150px;
+                    padding-left: 10px;
+                    padding-right: 20px;
+                    padding-top: 0;
+                }
+                a {
+                    font-size: 12px;
+                    display: block;
+                    margin: 0 0 5px;
+                    color: #535353;
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+            td.wishlist-stock {
+                width: 170px;
+                @media #{$md-layout}{
+                    width: 120px;
+                }
+                @media #{$xs-layout}{
+                    width: 100px;
+                }
+                span {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #535353;
+                    display: inline-block;
+                    line-height: 1;
+                }
+            }
+            td.wishlist-price {
+                width: 57px;
+                span {
+                    color: #262626;
+                    font-size: 16px;
+                }
+            }
+            td.wishlist-cart {
+                > a {
+                    display: inline-block;
+                    border: 1px solid #262626;
+                    line-height: 1;
+                    padding: 13px 20px;
+                    color: #262626;
+                    font-size: 12px;
+                    @media #{$lg-layout}{
+                        padding: 10px 10px;
+                    }
+                    @media #{$md-layout}{
+                        padding: 10px 12px;
+                    }
+                    @media #{$xs-layout}{
+                        width: 100px;
+                        padding: 10px 12px;
+                        text-align: center;
+                    }
+                    @media #{$sm-layout}{
+                        width: 94px;
+                        padding: 10px 10px;
+                    }
+                    &:hover {
+                        color: $theme-color;
+                        border: 1px solid $theme-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+

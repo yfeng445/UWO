@@ -1,0 +1,200 @@
+
+/*-------- 19. Breadcrumb style ---------*/
+
+.breadcrumb-ptb-1 {
+    padding: 85px 0 95px;
+    @media #{$lg-layout} {
+        padding: 75px 0 85px;
+    }
+    @media #{$md-layout} {
+        padding: 45px 0 55px;
+    }
+    @media #{$xs-layout} {
+        padding: 35px 0 45px;
+    }
+}
+
+.breadcrumb-ptb-2 {
+	padding: 200px 0 75px;
+    @media #{$md-layout} {
+        padding: 45px 0 55px;
+    }
+    @media #{$xs-layout} {
+        padding: 35px 0 45px;
+    }
+}
+.breadcrumb-ptb-3 {
+	padding: 50px 0 50px;
+    @media #{$xs-layout} {
+        padding: 30px 0 30px;
+    }
+}
+.breadcrumb-ptb-5 {
+	padding: 250px 0 75px;
+    @media #{$md-layout} {
+        padding: 50px 0 50px;
+    }
+    @media #{$xs-layout} {
+        padding: 30px 0 30px;
+    }
+}
+
+.breadcrumb-bg-1 {
+	background: #fff url("../../assets/images/bg/breadcrumb-bg-1.jpg") repeat-x center bottom;
+}
+
+.breadcrumb-bg-2 {
+	background: #FFEBEB url("../../assets/images/bg/breadcrumb-bg-2.png") no-repeat right bottom;
+    @media #{$xx-layout} {
+        background-size: 600px auto;
+    }
+    @media #{$xl-layout} {
+        background-size: 500px auto;
+    }
+    @media #{$lg-layout} {
+        background-size: 400px auto;
+    }
+}
+.breadcrumb-bg-3 {
+	background: url("../../assets/images/bg/breadcrumb-bg-3.jpg");
+    background-size: cover;
+    background-position: 100% 0%;
+}
+
+.breadcrumb-bg-4 {
+	background: url("../../assets/images/bg/breadcrumb-bg-4.jpg");
+    background-repeat: repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.breadcrumb-content {
+    position: relative;
+    z-index: 9;
+    .breadcrumb-title {
+        margin: 0 0 8px;
+        @media #{$xs-layout} {
+            margin: 0 0 10px;
+        }
+        h2 {
+            font-size: 42px;
+            font-weight: bold;
+            font-family: $alegreya;
+            margin: 0;
+            line-height: 52px;
+            @media #{$md-layout} {
+                font-size: 35px;
+            }
+            @media #{$xs-layout} {
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+    }
+    ul {
+        li {
+            display: inline-block;
+            margin: 0 2px;
+            text-transform: capitalize;
+            color: #777777;
+            font-size: 12px;
+            span {
+                margin-right: 4px;
+                display: inline-block;
+                margin: 6px 4px 0 0;
+                line-height: 1;
+                position: relative;
+                top: 1px;
+            }
+            a {
+               text-transform: capitalize;
+                color: #262626;
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+    &.breadcrumb-white {
+        .breadcrumb-title {
+            h2 {
+                color: #fff;
+            }
+        }
+        ul {
+            li {
+                color: #fff;
+                span {
+                    color: #fff;
+                }
+                a {
+                    color: #fff;
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+    &.breadcrumb-font-inc {
+        ul {
+            li {
+                font-size: 14px;
+                span {
+                    font-size: 14px;
+                }
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+.breadcrumb-ptb-4 {
+	padding: 440px 0 59px;
+    @media #{$xx-layout}{
+        padding: 300px 0 59px;
+    }
+    @media #{$xl-layout}{
+        padding: 240px 0 59px;
+    }
+    @media #{$lg-layout}{
+        padding: 240px 0 59px;
+    }
+    @media #{$md-layout}{
+        padding: 80px 0 80px;
+    }
+    @media #{$xs-layout}{
+        padding: 50px 0 50px;
+    }
+}
+
+.breadcrumb-content-2 {
+    h2 {
+        font-size: 120px;
+        color: #fff;
+        margin: 0 0 0 -50px;
+        line-height: 1em;
+        @media #{$xx-layout}{
+            font-size: 80px;
+        }
+        @media #{$xl-layout}{
+            font-size: 80px;
+        }
+        @media #{$lg-layout}{
+            font-size: 60px;
+        }
+        @media #{$md-layout}{
+            font-size: 40px;
+            margin: 0 0 0 0px;
+        }
+        @media #{$xs-layout}{
+            font-size: 35px;
+            margin: 0 0 0 0px;
+        }
+    }
+}
+
+
+

@@ -1,0 +1,360 @@
+/*-------- 21. Sidebar style ---------*/
+
+.sidebar-widget {
+    display: block;
+    overflow: hidden;
+    h4.pro-sidebar-title {
+        font-size: 32px;
+        margin: 0;
+        position: relative;
+        font-weight: 300;
+        font-family: $alegreya;
+        @media #{$md-layout} {
+            font-size: 28px;
+        }
+        @media #{$xs-layout} {
+            font-size: 25px;
+        }
+    }
+    h4.pro-sidebar-title2 {
+        font-size: 24px;
+        margin: 0;
+        position: relative;
+        font-weight: 600;
+        font-family: $alegreya;
+    }
+    .sidebar-widget-list {
+        ul {
+            li {
+                padding-bottom: 27px;
+                @media #{$md-layout} {
+                    padding-bottom: 10px;
+                }
+                @media #{$xs-layout} {
+                    padding-bottom: 10px;
+                }
+                &:last-child {
+                    padding-bottom: 0px;
+                }
+                a {
+                    color: #535353;
+                    &:hover {
+                        color: $theme-color;
+                        text-decoration: underline;
+                    }
+                }
+                span {
+                    float: right;
+                    color: #2F2F2F;
+                }
+            }
+        }
+        @media #{$md-layout} {
+            &.mt-50 {
+                margin-top: 30px;
+            }
+        }
+        @media #{$xs-layout} {
+            &.mt-50 {
+                margin-top: 17px;
+            }
+            &.mt-40 {
+                margin-top: 17px;
+            }
+        }
+    }
+    .price-filter{
+        #slider-range {
+            background: #eee none repeat scroll 0 0;
+            border: medium none;
+            border-radius: 50px;
+            height: 5px;
+            margin-bottom: 12px;
+            margin-left: auto;
+            span {
+                transition: all .0s ease 0s;
+            }
+            .ui-slider-range {
+                position: absolute;
+                display: block;
+                border: 0;
+                background: #262626 none repeat scroll 0 0;
+                border: none;
+                transition: all .0s ease 0s;
+            }
+            .ui-slider-handle {
+                background: #fff none repeat scroll 0 0;
+                border: medium none;
+                border-radius: 50%;
+                height: 23px;
+                margin-left: 0;
+                width: 23px;
+                box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.2);
+                top: -10px;
+                cursor: ew-resize;
+            }
+        }
+        .price-slider-amount {
+            margin: 22px 0 0;
+            .label-input {
+                margin: 25px 0 0;
+                display: flex;
+                align-items: center;
+                span {
+                    color: #535353 !important;
+                    margin-right: 5px;
+                }
+                input {
+                    background: transparent;
+                    padding: 0;
+                    border: none;
+                    font-size: 14px;
+                    font-weight: 400;
+                    height: auto;
+                    color: #535353 !important;
+                }
+            }
+            button {
+                width: 140px;
+                background-color: transparent;
+                padding: 8px 10px;
+                margin-top: 15px;
+                border: 2px solid #262626;
+                font-size: 11px;
+                font-weight: 700;
+                order: 2;
+                color: #262626;
+                transition: all 0.3s;
+                text-transform: uppercase;
+                &:hover {
+                    background-color: $theme-color;
+                    color: #fff;
+                    border: 2px solid $theme-color;
+                }
+            }
+        }
+        @media #{$md-layout} {
+            &.mt-60 {
+                margin-top: 40px;
+            }
+        }
+        @media #{$xs-layout} {
+            &.mt-60 {
+                margin-top: 35px;
+            }
+        }
+    }
+    .sidebar-widget-size {
+        ul {
+            li {
+                display: inline-block;
+                margin-right: 7px;
+                a {
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    padding: 11px 26px;
+                    display: block;
+                    margin-bottom: 10px;
+                    transition: all 0.3s;
+                    color: #535353;
+                    @media #{$lg-layout} {
+                        padding: 6px 10px;
+                    }
+                    &:hover {
+                        background-color: $theme-color;
+                        color: #fff;
+                        border: 1px solid $theme-color;
+                    }
+                }
+            }
+        }
+        @media #{$md-layout} {
+            &.mt-45 {
+                margin-top: 25px;
+            }
+        }
+        @media #{$xs-layout} {
+            &.mt-45 {
+                margin-top: 20px;
+            }
+        }
+    }
+    .sidebar-widget-color {
+        ul {
+            li {
+                margin-bottom: 16px;
+                display: block;
+                width: 50%;
+                float: left;
+                a {
+                    color: #535353;
+                    &:hover {
+                        color: $theme-color;
+                    }
+                    span {
+                        color: #535353;
+                    }
+                }
+            }
+        }
+        @media #{$md-layout} {
+            &.mt-40 {
+                margin-top: 20px;
+            }
+        }
+        @media #{$xs-layout} {
+            &.mt-40 {
+                margin-top: 15px;
+            }
+        }
+    }
+    .sidebar-widget-tag {
+        ul {
+            li {
+                display: inline-block;
+                padding-bottom: 10px;
+                a {
+                    color: #535353;
+                    span {
+                        color: #535353;
+                    }
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+        @media #{$md-layout} {
+            &.mt-45 {
+                margin-top: 25px;
+            }
+        }
+        @media #{$xs-layout} {
+            &.mt-45 {
+                margin-top: 20px;
+            }
+            &.mt-35 {
+                margin-top: 20px;
+            }
+        }
+    }
+    .shop-sidebar-banner {
+        position: relative;
+        overflow: hidden;
+        a {
+            img {
+                width: 100%;
+                transform: scale(1);
+                transition: all .35s ease 0s;
+            }
+        }
+        .shop-sidebar-content {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            width: 100%;
+            z-index: 99;
+            h5 {
+                color: #ffffff;
+                font-size: 16px;
+                margin: 0 0 12px;
+            }
+            h3 {
+                color: #ffffff;
+                font-size: 44px;
+                margin: 0;
+                @media #{$xx-layout} {
+                    font-size: 22px;
+                }
+                @media #{$xl-layout} {
+                    font-size: 20px;
+                }
+                @media #{$lg-layout} {
+                    font-size: 30px;
+                }
+                @media #{$xs-layout} {
+                    font-size: 30px;
+                }
+            }
+        }
+        &:hover a img {
+            transform: scale(1.05);
+        }
+        &:hover.default-overlay::before {
+            background-color: #000;
+            opacity: .4;
+            z-index: 1;
+            pointer-events: none;
+        }
+    }
+    @media #{$md-layout} {
+        &.mb-65 {
+            margin-bottom: 45px;
+        }
+        &.mb-70 {
+            margin-bottom: 50px;
+        }
+        &.mb-60 {
+            margin-bottom: 40px;
+        }
+        &.mb-45 {
+            margin-bottom: 25px;
+        }
+    }
+    @media #{$xs-layout} {
+        &.mb-65 {
+            margin-bottom: 35px;
+        }
+        &.mb-70 {
+            margin-bottom: 40px;
+        }
+        &.mb-60 {
+            margin-bottom: 30px;
+        }
+        &.mb-45 {
+            margin-bottom: 15px;
+        }
+        &.mb-50 {
+            margin-bottom: 30px;
+        }
+        &.mb-55 {
+            margin-bottom: 30px;
+        }
+        &.mt-60 {
+            margin-top: 30px;
+        }
+    }
+}
+
+.shhop-pl-35 {
+    padding-left: 35px;
+    @media #{$xl-layout} {
+        padding-left: 0px;
+    }
+    @media #{$md-layout} {
+        padding-left: 0px;
+    }
+    @media #{$xs-layout} {
+        padding-left: 0px;
+    }
+}
+
+.shop-sidebar-style.shop-sidebar-mrg {
+	margin-right: 115px;
+    @media #{$xx-layout} {
+        margin-right: 30px;
+    }
+    @media #{$xl-layout} {
+        margin-right: 0px;
+    }
+    @media #{$lg-layout} {
+        margin-right: 0px;
+    }
+    @media #{$xs-layout} {
+        margin-right: 0px;
+    }
+}
+
+

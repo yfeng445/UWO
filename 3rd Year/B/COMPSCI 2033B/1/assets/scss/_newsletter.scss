@@ -1,0 +1,183 @@
+/*-------- 32. Newsletter style ---------*/
+
+.b-modal.__b-popup1__ {
+	background-color: #333 !important;
+	opacity: .9 !important;
+}
+.newletter-popup {
+	width: 100%;
+    background: #fff none repeat scroll 0 0;
+    left: 0;
+    margin: auto;
+    position: fixed !important;
+    right: 0;
+    top: 22% !important;
+    width: 1070px;
+    display: none;
+    @media #{$xx-layout} {
+        top: 15% !important;
+    }
+    @media #{$xl-layout} {
+        top: 15% !important;
+    }
+    @media #{$lg-layout} {
+        width: 940px;
+        top: 15% !important;
+    }
+    @media #{$md-layout} {
+        width: 700px;
+        top: 15% !important;
+    }
+    @media #{$xs-layout} {
+        width: 290px;
+        top: 10% !important;
+        height: 300px !important;
+        overflow-y: auto;
+    }
+    @media #{$sm-layout} {
+        width: 500px;
+        height: 400px !important;
+        overflow-y: auto;
+    }
+    > #popup2 {
+        position: absolute;
+        right: -18px;
+        top: -30px;
+        width: 54px;
+        height: 54px;
+        background-color: #292929;
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+        border-radius: 100%;
+        cursor: pointer;
+        @media #{$xs-layout} {
+            right: 0px;
+            top: 0px;
+            width: 35px;
+            height: 35px;
+            font-size: 15px;
+        }
+        > span {
+            i {
+                line-height: 54px;
+                @media #{$xs-layout} {
+                    line-height: 35px;
+                }
+            }
+        }
+        &:hover {
+            color: $theme-color;
+        }
+    }
+    .popup-wrapper-all {
+        display: flex;
+        @media #{$xs-layout} {
+            display: block;
+        }
+        .popup-subscribe-area {
+            flex: 0 0 64%;
+            padding: 56px 80px 33px 80px;
+            @media #{$lg-layout} {
+                padding: 50px 30px 33px 30px;
+            }
+            @media #{$md-layout} {
+                padding: 20px 30px 20px 30px;
+            }
+            @media #{$xs-layout} {
+                padding: 15px 15px 15px 15px;
+                flex: 0 0 100%;
+            }
+            span {
+                color: #8a8a8a;
+            }
+            h2 {
+                font-family: $alegreya;
+                font-size: 46px;
+                line-height: 1em;
+                margin: 8px 0 40px;
+                @media #{$lg-layout} {
+                    margin: 8px 0 20px;
+                    font-size: 30px;
+                }
+                @media #{$md-layout} {
+                    margin: 8px 0 20px;
+                    font-size: 23px;
+                }
+                @media #{$xs-layout} {
+                    margin: 8px 0 15px;
+                    font-size: 20px;
+                }
+                @media #{$sm-layout} {
+                    font-size: 25px;
+                }
+            }
+            .subscribe-bottom {
+                .mc-form {
+                    input {
+                        border: 1px solid #e0e0e8;
+                        height: auto;
+                        padding: 20px 20px 20px 20px;
+                        font-size: 12px;
+                        color: #262626;
+                        height: 62px;
+                        background-color: transparent;
+                        @media #{$md-layout} {
+                            height: 40px;
+                        }
+                        &:focus {
+                            box-shadow: 0 0 10px #e0e0e8;
+                        }
+                    }
+                    .mc-news {
+                        display: none;
+                    }
+                    .clear-2 {
+                        margin-top: 30px;
+                        @media #{$md-layout} {
+                            margin-top: 15px;
+                        }
+                        input {
+                            width: auto;
+                            height: auto;
+                            color: #fff;
+                            background-color: #262626;
+                            padding: 15px 40px 16px 40px;
+                            font-size: 16px;
+                            text-transform: capitalize;
+                            &:hover {
+                                background-color: #fc4f4f;
+                            }
+                        }
+                    }
+                }
+            }
+            .dont-show {
+                display: flex;
+                align-items: center;
+                input {
+                    width: auto;
+                    height: auto;
+                }
+                label {
+                    color: #535353;
+                    display: block;
+                    margin: 0 0 0 5px;
+                }
+            }
+        }
+        .popup-image {
+            flex: 0 0 36%;
+            @media #{$xs-layout} {
+                display: block;
+                flex: 0 0 100%;
+            }
+            @media #{$sm-layout} {
+                display: block;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

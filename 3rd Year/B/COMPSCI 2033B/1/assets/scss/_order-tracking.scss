@@ -1,0 +1,125 @@
+/*-------- 28. Order tracking style ---------*/
+
+.order-tracking-area {
+    position: relative;
+    .order-tracking-img {
+        height: 100%;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        width: 50%;
+        z-index: 2;
+        @media #{$md-layout}{
+            width: 100%;
+            position: static;
+        }
+        @media #{$xs-layout}{
+            width: 100%;
+            position: static;
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            transition: all 0.3s linear 0s;
+            will-change: transform, top;
+            z-index: 0;
+            object-fit: cover;
+        }
+    }
+}
+
+.order-tracking-content {
+    padding: 152px 165px 160px;
+    @media #{$xx-layout}{
+        padding: 50px 100px;
+    }
+    @media #{$xl-layout}{
+        padding: 50px 50px;
+    }
+    @media #{$lg-layout}{
+        padding: 50px 50px;
+    }
+    @media #{$md-layout}{
+        padding: 30px 30px 50px;
+    }
+    @media #{$xs-layout}{
+        padding: 30px 15px 50px;
+    }
+    .order-tracking-title {
+        margin: 0 0 55px;
+        @media #{$xx-layout}{
+            margin: 0 0 25px;
+        }
+        @media #{$xl-layout}{
+            margin: 0 0 25px;
+        }
+        @media #{$lg-layout}{
+            margin: 0 0 25px;
+        }
+        @media #{$md-layout}{
+            margin: 0 0 25px;
+        }
+        @media #{$xs-layout}{
+            margin: 0 0 25px;
+        }
+        h3 {
+            font-size: 36px;
+            margin: 0 0 25px;
+            @media #{$xs-layout}{
+                margin: 0 0 10px;
+                font-size: 30px;
+            }
+        }
+        ul {
+            li {
+                color: #262626;
+                a {
+                    color: #777;
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+    p {
+        line-height: 1.714286;
+        margin: 0;
+        text-align: center;
+        width: 98%;
+        color: #2F2F2F;
+    }
+    .order-tracking-form {
+        margin: 30px 0 0;
+        text-align: left;
+        .sin-order-tracking {
+            margin: 0 0 30px;
+            input {
+                background: transparent;
+                border: 1px solid #CDCDCD;
+                height: 70px;
+                padding: 10px 20px;
+                color: #737373;
+                font-size: 12px;
+                &:focus {
+                    border: 1px solid #262626;
+                }
+            }
+        }
+        .order-track-btn {
+            text-align: center;
+            a {
+                display: inline-block;
+                font-weight: 700;
+                color: #fff;
+                background-color: #262626;
+                line-height: 1;
+                padding: 18px 40px;
+                &:hover {
+                    background-color: $theme-color;
+                }
+            }
+        }
+    }
+}
+

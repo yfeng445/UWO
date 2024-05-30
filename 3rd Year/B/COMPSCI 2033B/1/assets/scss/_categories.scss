@@ -1,0 +1,198 @@
+/*-------- 10. Categories style ---------*/
+
+.single-categories {
+    .img-zoom {
+        overflow: hidden;
+        a {
+            display: block;
+            img {
+                transition: opacity 0.35s, transform 0.35s;
+                transform: scale(1);
+            }
+        }
+    }
+    .categorie-posution-1 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 9;
+    }
+    .categorie-posution-2 {
+        position: absolute;
+        right: 50px;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 9;
+    }
+    .categorie-posution-3 {
+        position: absolute;
+        left: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 9;
+        @media #{$xl-layout} {
+            left: 30px;
+        }
+        @media #{$md-layout} {
+            left: 20px;
+        }
+        @media #{$xs-layout} {
+            left: 15px;
+        }
+    }
+    .categories-content {
+        span {
+            font-size: 16px;
+            color: #fff;
+        }
+        h3 {
+            font-size: 24px;
+            color: #fff;
+            line-height: 40px;
+            margin: 10px 0px 20px;
+            @media #{$xl-layout} {
+                font-size: 21px;
+                line-height: 34px;
+            }
+            @media #{$md-layout} {
+                font-size: 21px;
+                line-height: 34px;
+            }
+            @media #{$xs-layout} {
+                font-size: 21px;
+                line-height: 34px;
+            }
+            a {
+                color: #fff; 
+            }
+        }
+        .categories-btn {
+            a {
+                font-size: 11px;
+                color: #fff;
+                letter-spacing: 2px;
+                font-weight: 500;
+                text-transform: uppercase;
+                line-height: 1;
+                display: inline-block;
+                border: 1px solid #fff;
+                padding: 16px 25px 15px;
+            }
+            &.categories-btn-black {
+                a {
+                    background-color: #262626;
+                    border: 1px solid #262626;
+                }
+            }
+        }
+        &.categories-content-black {
+            span {
+                color: #262626;
+            }
+            h3 {
+                color: #262626;
+                a {
+                    color: #262626; 
+                }
+            }
+        }
+    }
+    &:hover::before {
+        background-color: rgba(0, 0, 0, 0.4);
+        opacity: 1;
+        pointer-events: none;
+    }
+    &:hover {
+        .img-zoom {
+            a {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
+
+.dot-style-2 {
+    .owl-dots {
+        text-align: center;
+        margin-top: 26px;
+        @media #{$xs-layout} {
+            margin-top: 15px;
+        }
+        .owl-dot {
+            background-color: #E7E7E7;
+            width: 14px;
+            height: 14px;
+            border-radius: 100%;
+            display: inline-block;
+            margin: 0 5px;
+            transition: all .3s ease 0s;
+            &.active, &:hover {
+                background-color: $theme-color;
+            }
+        }
+    }
+    &.dot-style-2-inc {
+        .owl-dots {
+            .owl-dot {
+                background-color: rgba(0,0,0,0.37);
+                width: 18px;
+                height: 18px;
+                margin: 0 8px;
+                &.active, &:hover {
+                    background-color: $theme-color;
+                }
+            }
+        }
+    }
+    &.dot-style-2-black {
+        .owl-dots {
+            .owl-dot {
+                background-color: rgba(0,0,0,0.34);
+                &.active, &:hover {
+                    background-color: #262626;
+                }
+            }
+        }
+    }
+}
+
+.single-categories-2 {
+    .categories-img {
+        border: 1px solid rgba(0,0,0,0.1);
+        border-radius: 50%;
+        overflow: hidden;
+        a {
+            display: block;
+            img {
+                width: 100%;
+                transition: all .35s ease 0s;
+            }
+        }
+    }
+    span {
+        color: #282828;
+        display: block;
+        line-height: 1;
+        margin: 23px 0 0;
+    }
+    &:hover {
+        a {
+            img {
+                transform: scale(1.2);
+            }
+        }
+        span {
+            color: $theme-color;
+        }
+    }
+}
+
+
+
+
