@@ -1,0 +1,24 @@
+CREATE DATABASE flip5;
+USE flip5;
+CREATE TABLE your_table (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, val INT);
+SELECT * FROM your_table;
+
+-- make a stored procedure that creates LOTS of rows
+
+DELIMITER $$
+CREATE PROCEDURE prepare_data()
+  BEGIN
+    DECLARE i INT DEFAULT 100;
+    WHILE i < 100000 DO
+      INSERT INTO your_table (val) VALUES (i);
+      SET i = i + 1;
+   END WHILE;
+END$$
+DELIMITER ;
+;
+
+-- make the stored procedure run
+-- note: this will take a LONG time!
+CALL prepare_data();
+
+

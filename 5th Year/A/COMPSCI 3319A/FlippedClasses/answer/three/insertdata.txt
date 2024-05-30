@@ -1,0 +1,58 @@
+INSERT INTO team VALUES('99','Colorado', 'Avalanche');
+INSERT INTO team VALUES('88', 'New York', 'Rangers');
+INSERT INTO team VALUES('78', 'Ottawa', 'Senators');
+INSERT INTO team VALUES('66', 'Edmonton', 'Oilers');
+INSERT INTO team VALUES('18','London','Knights');
+INSERT INTO team VALUES('19','Chicago','Black Hawks');
+INSERT INTO team VALUES('08','Philadelphia','Flyers');
+INSERT INTO team VALUES('12','Toronto','Maple Leaves');
+INSERT INTO team VALUES('11','Detroit','Red Wings');
+
+INSERT INTO official VALUES ('99','Hugh', 'Grant', 'Toronto');
+INSERT INTO official VALUES ('22','Courtney', 'Cox', 'New York');
+INSERT INTO official VALUES ('33','Rosie', 'Odonnell', 'Ottawa');
+INSERT INTO official VALUES ('66','David', 'Letterman', 'Edmonton');
+INSERT INTO official VALUES ('11','Regis', 'Philbin', 'Toronto');
+INSERT INTO official VALUES ('12','Rosie', 'Cox', 'Ottawa');
+
+
+INSERT INTO game VALUES ('21','2018-02-18','Toronto',11);
+INSERT INTO game VALUES ('31','2018-12-20','Toronto',33);
+INSERT INTO game VALUES ('12','2018-12-24','Ottawa',22);
+INSERT INTO game VALUES ('15','2018-12-20','New York',11);
+INSERT INTO game VALUES ('13','2018-01-7','New York',12);
+INSERT INTO game VALUES ('10','2018-12-20','Ottawa',12);
+INSERT INTO game VALUES ('14','2018-01-8','Toronto',33);
+
+INSERT INTO playing VALUES ('21','12',3);
+INSERT INTO playing VALUES ('21','11',2);
+INSERT INTO playing VALUES ('31','12',6);
+INSERT INTO playing VALUES ('31','66',2);
+INSERT INTO playing VALUES ('12','78',2);
+INSERT INTO playing VALUES ('12','88',3);
+INSERT INTO playing VALUES ('15','88',1);
+INSERT INTO playing VALUES ('15','11',2);
+INSERT INTO playing VALUES ('13','66',5);
+INSERT INTO playing VALUES ('13','12',2);
+INSERT INTO playing VALUES ('10','66',4);
+INSERT INTO playing VALUES ('10','88',2);
+INSERT INTO playing VALUES ('14','12',3);
+INSERT INTO playing VALUES ('14','11',1);
+
+INSERT INTO reffing VALUES ('21','11');
+INSERT INTO reffing VALUES ('21','12');
+INSERT INTO reffing VALUES ('31','22');
+INSERT INTO reffing VALUES ('31','33');
+INSERT INTO reffing VALUES ('31','12');
+INSERT INTO reffing VALUES ('12','22');
+INSERT INTO reffing VALUES ('12','33');
+INSERT INTO reffing VALUES ('12','66');
+INSERT INTO reffing VALUES ('15','22');
+INSERT INTO reffing VALUES ('15','11');
+INSERT INTO reffing VALUES ('13','12');
+INSERT INTO reffing VALUES ('13','33');
+INSERT INTO reffing VALUES ('10','11');
+INSERT INTO reffing VALUES ('10','12');
+INSERT INTO reffing VALUES ('10','33');
+INSERT INTO reffing VALUES ('14','11');
+INSERT INTO reffing VALUES ('14','33');

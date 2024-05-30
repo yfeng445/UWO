@@ -1,0 +1,16 @@
+CREATE DATABASE flipped4db;
+USE flipped4db;
+CREATE TABLE museum (musID  INT NOT NULL, musname VARCHAR(100), muscity VARCHAR(100), muscountry VARCHAR (100), numofvisitors INT, PRIMARY KEY(musID));
+CREATE TABLE workofart (woaID INT NOT NULL AUTO_INCREMENT, artname VARCHAR(100), artist VARCHAR(100), year INT, whichmus INT, FOREIGN KEY (whichmus) REFERENCES museum(musID), PRIMARY KEY (woaID));
+
+INSERT INTO museum (musID, musname, muscity, muscountry, numofvisitors) VALUES (1,'Louvre', 'Paris', 'France',10000);
+INSERT INTO museum (musID, musname, muscity, muscountry, numofvisitors) VALUES (2, 'British Museum','London','England',12000);
+INSERT INTO museum (musID, musname, muscity, muscountry, numofvisitors) VALUES (3, 'Egyptian Museum','Cairo','Egypt',6000);
+INSERT INTO museum (musID, musname, muscity, muscountry, numofvisitors) VALUES (4, 'National Museum of China','Beijing','China',8000);
+
+INSERT INTO workofart(artname, artist,year,whichmus) VALUES ('Venus de Milo', 'unknown', 130, 1);
+INSERT INTO workofart(artname, artist,year,whichmus) VALUES ('Dying Slave', 'Michelangelo', 1513, 1);
+INSERT INTO workofart(artname, artist,year,whichmus) VALUES ('Mona Lisa', 'Leonardo da Vinci', 1519, 1);
+INSERT INTO workofart(artname, artist,year,whichmus) VALUES ('Dragon and Tiger Vessel', 'unknown', 1046, 4);
+INSERT INTO workofart(artname, artist,year,whichmus) VALUES ('Moving to Fight in Shanbei', 'Shi Lu', 1959, 4);
+INSERT INTO workofart(artname, artist,year,whichmus) VALUES ('An Elephant', 'Rembrandt', 1637, 2);
