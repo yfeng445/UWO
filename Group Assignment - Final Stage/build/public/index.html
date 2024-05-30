@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg">
+        <div class="loader">HOP</div>
+    </div>
+    <header>
+        <nav>
+            <i class="ri-menu-line"></i>
+            <div>
+                <i class="ri-function-line"></i>
+                <button>Sign in</button>
+                <i class="ri-settings-line"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1><span>H</span><span>O</span><span>P</span></h1>
+            <div class="form">
+                <div></div>
+                <textarea rows="1" list="suggestion" onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
+                <button><i class="ri-send-plane-fill"></i></button>
+                <ul class="suggestion"></ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="../static/js/script.js"></script>
+</body>
+
+</html>

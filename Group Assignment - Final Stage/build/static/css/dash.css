@@ -1,0 +1,679 @@
+html {
+	scroll-behavior: smooth;
+	text-rendering: geometricPrecision;
+}
+body {
+	font-family: "Calibre", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	margin: 0;
+	transition: .6s;
+}
+/* Reset */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: inherit;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+ol,
+ul {
+	list-style: none;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+[disabled] {
+	pointer-events: none;
+	filter: brightness(.96);
+}
+/*
+ * Header
+ */
+nav, nav > ul, nav details ul, footer div, main .hero > div, main .hero div:nth-child(2), main .hero div:nth-child(2) div, .swiper-slide, .account form > div > div {
+	display: flex;
+}
+main .hero > div {
+	flex-direction: column;
+}
+nav ul,
+nav details summary,
+footer ul {
+	list-style: none;
+	padding: 0;
+}
+details {
+	list-style: none;
+}
+details summary {
+	display: inline;
+}
+header {
+	width: 100%;
+	top: 0;
+	position: fixed;
+	/* navbar style from vercel.com */
+	background-color: rgb(255 255 255 / .8);
+	backdrop-filter: saturate(180%) blur(5px);
+	box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, .1);
+}
+.container {
+	width: 96%;
+	max-width: 1080px;
+	margin: 0 auto;
+}
+nav {
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	height: 4em;
+}
+nav a {
+	text-decoration: none;
+	color: inherit;
+}
+nav i {
+	vertical-align: middle;
+}
+nav h1 {
+	font-weight: 600;
+}
+nav h1:hover {
+	/* https://codepen.io/shshaw/pen/YpERQQ */
+	background-image: linear-gradient(to right, #fbc2eb 0%, #a18cd1 40%, #fbc2eb 100%);
+	background-clip: text;
+	text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% auto;
+	animation: linearGradient 2s linear infinite;
+}
+nav > ul {
+	gap: 2em;
+}
+nav > ul div {
+	width: calc(8em + 2px);
+}
+nav > ul li:last-child {
+	position: relative;
+}
+nav > ul li:last-child a {
+	position: absolute;
+	top: -.8em;
+	color: #fff;
+	border: 1px solid #111;
+	overflow: hidden;
+    word-break: break-all;
+	transition: .3s;
+}
+nav > ul li:last-child a:hover {
+	color: #000;
+	background-color: #fff;
+}
+nav > ul li:last-child a:after {
+	content: none;
+}
+nav ul a:after {
+	content: "";
+	width: 0px;
+	height: 1px;
+	display: block;
+	background-color: currentColor;
+	transition: width 0.16s ease-in-out;
+}
+nav ul a:hover {
+	color: #06c
+}
+nav ul a:hover:after {
+	width: 100%;
+}
+nav details {
+	display: none;
+}
+nav details ul {
+	align-items: center;
+	position: absolute;
+	/* padding-top: 1em; */
+	margin: 0 2%;
+	top: 4em;
+	left: 0;
+	width: 96%;
+	font-size: 1.2em;
+	gap: 1em;
+	overflow-x: scroll;
+}
+nav details[open] span:before {
+	transform: translate3d(0, 5px, 0) rotate(45deg);
+}
+nav details[open] span:after {
+	transform: translate3d(0, -5px, 0) rotate(-225deg);
+}
+nav details[open] ul {
+	animation: stretch .3s ease forwards;
+}
+nav details[open] ul li {
+	white-space: nowrap;
+}
+nav summary {
+	display: block;
+	position: relative;
+	width: 24px;
+	height: 12px;
+	margin-top: -5px;
+	cursor: pointer;
+}
+nav summary span:before,
+nav summary span:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #000;
+	transition: transform .3s;
+}
+nav summary span:before {
+	top: 0;
+}
+nav summary span:after {
+	bottom: 0;
+}
+/*
+ * Main
+ */
+main {
+	width: 100%;
+	margin-top: 4em;
+	padding: .3em 0;
+	transition: margin .1s;
+}
+/* Hero style is from https://read.cv/explore */
+main .hero {
+	background-color: #f2f2f2;
+	margin: 1em auto;
+	height: 20em;
+	border-radius: .6em;
+	position: relative;
+	overflow: hidden;
+}
+main .hero > div {
+	padding: 2em;
+	justify-content: space-between;
+	height: calc(100% - 4em);
+}
+main .hero > div > div {
+	max-width: 32em;
+}
+main .hero > div > div:first-child {
+	background-color: rgb(242 242 242 / 50%);
+	backdrop-filter: blur(5px);
+	padding: 1em;
+	margin: -1em;
+	border-radius: 0.6em;
+}
+main .hero div:nth-child(2) {
+	justify-content: space-between;
+	max-width: none;
+}
+main .hero div:nth-child(2) div {
+	gap: 1em;
+}
+main .hero div div a {
+	margin-left: auto;
+}
+main .hero p {
+	font-size: 1.4em;
+	margin: 0;
+	color: #666;
+}
+main .hero i {
+	font-style: normal;
+	color: #000;
+}
+main .hero video {
+	position: absolute;
+	width: auto;
+	height: 20em;
+	top: 0;
+}
+.btn {
+	display: block;
+	background-color: rgb(255 255 255 / .5);
+	backdrop-filter: blur(5px);
+	font-weight: 600;
+	line-height: 2.8em;
+	height: 2.4em;
+	padding: 0 1.6em;
+	color: inherit;
+	text-decoration: none;
+	border-radius: 2em;
+	transition: opacity .3s;
+}
+.btn:hover {
+	opacity: .8;
+}
+.dark {
+	background-color: #111;
+	color: #fff;
+}
+.round {
+	border: 1px solid #000;
+	border-radius: .3em;
+	min-width: 4em;
+}
+.round:hover {
+	background-color: #000;
+	color: #fff;
+	opacity: 1;
+}
+.swiper-wrapper {
+	padding-bottom: 2em;
+}
+.swiper-wrapper .swiper-slide {
+	/* Customize slide */
+	background: #fff;
+	width: 25em;
+	border: 1px solid rgba(0, 0, 0, .1);
+	border-radius: .6em;
+	height: 10em;
+	padding: 2em;
+}
+.swiper-slide p {
+	font-size: 1.4em;
+	font-weight: 600;
+}
+.swiper-slide span {
+	color: #aaa;
+	font-weight: 300;
+}
+.swiper-slide a {
+	margin-right: auto;
+	transform-origin: top left;
+	transform: scale(.8);
+}
+.swiper-slide img {
+	display: block;
+	height: 2em;
+	width: 2em;
+	border-radius: 1em;
+}
+.swiper-slide span {
+	padding: .5em 0;
+}
+.swiper-slide i {
+	display: block;
+	font-style: normal;
+	color: #666;
+	max-height: 6em;
+	overflow-y: auto;
+}
+.swiper-slide:first-child {
+	flex-direction: column;
+	background-image: url(https://files.yyz.design/loki/explorecard.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+}
+.swiper-slide:nth-child(n+2) div:first-child {
+	background-color: #fafafa;
+	max-width: 8em;
+	margin: -2em;
+	padding: 2em;
+	border-radius: .6em 0 0 .6em;
+}
+.swiper-slide:nth-child(n+2) div:first-child div {
+	padding-top: 1em;
+}
+
+.swiper-slide:nth-child(n+2) a {
+	margin-top: 11em;
+	margin-left: 14em;
+}
+.swiper-slide:nth-child(2) > div:last-child {
+	display: flex;
+	width: 100%;
+	background-image: url(https://files.yyz.design/assets/lake.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: -2em -2em -2em 2em;
+	border-radius: 0 .6em .6em 0;
+}
+.account {
+	width: 96%;
+	max-width: 25em;
+	margin: 2em auto;
+	border-radius: .6em;
+	border: 1px solid rgba(0, 0, 0, .1);
+}
+.account > div {
+	padding: 2em;
+}
+.account form > div {
+	margin: 2em 0;
+}
+.account form > div > div {
+	position: relative;
+	align-items: center;
+}
+.account input {
+	padding: .3em 0 0 2em;
+	width: calc(100% - 2em);
+	outline: none;
+	line-height: 2em;
+	border: none;
+	border-bottom: 1px solid #ddd;
+}
+.account .border {
+	/* https://www.30secondsofcode.org/css/s/hover-underline-animation */
+	content: "";
+	position: absolute;
+	bottom: 4px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	margin-bottom: -.2em;
+	transform: scaleX(0);
+	background-color: #666;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+.account input:focus~i {
+	color: #111;
+}
+.account input:focus~.border {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+.account form div i {
+	margin-left: -100%;
+	z-index: 1;
+}
+.account form div i, .account input::placeholder {
+	color: #ddd;
+}
+.account a {
+	display: block;
+	color: inherit;
+	text-align: right;
+	text-decoration: none;
+	margin: .6em 0;
+}
+.account a:hover {
+	text-decoration: underline;
+	text-underline-offset: .1em;
+}
+.account .h-captcha {
+	text-align: center;
+}
+.account button {
+	border: none;
+	width: calc(100% - 3.2em);
+}
+.dropdown {
+	display: none;
+	position: absolute;
+	top: 4em;
+	right: 0;
+	box-shadow: rgb(229 229 229) 0px 0px 0.8rem 0px;
+}
+.dropdown ul li {
+	line-height: 2em;
+	width: 6em;
+    padding: .6em;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent transparent #e5e5e5 transparent;
+    background-color: rgb(255 255 255 / 0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+.dropdown ul li:hover {
+	border-color: #111;
+}
+.dropdown ul li a:after {
+	content: none;
+}
+.profile, .list {
+	width: 96%;
+	max-width: 540px;
+	margin: 0 auto;
+	background: #fff;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 0.6em;
+}
+.profile form:first-child, .list form:first-child {
+	display: none;
+}
+.list a {
+	text-decoration: none;
+	color: #111;
+}
+.profile > div, .list > div {
+	padding: 2em;
+}
+.profile > div {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 50%);
+}
+.profile h2 {
+	margin: auto 0;
+}
+.profile > div img {
+	margin-left: auto;
+	border-radius: 50%;
+}
+.profile form {
+	grid-column: span 2;
+}
+.profile > div ul, .list > div > ul {
+	display: grid;
+	margin: 2em -2em -2em -2em;
+	background-color: #fafafa;
+	border-radius: .6em;
+	width: 100%;
+	padding: 2em;
+	gap: 1em;
+}
+.profile > div ul li {
+	display: grid;
+	grid-template-columns: 4em 1fr 4em;
+	align-items: center;
+	gap: 1em;
+	padding: 1em;
+	background-color: #fff;
+	box-shadow: 0px 2px 4px rgba(0,0,0,.1);
+	border-radius: .3em	;
+	transition: box-shadow .2s ease-in-out;
+}
+.profile div input, .list div input {
+    padding: 0.5em;
+    border: 1px solid #eaeaff;
+    border-radius: 0.3em;
+    outline: none;
+    transition: border .3s;
+}
+.profile div input:focus, .list div input:focus {
+	border: 1px solid #666;
+}
+.profile div form div {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 50%);
+	gap: 1em;
+	margin: 1em 0;
+}
+.list > div div {
+	grid-column: span 2;
+}
+.list > div div ul {
+	display: grid;
+    grid-template-columns: 1fr 20% 20%;
+	gap: .5em;
+}
+.list > div form {
+	display: grid;
+	margin-top: 2em;
+	gap: .5em;
+}
+.list > div > ul li {
+	display: grid;
+	grid-template-columns: 1em 1fr 3em 3em;
+	align-items: center;
+	gap: 1em;
+	padding: 1em;
+	background-color: #fff;
+	box-shadow: 0px 2px 4px rgba(0,0,0,.1);
+	border-radius: .3em	;
+	transition: box-shadow .2s ease-in-out;
+}
+/* Style inspired by https://vercel.com/dashboard */
+.list > div > ul li:hover {
+	box-shadow: 0px 4px 8px rgba(0,0,0,.12);
+}
+.list > div > ul li p:before {
+	content: attr(data-content);
+	color: #fff;
+    background-color: #666;
+    font-size: .6em;
+    padding: 0.3em 0;
+    border-radius: 0.3em;
+}
+.list > div > ul li p {
+	font-weight: 600;
+	overflow-x: auto;
+	max-height: 2em;
+	margin-bottom: -.3em;
+}
+.list > div > ul li span {
+	grid-column: span 4;
+	font-size: 1.2em;
+	color: #666;
+}
+.list .edit {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 50%);
+	gap: .5em;
+	margin: 2em -2em -2em -2em;
+    background-color: #fafafa;
+	padding: 2em;
+}
+.list .edit button {
+	width: calc(100% - 3.2em);
+}
+.profile > div ul button, .list > div > ul button {
+	transform: scale(.8);
+	transform-origin: center;
+	margin-left: -.6em;
+	padding: 0 .3em;
+}
+.list input[type="checkbox"] {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+	outline: none;
+    border-radius: .3em;
+    width: .6em;
+    height: .6em;
+	padding: .2em;
+    border: 0.1em solid #999;
+    transition: .1s all linear;
+}
+.list input[type="checkbox"]:checked {
+	border: 0.3em solid #111;
+	padding: 0;
+}
+
+/*
+ * Footer
+ */
+footer {
+	/* footer style by Vercel */
+	border-top: 1px solid rgb(234 234 234);
+	background-color: #fafafa;
+	padding: 1em;
+	margin-top: 2em;
+}
+footer div {
+	justify-content: space-between;
+}
+footer a {
+	color: #999;
+	text-decoration: none;
+	transition: color .3s;
+}
+footer a:hover {
+	color: #000;
+}
+footer p {
+	text-align: center;
+}
+footer span {
+	display: inline-block;
+	position: relative;
+	top: -7px;
+	transform: rotate(180deg);
+	z-index: 0;
+}
+.err {
+	display: block;
+	height: 1em;
+	color: #ff2d55;
+	padding: .6em 0;
+	text-align: center;
+}
+.float {
+	animation: floatUp 2s ease forwards;
+}
+@media (max-width: 40em) {
+	nav>ul {
+		display: none;
+	}
+	nav details {
+		display: block;
+	}
+	main .hero > div {
+		padding: 1em;
+		height: calc(100% - 2em);
+	}
+	main .hero > div > div > a {
+		display: none;
+	}
+	.list > div div ul {
+		grid-template-columns: 50% 50%;
+	}
+	.list > div div ul button {
+		width: calc(100% - 4em);
+	}
+	.list > div div ul li:first-child {
+		display: none;
+	}
+	footer div {
+		flex-direction: column;
+	}
+}
+@keyframes floatUp {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 2vh, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes stretch {
+	0% {
+		opacity: 0;
+		height: 0;
+	}
+	100% {
+		opacity: 1;
+		height: auto;
+	}
+}
+@keyframes linearGradient {
+	to {
+		background-position: 200% center;
+	}
+}
