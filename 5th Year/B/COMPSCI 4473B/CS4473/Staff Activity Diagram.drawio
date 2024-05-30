@@ -1,0 +1,34 @@
+<mxfile host="app.diagrams.net" modified="2024-03-06T23:53:49.321Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="abVAIwHkBxQlJ3_9lKHf" version="24.0.1" type="google">
+  <diagram name="Page-1" id="LxUhvO7dlj-crzZ4T2Dn">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vqLfiR0zEpWV_cxNWXOm-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="vqLfiR0zEpWV_cxNWXOm-2" target="vqLfiR0zEpWV_cxNWXOm-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vqLfiR0zEpWV_cxNWXOm-2" value="Task received" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="460" y="174" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vqLfiR0zEpWV_cxNWXOm-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="vqLfiR0zEpWV_cxNWXOm-4" target="vqLfiR0zEpWV_cxNWXOm-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vqLfiR0zEpWV_cxNWXOm-4" value="Check task detail on dashboard" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="460" y="234" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vqLfiR0zEpWV_cxNWXOm-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="vqLfiR0zEpWV_cxNWXOm-6" target="vqLfiR0zEpWV_cxNWXOm-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vqLfiR0zEpWV_cxNWXOm-6" value="Finish task" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="460" y="294" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vqLfiR0zEpWV_cxNWXOm-7" value="Update task status" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="460" y="354" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vqLfiR0zEpWV_cxNWXOm-9" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Staff&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="144" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
